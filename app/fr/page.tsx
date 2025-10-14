@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import { createTranslator } from '@/utils/i18n';
 import { Hero } from '@/components/layout/Hero';
 import { CTA } from '@/components/layout/CTA';
 import { Container } from '@/components/layout/Container';
 import { LogoCarousel } from '@/components/layout/LogoCarousel';
+import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
 import {
   Camera,
   Heart,
@@ -185,6 +187,7 @@ export default function Home() {
                 title: 'Nextmotion Capture',
                 description: 'photos avant/après comparables et standardisées',
                 image: '/solutions/nmcapturehome.jpg',
+                link: '/fr/capture',
               },
               {
                 icon: FileCheck,
@@ -192,12 +195,14 @@ export default function Home() {
                 description:
                   'dossier patient intelligent et comptes-rendus automatisés',
                 image: '/solutions/nmconsulthome.jpg',
+                link: null,
               },
               {
                 icon: Calendar,
                 title: 'Nextmotion Agenda',
                 description: 'planification et synchronisation avec Doctolib',
                 image: '/solutions/nmcalendarhome.jpg',
+                link: null,
               },
               {
                 icon: Globe,
@@ -205,6 +210,7 @@ export default function Home() {
                 description:
                   'espace en ligne pour partager documents et résultats',
                 image: '/solutions/portalhome.jpg',
+                link: null,
               },
               {
                 icon: Image,
@@ -212,6 +218,7 @@ export default function Home() {
                 description:
                   'simulations morphologiques réalistes et interactives',
                 image: '/solutions/nm3Dhome.jpg',
+                link: '/fr/3d',
               },
               {
                 icon: Video,
@@ -219,13 +226,11 @@ export default function Home() {
                 description:
                   'vidéos standardisées et dynamiques pour vos patients',
                 image: '/solutions/nmrevolutionhome.jpg',
+                link: null,
               },
             ].map((module, index) => {
-              return (
-                <div
-                  key={index}
-                  className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 group"
-                >
+              const content = (
+                <>
                   <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl mb-6 overflow-hidden">
                     <img
                       src={module.image}
@@ -239,6 +244,23 @@ export default function Home() {
                   <p className="text-[#4B5563] text-sm leading-relaxed">
                     {module.description}
                   </p>
+                </>
+              );
+
+              return module.link ? (
+                <Link
+                  key={index}
+                  href={module.link}
+                  className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 group block"
+                >
+                  {content}
+                </Link>
+              ) : (
+                <div
+                  key={index}
+                  className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 group"
+                >
+                  {content}
                 </div>
               );
             })}
@@ -333,22 +355,36 @@ export default function Home() {
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl p-8 sm:p-12 text-center shadow-sm">
-              <div className="flex justify-center mb-6">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    className="w-5 h-5 text-[#FDB022] fill-current"
-                  />
-                ))}
-              </div>
-              <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed">
-                {t('testimonial.quote')}
-              </blockquote>
-              <p className="text-gray-900 font-semibold">
-                {t('testimonial.author')}
-              </p>
-            </div>
+            <TestimonialsCarousel
+              testimonials={[
+                {
+                  quote: "Nextmotion a transformé notre cabinet. La gestion des photos avant/après est exceptionnelle et nos patients adorent les simulations 3D.",
+                  author: "Dr. Sophie Martin",
+                  role: "Chirurgien Esthétique, Paris",
+                  rating: 5,
+                },
+                {
+                  quote: "L'assistant IA nous fait gagner des heures chaque semaine. Les comptes-rendus automatisés sont précis et notre workflow n'a jamais été aussi fluide.",
+                  author: "Dr. Jean Dupont",
+                  role: "Médecin Esthétique, Lyon",
+                  rating: 5,
+                },
+                {
+                  quote: "La satisfaction de nos patients a considérablement augmenté depuis que nous utilisons Nextmotion. Le portail patient est révolutionnaire.",
+                  author: "Dr. Marie Laurent",
+                  role: "Directrice de Spa Médical, Bordeaux",
+                  rating: 5,
+                },
+                {
+                  quote: "L'intégration Doctolib et la synchronisation des agendas ont éliminé les doubles réservations. Notre équipe est bien plus efficace.",
+                  author: "Dr. Pierre Rousseau",
+                  role: "Manager de Clinique, Nice",
+                  rating: 5,
+                },
+              ]}
+              autoPlay={true}
+              interval={6000}
+            />
           </div>
         </Container>
       </section>

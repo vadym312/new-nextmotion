@@ -36,7 +36,7 @@ export function Header({ locale, translations }: HeaderProps) {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-sm">
       <Container>
         <nav className="flex items-center justify-between h-20">
-          <Link href={`/${locale}`} className="flex items-center group">
+          <Link href={`${locale === 'en' ? '/' : '/fr'}`} className="flex items-center group">
             <Image
               src="/nmlogo.svg"
               alt="Nextmotion"
