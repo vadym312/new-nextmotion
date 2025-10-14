@@ -1,0 +1,1814 @@
+{
+  "nav": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "demo": "Request a demo"
+  },
+  "hero": {
+    "title": "All-in-one software for aesthetic clinics",
+    "subtitle": "Manage your patients, digitalize your consultations and increase your revenue with a SaaS solution designed for aesthetic medicine.",
+    "cta": "Request a demo",
+    "ctaSecondary": "Learn more",
+    "ctaTertiary": "Start with Starter"
+  },
+  "trustedBy": {
+    "title": "Used by the best aesthetic clinics",
+    "subtitle": "Join over 500 clinics already transforming their practice with Nextmotion"
+  },
+  "logos": {
+    "clinics": [
+      "Nasser Majed",
+      "Centre Médical Expertini Lyon",
+      "Lutétia Paris",
+      "Clinique Champs-Élysées"
+    ]
+  },
+  "challenges": {
+    "title": "The 3 main challenges of aesthetic clinics",
+    "items": [
+      {
+        "title": "Fragmented management",
+        "description": "Using multiple tools to manage patients, schedule, accounting and communication creates wasted time and efficiency."
+      },
+      {
+        "title": "Lack of data",
+        "description": "The absence of precise tracking of consultations and results prevents treatment optimization."
+      },
+      {
+        "title": "Limited communication",
+        "description": "Difficult to maintain a strong connection with patients and personalize the care journey."
+      }
+    ]
+  },
+  "mission": {
+    "title": "Our mission: simplify your daily routine and boost your results",
+    "items": [
+      {
+        "title": "Optimal efficiency",
+        "description": "A single platform to manage everything: schedule, patient files, billing and communication."
+      },
+      {
+        "title": "Patient experience",
+        "description": "Automate follow-up and personalize each interaction to retain your patients."
+      },
+      {
+        "title": "Measurable growth",
+        "description": "Track your KPIs in real-time and make decisions based on concrete data."
+      }
+    ]
+  },
+  "solution": {
+    "title": "A modular solution adapted to your needs",
+    "subtitle": "Choose the modules you need and activate them with one click"
+  },
+  "ai": {
+    "title": "AI and Automations Empowering Your Practice",
+    "items": [
+      {
+        "title": "Copilot AI",
+        "description": "your smart assistant to analyze, summarize and act on your patient data."
+      },
+      {
+        "title": "Smart Automations",
+        "description": "design your own workflows — quote follow-ups, birthday messages, patient reminders or internal alerts."
+      },
+      {
+        "title": "Open APIs",
+        "description": "connect Nextmotion to your ecosystem — calendar, CRM, chatbot or AI voice assistant."
+      }
+    ],
+    "cta": "Discover AI"
+  },
+  "results": {
+    "title": "Measurable results for our clients",
+    "items": [
+      {
+        "value": "+80%",
+        "label": "time saved on administrative management through automation"
+      },
+      {
+        "value": "+35%",
+        "label": "patient retention rate with automated follow-up"
+      },
+      {
+        "value": "+50%",
+        "label": "patient satisfaction through personalized and seamless experience"
+      }
+    ]
+  },
+  "testimonial": {
+    "quote": "Nextmotion now allows us to manage our entire clinic on a single platform. We have saved precious time and our patients are much more satisfied and engaged.",
+    "author": "Dr Diala Haykal, Aesthetic Physician"
+  },
+  "faq": {
+    "title": "Frequently asked questions about Nextmotion",
+    "items": [
+      {
+        "question": "What is Nextmotion?",
+        "answer": "Nextmotion is an all-in-one platform designed to digitize and centralize the management of your aesthetic clinic: patient files, schedule, communication, billing, marketing and photo tools."
+      },
+      {
+        "question": "Who is the solution for?",
+        "answer": "Nextmotion is intended for aesthetic medicine, aesthetic surgery, dermatology and anti-aging medicine clinics and practices that want to modernize their practice."
+      },
+      {
+        "question": "What are the main features?",
+        "answer": "Patient management, online appointment booking, automated communication (emails, SMS, WhatsApp), CRM, billing, photo tools, conversational AI, dashboard and statistics."
+      },
+      {
+        "question": "Is it compatible with Doctolib?",
+        "answer": "Yes, Nextmotion can synchronize with Doctolib and other calendars to avoid double entries."
+      },
+      {
+        "question": "Is patient data secure?",
+        "answer": "Yes. All data is hosted in France and compliant with GDPR and the HDS (Health Data Hosting) framework."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Our offers",
+    "subtitle": "solutions",
+    "subtitleHighlight1": "flexible",
+    "subtitleMiddle": ", tailored to your",
+    "subtitleHighlight2": "aesthetic",
+    "subtitleEnd": " practice.",
+    "plans": [
+      {
+        "name": "Starter",
+        "description": "Ideal for independent practitioners who want to digitalize simply.",
+        "price": "99",
+        "originalPrice": "187",
+        "period": "/month",
+        "note": "excluding taxes, 12-month commitment",
+        "features": [
+          "**Nextmotion Capture**",
+          "Nextmotion Consult digital",
+          "1 user included",
+          "Nextmotion Academy access"
+        ],
+        "cta": "Start now",
+        "ctaVariant": "green",
+        "support": "Chatbot and email support included."
+      },
+      {
+        "name": "Essential",
+        "description": "For growing practices that want to gain efficiency and organization.",
+        "price": "199",
+        "originalPrice": "352",
+        "period": "/month",
+        "note": "excluding taxes, 12-month commitment",
+        "features": [
+          "**Nextmotion Capture**",
+          "Nextmotion Starter Pack",
+          "**Nextmotion Copilot AI** (1 user)",
+          "Accounting",
+          "2 users included",
+          "Good reviews"
+        ],
+        "cta": "Request a demo",
+        "ctaVariant": "blue",
+        "support": "Chatbot and email support.",
+        "recommended": true
+      },
+      {
+        "name": "Premium",
+        "description": "Designed for structured practices that want to automate and integrate AI into their daily routine.",
+        "price": "399",
+        "originalPrice": "569",
+        "period": "/month",
+        "note": "excluding taxes, 12-month commitment",
+        "features": [
+          "**Nextmotion Capture**",
+          "Nextmotion Essential",
+          "**Automations & API access**",
+          "5 users included",
+          "Nextmotion Agenda",
+          "1h support/month"
+        ],
+        "cta": "Request a demo",
+        "ctaVariant": "blue",
+        "support": "Chatbot support, priority email and Whatsapp."
+      },
+      {
+        "name": "Enterprise",
+        "description": "For clinic groups or networks. Custom integrations and global management.",
+        "price": "Custom quote",
+        "period": "",
+        "note": "",
+        "features": [
+          "**Nextmotion Capture**",
+          "Nextmotion Premium",
+          "Patient portal",
+          "Patient messaging & video",
+          "10 users included",
+          "2h support/month"
+        ],
+        "cta": "Request a demo",
+        "ctaVariant": "blue",
+        "support": "Contact us for a personalized offer."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Transform your clinic today",
+    "subtitle": "Join hundreds of practitioners who are optimizing their practice and delivering an exceptional patient experience.",
+    "cta": "Book a demonstration",
+    "ctaSecondary": "Start with Starter"
+  },
+  "footer": {
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "security": "Security",
+    "integrations": "Integrations",
+    "company": "Company",
+    "about": "About",
+    "careers": "Careers",
+    "blog": "Blog",
+    "press": "Press",
+    "support": "Support",
+    "help": "Help Center",
+    "docs": "Documentation",
+    "contact": "Contact",
+    "status": "Service Status",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "tagline": "The all-in-one platform for aesthetic clinics. Modernize your practice, automate your management and deliver an exceptional patient experience.",
+    "newsletter": "Stay informed of the latest updates",
+    "emailPlaceholder": "Your professional email",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved."
+  },
+  "starter": {
+		"hero": {
+			"title": "The simplest way to digitize your aesthetic practice",
+			"subtitle": "Join hundreds of practitioners who have chosen Nextmotion to develop their aesthetic activity with complete peace of mind.",
+			"cta": "Get started now",
+			"form": {
+				"firstName": "First name*",
+				"lastName": "Last name*",
+				"email": "Professional email*",
+				"phone": "Phone*",
+				"clinicName": "Clinic name*",
+				"submit": "Create my Starter account",
+				"submitting": "Creating account...",
+				"setupTime": "Setup in less than 5 minutes"
+			}
+		},
+		"benefits": {
+			"title": "Everything you need to get started right",
+			"subtitle": "The Starter Pack brings together all the essential features to structure your aesthetic activity from day one.",
+			"timeGain": {
+				"title": "Immediate time savings",
+				"description": "Automate your repetitive administrative tasks."
+			},
+			"revenue": {
+				"title": "Grow your revenue",
+				"description": "Showcase your results and retain your patients."
+			},
+			"admin": {
+				"title": "Simplify your administration",
+				"description": "Digital patient file with consents, quotes and follow-up."
+			},
+			"patient": {
+				"title": "Improve patient journey",
+				"description": "Doctor, assistant, manager: one interface for everyone."
+			}
+		},
+		"productInAction": {
+			"title": "Discover Nextmotion Starter in action",
+			"subtitle": "A preview of the features included in your Starter pack",
+			"capture": {
+				"title": "Nextmotion Capture",
+				"description": "Standardized before/after photos to showcase your results."
+			},
+			"patientFile": {
+				"title": "Patient file",
+				"description": "Complete web interface for managing your patients."
+			},
+			"signature": {
+				"title": "Electronic signature",
+				"description": "Have your consents signed on iPad securely."
+			},
+			"inventory": {
+				"title": "Inventory management & traceability",
+				"description": "Track your products and comply with regulations."
+			}
+		},
+		"reassurance": {
+			"aws": {
+				"title": "AWS Secure Hosting",
+				"description": "Trusted cloud infrastructure"
+			},
+			"innovation": {
+				"title": "Health Innovation Award",
+				"description": "Recognized by professionals"
+			},
+			"certification": {
+				"title": "\"Pro Award for You\" Recognition",
+				"description": "Recognized excellence"
+			}
+		},
+		"testimonial": {
+			"quote": "Nextmotion has become a pillar in managing our patients and our teams.",
+			"author": {
+				"name": "Dr Diala Haykal",
+				"title": "Aesthetic physician, Palaiseau"
+			}
+		},
+		"pricing": {
+			"title": "The essentials to launch your clinic on solid foundations",
+			"subtitle": "Start with the essentials and evolve according to your needs",
+			"starter": {
+				"name": "Starter Pack",
+				"price": "From €99/month",
+				"description": "Perfect to get started",
+				"features": {
+					"capture": "NM Capture included",
+					"patientFiles": "Basic patient files",
+					"clinicalNotes": "Clinical notes",
+					"quotes": "Quotes and invoices",
+					"eSignature": "Electronic signature",
+					"inventory": "Inventory management"
+				}
+			},
+			"essential": {
+				"name": "Essential",
+				"price": "€199/month",
+				"description": "For established clinics",
+				"features": {
+					"all": "Everything from Starter Pack",
+					"advanced": "Advanced features",
+					"analytics": "Analytics and reports"
+				}
+			},
+			"premium": {
+				"name": "Premium",
+				"price": "€299/month",
+				"description": "Complete solution",
+				"features": {
+					"all": "Everything from Essential",
+					"integrations": "CRM integrations",
+					"support": "Priority support"
+				}
+			},
+			"selectPlan": "Choose this plan"
+		},
+		"contact": {
+			"title": "The simplest solution to manage your aesthetic clinic",
+			"subtitle": "Centralize your patients, your before/after photos and your quotes in one secure tool, accessible to the entire team.",
+			"cta": "Get started now",
+			"features": {
+				"quickSetup": "Quick setup",
+				"support": "Support included",
+				"gdpr": "GDPR security"
+			},
+			"form": {
+				"firstName": "First name*",
+				"lastName": "Last name*",
+				"email": "Professional email*",
+				"phone": "Phone*",
+				"clinicName": "Clinic name*",
+				"submit": "Create my Starter account",
+				"submitting": "Creating account...",
+				"setupTime": "Setup in less than 5 minutes"
+			},
+			"success": {
+				"title": "Thank you for your registration!",
+				"message": "We will contact you within the next few hours to set up your account."
+			},
+			"error": {
+				"message": "An error occurred. Please try again."
+			}
+		}
+	},
+  "copilotAi": {
+    "hero": {
+      "badge": "Nextmotion Copilot AI",
+      "title": "The AI that manages your patient records from A to Z",
+      "subtitle": "Copilot AI transcribes your consultations, fills patient data, generates quotes, and automatically answers intake questionnaires. Less admin. More medicine.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Activate Copilot"
+    },
+    "benefits": {
+      "title": "Your autonomous medical assistant",
+      "items": [
+        {
+          "title": "80% time saved",
+          "description": "Copilot automates reporting, quoting and medical documentation."
+        },
+        {
+          "title": "Advanced contextual understanding",
+          "description": "The AI interprets your speech and extracts relevant medical data."
+        },
+        {
+          "title": "Smart CRM actions",
+          "description": "Automatically fills fields, updates records and organizes data."
+        },
+        {
+          "title": "Instant reports and quotes",
+          "description": "Structured documents generated in seconds, ready to validate."
+        },
+        {
+          "title": "HDS & GDPR compliant",
+          "description": "All data hosted on health-certified servers."
+        }
+      ]
+    },
+    "how": {
+      "title": "From speech to action, seamlessly",
+      "steps": [
+        "Speak naturally during the consultation.",
+        "Copilot AI automatically completes the patient record.",
+        "It generates a complete quote and answers the intake questionnaire.",
+        "You review and approve with one click."
+      ]
+    },
+    "intelligence": {
+      "title": "More than transcription: AI that gets things done",
+      "subtitle": "Copilot AI understands, detects and acts directly inside your workflow.",
+      "items": [
+        {
+          "title": "Intelligent patient file completion",
+          "description": "AI identifies useful information and fills the right CRM fields."
+        },
+        {
+          "title": "Automatic intake questionnaire answers",
+          "description": "Copilot completes forms using patient and consultation data."
+        },
+        {
+          "title": "Automated quote generation",
+          "description": "Creates detailed treatment quotes instantly from consultation info."
+        }
+      ]
+    },
+    "ecosystem": {
+      "title": "Works across your entire medical ecosystem",
+      "text": "Natively integrated with the Nextmotion suite (Consult, Agenda, Quotes, Patient Portal) and connected to external tools via API (Doctolib, Google Calendar, VAPI…)."
+    },
+    "security": {
+      "title": "Security first",
+      "text": "All data is processed on HDS-certified servers with full GDPR compliance."
+    },
+    "pricing": {
+      "title": "Simple and accessible",
+      "text": "One Copilot AI seat is included with the Essential plan (most popular). Additional seats €59/month for a limited time (regular €99).",
+      "cta": "Discover the Essential plan"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Does Copilot AI do more than transcription?",
+          "answer": "Yes — it writes reports, generates quotes and answers patient questionnaires automatically."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Absolutely. HDS hosting, GDPR compliance and full encryption."
+        },
+        {
+          "question": "Can I review before saving?",
+          "answer": "Always. You remain in control of final validation."
+        },
+        {
+          "question": "Is it compatible with my tools?",
+          "answer": "Yes, it integrates with all Nextmotion modules and external tools via API."
+        },
+        {
+          "question": "Is there a mobile app?",
+          "answer": "Yes — available on iPhone and Android via the Nextmotion app."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Free your practice from admin overload",
+      "subtitle": "Hundreds of practitioners already use Copilot AI to turn consultations into structured reports, quotes and automated follow-ups.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Activate Copilot"
+    }
+  },
+  "capture": {
+    "hero": {
+      "badge": "Nextmotion Capture",
+      "title": "The professional photo/video tool for aesthetic clinics",
+      "subtitle": "Perfectly comparable before/after photos to showcase your results and build patient trust.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Start with Starter"
+    },
+    "problems": {
+      "title": "Why don't your before/after photos always reflect your true results?",
+      "items": [
+        "Variations in angle, lighting or patient posture",
+        "Difficulty finding previous shots",
+        "Poorly aligned and unprofessional comparisons",
+        "Photo content difficult to use in marketing"
+      ],
+      "imageCaption": "Diagram: poorly aligned photos"
+    },
+    "solution": {
+      "title": "Simplified and standardized medical capture",
+      "items": [
+        {
+          "title": "Automatic alignment",
+          "description": "Automatic face and body alignment for perfect comparisons"
+        },
+        {
+          "title": "Standardized lighting",
+          "description": "Identical lighting and distance with each shot"
+        },
+        {
+          "title": "Smart management",
+          "description": "Intelligent gallery management per patient with quick search"
+        },
+        {
+          "title": "Complete integration",
+          "description": "Compatible with all Nextmotion modules (Consult, Quotes, CRM)"
+        }
+      ],
+      "imageCaption": "App demonstration on iPad"
+    },
+    "benefits": {
+      "title": "A tool serving your expertise",
+      "items": [
+        {
+          "title": "Professionalize your consultations",
+          "description": "Consistent and comparable visuals that strengthen your credibility"
+        },
+        {
+          "title": "Save time",
+          "description": "Everything is centralized, organized and ready to share with one click"
+        },
+        {
+          "title": "Showcase your results",
+          "description": "Share your successes on social media with professional-quality photos"
+        }
+      ]
+    },
+    "ecosystem": {
+      "title": "Capture integrates with your entire Nextmotion environment",
+      "items": [
+        {
+          "title": "Nextmotion Revolution",
+          "description": "Works with the robotic platform for standardized and automated photography"
+        },
+        {
+          "title": "Automatic synchronization",
+          "description": "Automatic sync with patient file and Nextmotion CRM for seamless workflow"
+        },
+        {
+          "title": "iOS compatible",
+          "description": "Compatible with iPhone and iPad for maximum flexibility during consultations"
+        }
+      ]
+    },
+    "testimonial": {
+      "title": "They trust us",
+      "quote": "Nextmotion Capture has completely changed the way I present my treatments. My patients understand the results better and accept my proposals more easily.",
+      "author": "Dr. Diala Haykal, aesthetic physician in Paris"
+    },
+    "pricing": {
+      "title": "Accessible and scalable",
+      "subtitle": "Nextmotion Capture is included in all our plans starting from €99/month"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Is it compatible with Android?",
+          "answer": "No, Nextmotion Capture is only available on iOS (iPhone and iPad) to ensure the best quality and performance."
+        },
+        {
+          "question": "Can we export photos?",
+          "answer": "Yes, you can export all your photos in high definition to use in your marketing materials or share with your patients."
+        },
+        {
+          "question": "Are photos secure?",
+          "answer": "Yes, all photos are hosted on HDS-certified servers (Health Data Hosting) in France, compliant with GDPR."
+        },
+        {
+          "question": "Is it compatible with the Revolution device?",
+          "answer": "Yes, Nextmotion Capture is fully integrated with the Revolution device for robotic and standardized photo/video capture."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Discover Nextmotion precision",
+      "subtitle": "Book a demonstration today to see how Nextmotion Capture can transform your practice.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Start with Starter"
+    }
+  },
+  "consult": {
+    "hero": {
+      "badge": "Nextmotion Consult",
+      "title": "Simplify your entire practice with Nextmotion Consult",
+      "subtitle": "The all-in-one CRM for aesthetic clinics: patient records, quotes, consents, payments and photos — centralized, secure and easy to use.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Get started"
+    },
+    "problems": {
+      "title": "Why is managing your clinic so complex?",
+      "items": [
+        "Multiple tools that don't communicate with each other",
+        "Time-consuming administrative tasks and paperwork",
+        "Difficulty tracking quotes and payments",
+        "Lost patient files and missing documents"
+      ]
+    },
+    "solution": {
+      "title": "A complete CRM for your aesthetic clinic",
+      "items": [
+        {
+          "title": "Total centralization",
+          "description": "All patient files, photos, quotes, consents and payments in one place"
+        },
+        {
+          "title": "Full traceability",
+          "description": "Every step of the patient journey is documented and archived automatically"
+        },
+        {
+          "title": "Time savings",
+          "description": "No more duplicate data entry or paperwork — everything is digital and automated"
+        },
+        {
+          "title": "Integrated financial tracking",
+          "description": "Generate and track quotes and payments directly from the patient record"
+        }
+      ]
+    },
+    "features": {
+      "title": "Everything you need, in one place",
+      "items": [
+        {
+          "title": "Automated pre-consultation questionnaire",
+          "icon": "clipboard"
+        },
+        {
+          "title": "Patient photo and protocol management",
+          "icon": "image"
+        },
+        {
+          "title": "Digital quote creation and signature",
+          "icon": "pen"
+        },
+        {
+          "title": "Medical consents and secure archiving",
+          "icon": "lock"
+        },
+        {
+          "title": "Agenda + CRM synchronization",
+          "icon": "calendar"
+        },
+        {
+          "title": "Integrated patient portal",
+          "icon": "user"
+        },
+        {
+          "title": "Copilot AI: transcription, reports and data interaction",
+          "icon": "sparkles"
+        },
+        {
+          "title": "API & automations",
+          "icon": "workflow"
+        }
+      ]
+    },
+    "copilot": {
+      "title": "Unlock the full power of Consult with Copilot AI",
+      "subtitle": "The integrated AI assistant that fills patient files, writes reports and generates quotes automatically.",
+      "text": "Copilot AI integrates directly into Nextmotion Consult to turn your consultations into concrete actions.\n\nWhile you interact with your patient, the AI listens, understands and acts: it transcribes your words, writes a structured medical report, completes introduction questionnaires and instantly creates a quote ready to validate.\n\nResult: you save time, reduce errors and focus on what truly matters — your patients.",
+      "cta": "Discover Copilot AI"
+    },
+    "benefits": {
+      "title": "An intelligent and connected platform",
+      "items": [
+        {
+          "title": "Smart patient journey analytics",
+          "description": "Identify inactive patients, pending quotes or missed follow-ups instantly"
+        },
+        {
+          "title": "Medical & admin automations",
+          "description": "Trigger reminders, follow-ups and questionnaires automatically based on your rules"
+        },
+        {
+          "title": "Native Copilot AI integration",
+          "description": "Consultations are transcribed and structured automatically into reports"
+        }
+      ]
+    },
+    "ecosystem": {
+      "title": "A perfectly connected ecosystem",
+      "tagline": "Nextmotion Consult is compatible with all your other software through our open APIs and native connectors.",
+      "items": [
+        {
+          "title": "Seamless integration",
+          "description": "Works in synergy with Capture, Agenda, Patient Portal and Copilot AI"
+        },
+        {
+          "title": "Real-time synchronization",
+          "description": "All data stays synchronized across your entire workflow"
+        },
+        {
+          "title": "Mobile compatibility",
+          "description": "Access your practice from anywhere on iPhone, iPad and Android"
+        }
+      ]
+    },
+    "testimonial": {
+      "title": "They trust us",
+      "quote": "Nextmotion Consult has transformed how we manage our clinic. Everything is centralized and we save hours every week on administrative tasks.",
+      "author": "Dr. Sophie Martin, aesthetic physician in Lyon"
+    },
+    "pricing": {
+      "title": "Included in Essential and Premium plans",
+      "subtitle": "Nextmotion Consult is part of the Essential plan and above"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Does Consult replace my current CRM?",
+          "answer": "Yes. Consult unifies CRM, quotes, consents and payments into one secure platform."
+        },
+        {
+          "question": "Is it available on mobile?",
+          "answer": "Yes, Consult works on iPhone, iPad and Android."
+        },
+        {
+          "question": "Is Copilot AI included?",
+          "answer": "Yes. One Copilot AI seat is included from the Essential plan to automate reports."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Absolutely. HDS hosting, GDPR compliance and full encryption guarantee safety."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Simplify consultations and optimize management",
+      "subtitle": "Hundreds of practitioners already trust Nextmotion Consult to save time and improve patient experience.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Discover the Essential plan"
+    }
+  },
+  "agenda": {
+    "hero": {
+      "badge": "Nextmotion Agenda",
+      "title": "The scheduling software built for aesthetic clinics",
+      "subtitle": "Manage appointments, practitioners, rooms and equipment from a single interface — designed specifically for aesthetic practices.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Discover features"
+    },
+    "problems": {
+      "title": "Why traditional scheduling tools don't work for aesthetic clinics",
+      "items": [
+        "Generic calendars not designed for multi-practitioner management",
+        "No integration with patient files and treatment history",
+        "Manual management of rooms, equipment and availability",
+        "Difficulty synchronizing with Doctolib and other platforms"
+      ]
+    },
+    "solution": {
+      "title": "Smart scheduling designed for aesthetic medicine",
+      "items": [
+        {
+          "title": "Multi-practitioner & multi-room",
+          "description": "Schedule consultations and treatments across multiple practitioners, rooms or sites from one calendar"
+        },
+        {
+          "title": "Patient integration",
+          "description": "Every appointment is automatically linked to patient file, quote and payment"
+        },
+        {
+          "title": "Online booking portal",
+          "description": "Let patients book appointments autonomously via embedded widget on your website"
+        },
+        {
+          "title": "Smart synchronization",
+          "description": "Sync with Doctolib, Google Calendar and iCal bidirectionally"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "An agenda that works for your practice",
+      "items": [
+        {
+          "title": "Save time daily",
+          "description": "Automatic confirmations, reminders and notifications eliminate manual follow-up"
+        },
+        {
+          "title": "Increase bookings",
+          "description": "24/7 online booking captures more appointments and reduces no-shows"
+        },
+        {
+          "title": "Stay mobile",
+          "description": "Manage your schedule from anywhere with the iOS and Android apps"
+        }
+      ]
+    },
+    "ecosystem": {
+      "title": "Seamlessly integrated with your workflow",
+      "items": [
+        {
+          "title": "Doctolib connectors",
+          "description": "Level 1 and 2 connectors to import patients or fully synchronize appointments"
+        },
+        {
+          "title": "Patient portal integration",
+          "description": "Patients can view appointments, documents and results in one place"
+        },
+        {
+          "title": "API & automations",
+          "description": "Connect to your CRM or marketing tools via Make, Zapier or direct API"
+        }
+      ]
+    },
+    "testimonial": {
+      "title": "They trust us",
+      "quote": "Nextmotion Agenda has streamlined our entire scheduling process. We've reduced administrative time by 60% and our patients love the convenience of online booking.",
+      "author": "Dr. Sophie Martin, aesthetic physician in Lyon"
+    },
+    "pricing": {
+      "title": "Included in Premium plan",
+      "subtitle": "Nextmotion Agenda is included in the Premium plan alongside Consult, Capture, Copilot AI and 3D. Available as an add-on for other plans."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can I sync with Google Calendar?",
+          "answer": "Yes, bidirectional synchronization with Google Calendar and iCal is included so your appointments stay in sync everywhere."
+        },
+        {
+          "question": "Is there a mobile app?",
+          "answer": "Yes, available on iPhone and Android with notifications, messaging and full schedule management."
+        },
+        {
+          "question": "Is it compatible with Doctolib?",
+          "answer": "Yes, we offer two connector levels: patient import (Level 1) and full appointment synchronization (Level 2)."
+        },
+        {
+          "question": "Can I embed the booking widget on my website?",
+          "answer": "Yes, via iFrame or native API for seamless online booking directly on your site."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Simplify your appointment management",
+      "subtitle": "With Nextmotion Agenda, manage your schedule, patients and notifications in one intuitive platform.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Discover Premium plan"
+    }
+  },
+  "revolution": {
+    "hero": {
+      "badge": "Nextmotion Revolution",
+      "title": "Nextmotion Revolution: the Rolls Royce of standardization",
+      "subtitle": "A motorized acquisition platform for perfectly standardized before/after photos and dynamic videos.",
+      "cta": "Request a demo",
+      "ctaSecondary": "View specifications"
+    },
+    "concept": {
+      "title": "Absolute precision for medical imaging",
+      "subtitle": "A new era for before-and-after visualization.",
+      "text": "Nextmotion Revolution is a robotic arm controlled by your iPhone that rotates around the patient at a constant speed. It captures every angle, every expression and every emotion to produce dynamic videos that can be analyzed from any viewpoint."
+    },
+    "benefits": {
+      "title": "Key advantages of Nextmotion Revolution",
+      "item1": {
+        "title": "Total standardization",
+        "desc": "Recreate the exact same video sequence months later using saved parameters."
+      },
+      "item2": {
+        "title": "Smart robotic arm",
+        "desc": "Smooth 180° or 360° rotation with precise stops at pre-defined positions."
+      },
+      "item3": {
+        "title": "Calibrated lighting",
+        "desc": "Dual LED panels on battery ensure constant and shadow-free lighting."
+      },
+      "item4": {
+        "title": "Dynamic captures",
+        "desc": "Record facial expressions and emotions for authentic and natural results."
+      },
+      "item5": {
+        "title": "Portable & autonomous",
+        "desc": "Lightweight, battery-powered and transportable in a compact case."
+      }
+    },
+    "workflow": {
+      "title": "How it works",
+      "step1": "1️⃣ Connect your iPhone to the device via Bluetooth using the Nextmotion Capture app.",
+      "step2": "2️⃣ Calibrate camera position, lighting and patient alignment in seconds.",
+      "step3": "3️⃣ Record the 'before' video following facial expression cues on screen.",
+      "step4": "4️⃣ Recreate the 'after' video automatically using the ghost image and stored parameters."
+    },
+    "value": {
+      "title": "Dynamic videos. Irrefutable proof.",
+      "subtitle": "Emotion, transparency and credibility in every frame.",
+      "text": "A video is worth a thousand pictures. It shows movement, emotion and natural results — no Photoshop, no filters. Patients trust what they see, colleagues respect your precision, and your results speak for themselves."
+    },
+    "integration": {
+      "title": "Seamless integration with the Nextmotion ecosystem",
+      "item1": {
+        "title": "Direct connection to Nextmotion Capture",
+        "desc": "Videos and images are automatically linked to the patient record."
+      },
+      "item2": {
+        "title": "Secure cloud storage",
+        "desc": "All data are stored on GDPR-compliant, HDS-certified servers in France."
+      },
+      "item3": {
+        "title": "AI analysis & comparison",
+        "desc": "Extract, compare and visualize results from any angle with millimetric accuracy."
+      }
+    },
+    "pricing": {
+      "title": "Nextmotion Revolution",
+      "price": "€19,900",
+      "subtitle": "Includes Nextmotion Starter Pack for life",
+      "starterPackValue": "(normally €99/month)",
+      "features": [
+        "Installation and calibration included",
+        "Complete training provided",
+        "Maintenance included",
+        "Nextmotion Starter Pack for life",
+        "The ultimate investment to showcase your expertise"
+      ],
+      "cta": "Get a quote"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "q": "Is it compatible with the Nextmotion app?",
+        "a": "Yes, the device connects directly via Bluetooth to the Nextmotion Capture app."
+      },
+      "q2": {
+        "q": "Can I extract photos from the video?",
+        "a": "Yes, you can capture and export HD stills from any angle."
+      },
+      "q3": {
+        "q": "Does it require a specific setup?",
+        "a": "No, it runs on battery and sets up in minutes."
+      },
+      "q4": {
+        "q": "Is it portable?",
+        "a": "Yes, the system comes in a compact, travel-ready case."
+      },
+      "q5": {
+        "q": "Is training included?",
+        "a": "Yes, each installation includes a complete calibration and usage session."
+      }
+    },
+    "final": {
+      "title": "Reinvent how you showcase your results",
+      "subtitle": "With Nextmotion Revolution, show what's real — from every angle, with full transparency.",
+      "cta1": "Request a demo",
+      "cta2": "Get a quote"
+    }
+  },
+  "3d": {
+    "hero": {
+      "badge": "Nextmotion 3D",
+      "title": "3D analysis and aging simulation for aesthetic medicine",
+      "subtitle": "Visualize your patients' anatomical evolution with Nextmotion 3D — a scientific, educational and differentiating tool for your consultations.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Discover the technology"
+    },
+    "problems": {
+      "title": "Why is it difficult to explain facial aging to your patients?",
+      "items": [
+        "Complex anatomical mechanisms difficult to visualize",
+        "2D photos don't show deep structural changes",
+        "Difficult to anticipate long-term evolution",
+        "Limited communication tools during consultations"
+      ]
+    },
+    "solution": {
+      "title": "A unique 3D anatomical visualization tool",
+      "items": [
+        {
+          "title": "Multi-layer visualization",
+          "description": "Observe skin, fat, muscles and bone structures in superposition for a complete understanding of facial anatomy"
+        },
+        {
+          "title": "Aging simulation",
+          "description": "Show patients how tissues evolve over time, layer by layer, in a scientific and visual way"
+        },
+        {
+          "title": "Educational support",
+          "description": "Enhance communication during consultation with clear, visual explanations of aging mechanisms"
+        },
+        {
+          "title": "Science-based models",
+          "description": "All 3D models are based on validated anatomical and imaging data for realistic accuracy"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "A tool serving your medical expertise",
+      "items": [
+        {
+          "title": "Differentiate your practice",
+          "description": "Offer an innovative and interactive experience that highlights your medical expertise"
+        },
+        {
+          "title": "Improve patient understanding",
+          "description": "Clear visualizations help patients better understand their anatomy and aging process"
+        },
+        {
+          "title": "Strengthen credibility",
+          "description": "Science-based approach demonstrates your commitment to education and transparency"
+        }
+      ]
+    },
+    "workflow": {
+      "title": "A state of the art application to highlight your patient's needs",
+      "items": [
+        {
+          "title": "Capture with precision",
+          "description": "Capture the patient's face in high definition with Nextmotion Capture"
+        },
+        {
+          "title": "Analyze in 3D",
+          "description": "Analyze anatomical layers directly in the 3D interface"
+        },
+        {
+          "title": "Present interactively",
+          "description": "Present the aging simulation interactively during the consultation"
+        }
+      ]
+    },
+    "science": {
+      "title": "Pricing",
+      "subtitle": "Simple and transparent pricing for Nextmotion 3D",
+      "price": "49",
+      "currency": "€",
+      "period": "/month",
+      "description": "Get access to the complete Nextmotion 3D application with all features included. Available on iOS and Android (smartphones and tablets). No hidden fees, cancel anytime."
+    },
+    "ecosystem": {
+      "title": "Integrated within the Nextmotion ecosystem",
+      "items": [
+        {
+          "title": "Accessible from Consult",
+          "description": "Compatible with Nextmotion Consult for an integrated experience"
+        },
+        {
+          "title": "Available on iOS and Android",
+          "description": "Use the app on smartphones and tablets for maximum flexibility"
+        },
+        {
+          "title": "Patient sharing",
+          "description": "Share your simulations securely with your patients"
+        }
+      ]
+    },
+    "security": {
+      "title": "Data protection and confidentiality",
+      "description": "All 3D patient data is hosted on HDS-certified servers, fully compliant with GDPR and medical standards."
+    },
+    "testimonial": {
+      "title": "They trust us",
+      "quote": "Nextmotion 3D has transformed how I educate my patients. They now understand the aging process better and appreciate the scientific approach.",
+      "author": "Dr. Sophie Martin, aesthetic physician in Lyon"
+    },
+    "pricing": {
+      "title": "Standalone app at €49/month",
+      "subtitle": "Nextmotion 3D is a standalone application not included in Nextmotion plans. Available on iOS and Android for smartphones and tablets."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Does 3D simulate treatments?",
+          "answer": "No, it only illustrates natural facial aging without simulating medical interventions or treatments."
+        },
+        {
+          "question": "What devices is Nextmotion 3D available on?",
+          "answer": "Nextmotion 3D is available on iOS and Android, compatible with both smartphones and tablets for maximum flexibility during your consultations."
+        },
+        {
+          "question": "Can I export images?",
+          "answer": "Yes, you can export visuals for patient records or presentations."
+        },
+        {
+          "question": "Is it included in my Nextmotion subscription?",
+          "answer": "No, Nextmotion 3D is an application available separately. It is not included in any of the Nextmotion plans."
+        },
+        {
+          "question": "Are models scientifically validated?",
+          "answer": "Yes, all 3D models are based on published and validated anatomical studies."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Offer your patients a unique 3D experience",
+      "subtitle": "With Nextmotion 3D, bring a scientific and visual dimension to your aesthetic consultations.",
+      "cta": "Request a demo",
+      "ctaSecondary": "Try for free"
+    }
+  },
+  "manager": {
+    "hero": {
+      "badge": "Clinic Manager",
+      "title": "Simplify your aesthetic clinic management",
+      "subtitle": "Centralize schedules, patient data, sales and practitioner performance in a single platform. Nextmotion helps you run your clinic like a real business manager.",
+      "cta1": "Request a demo",
+      "cta2": "Discover features"
+    },
+    "challenges": {
+      "title": "The daily challenges of a clinic manager",
+      "subtitle": "Take back control of your organization and profitability.",
+      "item1": {
+        "title": "Too many scattered tools",
+        "desc": "CRM, calendar, photos, accounting… hard to keep everything in sync."
+      },
+      "item2": {
+        "title": "Lack of visibility",
+        "desc": "Hard to measure practitioner performance and anticipate workload."
+      },
+      "item3": {
+        "title": "Limited commercial tracking",
+        "desc": "No clear view of conversion rates, quotes, or lost opportunities."
+      },
+      "item4": {
+        "title": "Fragmented communication",
+        "desc": "Assistants, doctors and management on different channels."
+      }
+    },
+    "solutions": {
+      "title": "How Nextmotion helps you manage efficiently",
+      "subtitle": "All your clinical management, centralized and connected.",
+      "item1": {
+        "title": "Real-time dashboard",
+        "desc": "Track key metrics, occupancy rates, signed quotes and lead sources at a glance."
+      },
+      "item2": {
+        "title": "Built-in AI assistant",
+        "desc": "Copilot AI automates transcription, quotes and patient follow-ups."
+      },
+      "item3": {
+        "title": "Team coordination",
+        "desc": "Unite doctors, assistants and management in a single collaborative workspace."
+      },
+      "item4": {
+        "title": "Multi-site and multi-practitioner agenda",
+        "desc": "Visualize workload and optimize scheduling."
+      },
+      "item5": {
+        "title": "Integrated business analytics",
+        "desc": "Monitor sales, track practitioner performance and automate follow-ups."
+      }
+    },
+    "data": {
+      "title": "Data that empowers decisions",
+      "subtitle": "Make strategic decisions based on insights, not intuition.",
+      "bullet1": "Automatic KPI tracking: revenue per doctor, conversion rate, repeat visits",
+      "bullet2": "Customizable, exportable reports (PDF, Excel)",
+      "bullet3": "AI analysis of patient trends and treatment volumes",
+      "bullet4": "Automatic alerts on low performance or patient churn"
+    },
+    "testimonial": {
+      "title": "They trust Nextmotion",
+      "quote": "Thanks to Nextmotion, we now have a clear view of each practitioner's profitability. I've reduced scheduling time by 30% and doubled our quote conversion rate.",
+      "author": "Anne, Manager - Aesthéline Clinic, Lyon"
+    },
+    "cta": {
+      "title": "Manage your clinic with the precision of a business leader",
+      "subtitle": "Discover how Nextmotion can transform your daily operations.",
+      "primary": "Request a demo",
+      "secondary": "See our plans"
+    }
+  },
+  "practitioner": {
+    "hero": {
+      "title": "Optimize your aesthetic practice",
+      "subtitle": "Focus on your patients — Nextmotion takes care of the rest: records, photos, quotes, consents and AI-generated reports.",
+      "cta1": "Request a demo",
+      "cta2": "Discover features"
+    },
+    "challenges": {
+      "title": "The challenges of modern aesthetic doctors",
+      "subtitle": "You're not just a practitioner — you're also a manager, communicator and educator.",
+      "item1": {
+        "title": "Too little time per patient",
+        "desc": "Administrative work and file management eat up valuable consultation time."
+      },
+      "item2": {
+        "title": "Time-consuming documentation",
+        "desc": "Consents, photos, quotes… everything takes time to organize and archive properly."
+      },
+      "item3": {
+        "title": "Limited visibility on results",
+        "desc": "Before/after comparisons are critical but hard to standardize manually."
+      },
+      "item4": {
+        "title": "Scattered patient communication",
+        "desc": "Messages spread across email, WhatsApp and SMS channels."
+      }
+    },
+    "solutions": {
+      "title": "How Nextmotion transforms your daily practice",
+      "subtitle": "Technology designed for doctors, by doctors.",
+      "item1": {
+        "title": "AI-assisted consultation",
+        "desc": "Copilot AI automatically writes your consultation notes, quotes and follow-ups from your voice."
+      },
+      "item2": {
+        "title": "Standardized medical photography",
+        "desc": "Capture perfect before/after visuals using Nextmotion Capture or Revolution."
+      },
+      "item3": {
+        "title": "Comprehensive patient records",
+        "desc": "Access full patient history: photos, consents, payments, notes and quotes."
+      },
+      "item4": {
+        "title": "Enhanced patient experience",
+        "desc": "Share results, videos and 3D simulations securely via the patient portal."
+      },
+      "item5": {
+        "title": "Time-saving efficiency",
+        "desc": "Less admin, more patients. Enjoy smoother, more productive days."
+      }
+    },
+    "data": {
+      "title": "Powerful tools serving your expertise",
+      "subtitle": "Turn every consultation into a premium experience.",
+      "bullet1": "AI-generated consultation summaries and reports",
+      "bullet2": "Dynamic before/after comparison tools",
+      "bullet3": "Built-in e-signature for consents",
+      "bullet4": "AI skin analysis for personalized recommendations"
+    },
+    "testimonial": {
+      "title": "They trust Nextmotion",
+      "quote": "Nextmotion has completely transformed my workflow: I save time, my patients are amazed by the visual tools, and my team works more smoothly.",
+      "author": "Dr. Sophie M., Aesthetic doctor in Paris"
+    },
+    "cta": {
+      "title": "Focus on what really matters: your patients",
+      "subtitle": "Try Nextmotion and experience a smarter way to practice aesthetic medicine.",
+      "primary": "Request a demo",
+      "secondary": "See our plans"
+    }
+  },
+  "assistant": {
+    "hero": {
+      "title": "Simplify your day at the reception desk",
+      "subtitle": "Nextmotion helps you manage appointments, photos, quotes and payments — without stress or wasted time.",
+      "cta1": "Request a demo",
+      "cta2": "Discover features"
+    },
+    "challenges": {
+      "title": "The daily challenges of a clinic assistant",
+      "subtitle": "Between patient care, scheduling and administration, your days are always full.",
+      "item1": {
+        "title": "Constant administrative pressure",
+        "desc": "Paper files, consents, payments and follow-ups — everything depends on you."
+      },
+      "item2": {
+        "title": "Complex scheduling",
+        "desc": "Doctors, rooms, machines, cancellations… managing logistics is a daily challenge."
+      },
+      "item3": {
+        "title": "Patients spread across multiple channels",
+        "desc": "Emails, SMS, WhatsApp, calls — hard to keep everything centralized."
+      },
+      "item4": {
+        "title": "Lack of visibility on priorities",
+        "desc": "Hard to know which tasks to handle first or which patients to follow up."
+      }
+    },
+    "solutions": {
+      "title": "Nextmotion, your daily ally",
+      "subtitle": "A simple, modern platform designed to make your job easier.",
+      "item1": {
+        "title": "Smart agenda",
+        "desc": "Easily manage multi-doctor and multi-room appointments synchronized with Doctolib, Google Calendar and iPhone."
+      },
+      "item2": {
+        "title": "Smooth patient reception",
+        "desc": "Instantly access patient files, photos, quotes, consents and payments."
+      },
+      "item3": {
+        "title": "Centralized communication",
+        "desc": "Send automated reminders via email, SMS or WhatsApp from one place."
+      },
+      "item4": {
+        "title": "Built-in AI assistant",
+        "desc": "Copilot AI answers calls, writes messages and assists the reception team 24/7."
+      },
+      "item5": {
+        "title": "Peace of mind",
+        "desc": "Save time, reduce errors and manage the clinic with confidence."
+      }
+    },
+    "data": {
+      "title": "Simple, powerful and connected tools",
+      "subtitle": "One interface to manage appointments, patients, payments and communication.",
+      "bullet1": "Automatic appointment synchronization",
+      "bullet2": "Smart notifications and reminders",
+      "bullet3": "Complete patient tracking and unified history",
+      "bullet4": "Access from any device: PC, tablet, smartphone"
+    },
+    "testimonial": {
+      "title": "What assistants say",
+      "quote": "Since using Nextmotion, I handle appointments and patients without stress. I save an hour every day and the whole team is more organized.",
+      "author": "Nathalie, Receptionist - Renaissance Clinic, Bordeaux"
+    },
+    "cta": {
+      "title": "Manage your clinic with ease, thanks to Nextmotion",
+      "subtitle": "Discover how to simplify your workflow and enhance patient experience.",
+      "primary": "Request a demo",
+      "secondary": "See our plans"
+    }
+  },
+  "multisite": {
+    "hero": {
+      "title": "Manage all your clinics from a single platform",
+      "subtitle": "Nextmotion centralizes operations, performance tracking and communication across your clinics for seamless management and growth.",
+      "cta1": "Request a demo",
+      "cta2": "Discover features"
+    },
+    "challenges": {
+      "title": "The challenges of managing multiple clinics",
+      "subtitle": "Scaling your network requires flawless coordination and real-time visibility.",
+      "item1": {
+        "title": "Lack of performance visibility",
+        "desc": "Each clinic operates differently, making it difficult to get a unified, reliable view."
+      },
+      "item2": {
+        "title": "Scattered tools and data",
+        "desc": "Accounting, photos, quotes and analytics — everything is fragmented across tools."
+      },
+      "item3": {
+        "title": "Complex team communication",
+        "desc": "Standardizing practices and communication between sites can be challenging."
+      },
+      "item4": {
+        "title": "Unlinked patient files",
+        "desc": "Patients treated at different sites don't always have a unified record."
+      }
+    },
+    "solutions": {
+      "title": "Nextmotion — built for multi-site and group management",
+      "subtitle": "One connected and scalable platform for your entire network.",
+      "item1": {
+        "title": "Real-time multi-site dashboard",
+        "desc": "Monitor and compare clinic performance through a centralized dashboard."
+      },
+      "item2": {
+        "title": "Role-based user management",
+        "desc": "Define access levels for doctors, assistants, managers and head office."
+      },
+      "item3": {
+        "title": "Cross-site synchronization",
+        "desc": "Access patient files, quotes and photos from any site in your network."
+      },
+      "item4": {
+        "title": "AI-powered performance analytics",
+        "desc": "Identify best practices and growth opportunities using data insights."
+      },
+      "item5": {
+        "title": "Standardized patient experience",
+        "desc": "Ensure consistent quality of care and service across all clinics."
+      }
+    },
+    "data": {
+      "title": "A 360° view for smarter decision-making",
+      "subtitle": "Nextmotion gives you full control of your network.",
+      "bullet1": "Consolidated multi-site dashboard",
+      "bullet2": "KPI tracking by site, practitioner or department",
+      "bullet3": "Automatic alerts on performance deviations",
+      "bullet4": "Customizable PDF reports and exports"
+    },
+    "testimonial": {
+      "title": "They manage their network with Nextmotion",
+      "quote": "With Nextmotion, we can monitor our 8 clinics in real time. I have a clear view of profitability per site, and communication between teams has never been smoother.",
+      "author": "Julien, Network Director - Aesthéline Group"
+    },
+    "cta": {
+      "title": "Take control of your network",
+      "subtitle": "Discover how Nextmotion helps aesthetic groups scale faster and smarter.",
+      "primary": "Request a demo",
+      "secondary": "See our plans"
+    }
+  },
+  "marketing": {
+    "hero": {
+      "title": "Boost your clinic's visibility and reputation",
+      "subtitle": "Nextmotion helps you create powerful marketing content, collect positive reviews, and drive data-based growth.",
+      "cta1": "Request a demo",
+      "cta2": "Discover features"
+    },
+    "challenges": {
+      "title": "The challenges of aesthetic marketing",
+      "subtitle": "Content creation, review management and performance tracking require connected and efficient tools.",
+      "item1": {
+        "title": "Lack of marketing content",
+        "desc": "It's difficult to get high-quality, standardized before/after photos and videos ready to use for campaigns."
+      },
+      "item2": {
+        "title": "Few positive reviews",
+        "desc": "Satisfied patients often forget to leave feedback, and negative reviews can dominate perception."
+      },
+      "item3": {
+        "title": "No actionable data for marketing decisions",
+        "desc": "Hard to track campaign ROI, patient behavior, or treatment performance."
+      },
+      "item4": {
+        "title": "Fragmented tools and data",
+        "desc": "Photos, stats, and reviews are spread across disconnected platforms."
+      }
+    },
+    "solutions": {
+      "title": "Nextmotion — your all-in-one marketing solution",
+      "subtitle": "Create, measure, and optimize your marketing performance effortlessly.",
+      "item1": {
+        "title": "Simplified content creation",
+        "desc": "With NM Capture, produce standardized before/after visuals for your campaigns and social media."
+      },
+      "item2": {
+        "title": "Automated review collection",
+        "desc": "The Marketing module automatically requests feedback from patients after treatments."
+      },
+      "item3": {
+        "title": "AI-driven performance analytics",
+        "desc": "Track satisfaction rates, lead volume, ROI per channel, and practitioner performance."
+      },
+      "item4": {
+        "title": "Centralized reporting",
+        "desc": "Access all your marketing data in one unified dashboard, ready for your team."
+      },
+      "item5": {
+        "title": "Marketing automations",
+        "desc": "Re-engage inactive patients, send personalized newsletters, and monitor results in real time."
+      }
+    },
+    "data": {
+      "title": "Data that powers your marketing strategy",
+      "subtitle": "Nextmotion turns clinic and patient insights into actionable marketing intelligence.",
+      "bullet1": "KPIs by treatment, practitioner, and acquisition channel",
+      "bullet2": "Lead tracking and conversion rate monitoring",
+      "bullet3": "Exportable, customized reports",
+      "bullet4": "API integration with your CRM and ad tools"
+    },
+    "testimonial": {
+      "title": "They elevated their marketing with Nextmotion",
+      "quote": "Thanks to Nextmotion, we create in-house visuals and automatically collect reviews. Our campaigns are more precise and profitable.",
+      "author": "Laura, Marketing Manager - Élysée Aesthetic Center, Paris"
+    },
+    "cta": {
+      "title": "Take your marketing to the next level",
+      "subtitle": "Discover how Nextmotion helps clinics grow faster with better visibility and data.",
+      "primary": "Request a demo",
+      "secondary": "See our plans"
+    }
+  },
+  "tarifs": {
+    "hero": {
+      "title": "Our Pricing",
+      "subtitle": "Flexible solutions, tailored to your aesthetic practice.",
+      "cta": "Request a Demo"
+    },
+    "plans": {
+      "title": "Our Plans",
+      "subtitle": "Choose the solution best suited to your practice.",
+      "popular": "Popular",
+      "starter": {
+        "title": "Starter",
+        "price": "€99/month",
+        "oldPrice": "€187/month",
+        "desc": "Ideal for independent practitioners who want to digitize simply.",
+        "f1": "Nextmotion Capture",
+        "f2": "Nextmotion Digital Consult",
+        "f3": "1 user included",
+        "f4": "Access to Nextmotion Academy",
+        "cta": "Get Started"
+      },
+      "essential": {
+        "title": "Essential",
+        "price": "€199/month",
+        "oldPrice": "€352/month",
+        "desc": "For growing practices that want to gain efficiency and organization.",
+        "f1": "Nextmotion Starter Pack",
+        "f2": "Consult AI (1 user)",
+        "f3": "Integrated accounting",
+        "f4": "2 users included",
+        "cta": "Request a Demo"
+      },
+      "premium": {
+        "title": "Premium",
+        "price": "€399/month",
+        "oldPrice": "€569/month",
+        "desc": "Designed for structured practices that want to automate and integrate AI into their daily routine.",
+        "f1": "Nextmotion Essential",
+        "f2": "Nextmotion Copilot AI",
+        "f3": "API access & automations",
+        "f4": "Nextmotion Calendar",
+        "f5": "5 users included",
+        "cta": "Request a Demo"
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "price": "Custom Quote",
+        "oldPrice": "",
+        "desc": "For clinic groups or networks. Custom integrations and global management.",
+        "f1": "Nextmotion Premium",
+        "f2": "Patient portal",
+        "f3": "Internal messaging & video",
+        "f4": "10 users included",
+        "cta": "Request a Demo"
+      }
+    },
+    "cloud": {
+      "title": "Nextmotion Cloud Storage",
+      "subtitle": "Simple and transparent plans, adapted to your storage needs.",
+      "tiers": {
+        "t1": { "title": "Up to 50 GB", "price": "Free", "text": "Ideal for small volumes." },
+        "t2": { "title": "50 to 200 GB", "price": "€49/month", "text": "For growing practices." },
+        "t3": { "title": "200 to 500 GB", "price": "€149/month", "text": "For clinics with high image volume." },
+        "t4": { "title": "500 GB to 1 TB", "price": "€249/month", "text": "For groups and multi-site structures." }
+      }
+    },
+    "addons": {
+      "title": "Additional Modules",
+      "subtitle": "Extend your functionality according to your clinic's needs.",
+      "nm3d": {
+        "title": "Nextmotion 3D",
+        "price": "€49/month",
+        "text": "Connect Nextmotion to your external tools (CRM, marketing, accounting...) and create your own custom automations."
+      },
+      "copilot": {
+        "title": "Additional Copilot AI Seat",
+        "price": "€99/month",
+        "text": "Add additional Copilot AI users to automate transcription, writing, and quote management across multiple workstations."
+      },
+      "api": {
+        "title": "API & Automations Module",
+        "price": "€99/month",
+        "text": "Connect Nextmotion to your external tools (CRM, marketing, accounting...) and create your own custom automations."
+      }
+    },
+    "annual": {
+      "title": "Annual Payment",
+      "subtitle": "5% discount for 1 year, 7% for 2 years, 10% for 3 years.",
+      "b1": { "title": "Save up to 10%", "text": "Significant reduction on pricing." },
+      "b2": { "title": "Priority Support", "text": "Privileged access to our support team." },
+      "b3": { "title": "Budget Stability", "text": "Plan your expenses long-term." }
+    },
+    "services": {
+      "title": "Our Service Offerings",
+      "s1": { "title": "Nextmotion Support", "text": "€69/month excl. VAT, includes 1 hour of training per month with our support teams." },
+      "s2": { "title": "Nextmotion Quickstart", "text": "€1000 excl. VAT, setup (15h) + 3 hours of training included." },
+      "s3": { "title": "Additional Training", "text": "€200 excl. VAT / hour." }
+    },
+    "final": {
+      "title": "Ready to Digitize Your Clinic?",
+      "subtitle": "Contact us to discover the ideal plan for your practice.",
+      "cta1": "Request a Demo",
+      "cta2": "Get a Quote"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "Creating value for doctors and patients worldwide",
+      "subtitle": "Nextmotion designs cutting-edge solutions to simplify medical practice, highlight clinical results and drive clinic growth.",
+      "cta": "Request a demo"
+    },
+    "intro": {
+      "paragraph": "Since its creation in 2015, Nextmotion has become the most innovative technology company in aesthetic medicine. Present in over 30 countries, our mission is to provide practitioners with intuitive, secure and connected tools to digitize every step of the patient journey — from consultation to loyalty."
+    },
+    "timeline": {
+      "title": "Our Story",
+      "years": [
+        { "year": "2015", "desc": "Launch of the first NextMotion (Face & Body) and filing of two international patents." },
+        { "year": "2016", "desc": "Creation of NextMotion Connect and introduction of digital management tools." },
+        { "year": "2017", "desc": "45 units installed in 15 countries. First fundraising round of €575K." },
+        { "year": "2018", "desc": "Introduction of Augmented and Mixed Reality. Nextmotion becomes the market's most innovative company." },
+        { "year": "2019", "desc": "Presence in more than 30 countries. Launch of 3D tools and €1M fundraising." },
+        { "year": "2020", "desc": "World premiere with the LENA AI-guided injection robot." },
+        { "year": "2021", "desc": "Major redesign with Nextmotion V2.0 and launch of Nextmotion Consult." },
+        { "year": "2024", "desc": "Launch of Copilot AI — full AI integration across the Nextmotion platform." }
+      ]
+    },
+    "mission": {
+      "title": "Creating value for practitioners and patients",
+      "paragraph": "Since day one, we've invested heavily in R&D to deliver innovations that truly matter. Our goal: to empower doctors with smart, disruptive tools that combine clinical excellence, patient experience and business growth."
+    },
+    "values": {
+      "title": "Our values",
+      "items": [
+        {
+          "name": "Innovation",
+          "desc": "We constantly explore new ways to integrate technology into aesthetic medicine."
+        },
+        {
+          "name": "Transparency",
+          "desc": "Our solutions foster ethical, clear communication between practitioners and patients."
+        },
+        {
+          "name": "Performance",
+          "desc": "We design fast, reliable tools that simplify your workflow and boost your results."
+        },
+        {
+          "name": "Humanity",
+          "desc": "Technology enhances — never replaces — the human connection between doctor and patient."
+        }
+      ]
+    },
+    "teamMedical": {
+      "title": "Built by doctors, for doctors",
+      "members": [
+        { "name": "Per Heden", "role": "MD, PhD", "desc": "Associate Professor of Plastic Surgery at Karolinska University, founder of Akademikliniken and pioneer in botulinum toxin use." },
+        { "name": "Constantin Stan", "role": "MD, PhD", "desc": "Certified plastic surgeon, ISAPS member and international expert in facial and neck surgery." },
+        { "name": "Jean-Paul Meningaud", "role": "MD, PhD", "desc": "Head of Plastic and Maxillofacial Surgery at Henri Mondor Hospital, France. Renowned academic and lecturer." },
+        { "name": "Dr Nabila Azib", "role": "MD, PhD", "desc": "International speaker and plastic surgeon specialized in patient experience and aesthetic anatomy." },
+        { "name": "Dr Diala Haykal", "role": "MD, PhD", "desc": "Renowned aesthetic physician specialized in laser technologies and advanced skin rejuvenation." }
+      ]
+    },
+    "teamOperational": {
+      "title": "On the field, experts by your side",
+      "members": [
+        { "name": "Dr Emmanuel Elard", "role": "Founder & CEO", "desc": "Aesthetic physician and entrepreneur, he created Nextmotion to digitize aesthetic medicine and promote transparent results." },
+        { "name": "Yasmina", "role": "Customer Success Manager - France", "desc": "Supports French clients daily to optimize their use of Nextmotion and maximize their satisfaction." },
+        { "name": "Santiago", "role": "Customer Success Manager - International", "desc": "Leads international client deployment and support with expertise and responsiveness." },
+        { "name": "Romain", "role": "Production Manager", "desc": "Coordinates production and ensures deliverable quality to guarantee an optimal user experience." },
+        { "name": "Loan", "role": "Senior Sales Executive", "desc": "Sales and client relationship expert, he guides clinics toward solutions best suited to their needs." },
+        { "name": "Théo", "role": "Business Developer", "desc": "Develops new strategic partnerships and identifies growth opportunities for Nextmotion." },
+        { "name": "Jérôme", "role": "Business Strategy Advisor", "desc": "Defines business strategy and supports Nextmotion's development with vision and expertise." },
+        { "name": "Yannig", "role": "Head of Marketing", "desc": "Leads marketing strategy and communications to strengthen Nextmotion's market presence." }
+      ]
+    },
+    "partners": {
+      "title": "Our partners and medical institutions",
+      "subtitle": "Nextmotion collaborates with leading medical institutions and societies to ensure scientific rigor and innovation in all developments."
+    },
+    "cta": {
+      "title": "The Nextmotion team is proud to support your growth",
+      "cta": "Request a demo"
+    }
+  },
+  "blog": {
+		"hero": {
+			"title": "Discover the latest news about aesthetic medicine with NextMotion",
+			"description": "NextMotion Takes all aspects of aesthetic medicine into account and brings the most relevant technologies together to build an evolutive solution for today's aesthetic doctors."
+		},
+		"posts": {
+			"readMore": "Read More",
+			"author": "NextMotion",
+			"category": "Events"
+		},
+		"categories": {
+			"Events": "Events",
+			"BeforeAfter": "Before & After",
+			"DigitalConsultation": "Digital Consultation",
+			"ELearning": "E-Aesthetics",
+			"CaseStudies": "Case studies"
+		},
+		"sidebar": {
+			"newsletter": {
+				"title": "Subscribe to our newsletter",
+				"placeholder": "Your business email",
+				"button": "Join the business revolution"
+			},
+			"popular": {
+				"title": "Most Popular"
+			},
+			"topics": {
+				"title": "Post By Topic",
+				"events": "Events",
+				"beforeAfter": "Before & After",
+				"digitalConsultation": "Digital Consultation",
+				"eLearning": "E-Aesthetics",
+				"caseStudies": "Case studies",
+				"count": {
+					"events": "8",
+					"beforeAfter": "2",
+					"digitalConsultation": "2",
+					"eLearning": "2",
+					"caseStudies": "1"
+				}
+			}
+		},
+		"articles": {
+			"cms2024": {
+				"title": "Discover medical innovation at the Corsica Medical Summit 2024!",
+				"subtitle": "à l'évènement CMS 2024",
+				"date": "21 et 22 juin 2024",
+				"location": "Le Palais des Congrès d'Ajaccio",
+				"excerpt": "Ajaccio, the pearl of the Mediterranean, will host the Corsica Medical Summit (CMS) on June 21st and 22nd, 2024, at..."
+			},
+			"aime2024": {
+				"title": "Robotics and Augmented Reality: Highlights from Dr. Elard's Presentation at the AIME 2024 Conference",
+				"subtitle": "at the AIME 2024 event",
+				"date": "May 30th and 31st",
+				"excerpt": "The AIME 2024 conference, held in Paris on May 30th and 31st, was a resounding success, bringing together aesthetic..."
+			},
+			"popularTitles": {
+				"1": "Join the AIME Congress 2024 with NextMotion!",
+				"2": "FME Congress 2024: Were we there, and you?",
+				"3": "FME 2024 Congress: witness the future of aesthetic medicine"
+			}
+		}
+	},
+  "article": {
+		"author": "NextMotion",
+		"appointment": {
+			"title": "Do you want to organize these 2 days of congress effectively?",
+			"subtitle": "Let's schedule a meeting beforehand.👇",
+			"button": "Scheduling an appointment"
+		},
+		"newsletter": {
+			"title": "Revolution your Business",
+			"placeholder": "Your business email",
+			"button": "Join the business revolution"
+		},
+		"popular": {
+			"title": "Popular articles"
+		},
+		"topics": {
+			"title": "Post By Topic",
+			"Events": "Events",
+			"BeforeAfter": "Before & After",
+			"DigitalConsultation": "Digital Consultation",
+			"ELearning": "E-Aesthetics",
+			"CaseStudies": "Case studies"
+		},
+		"contact": {
+			"firstName": "First Name",
+			"lastName": "Last Name",
+			"email": "Email",
+			"website": "Website",
+			"comment": "Comment",
+			"submit": "Submit Comment"
+		},
+		"sidebar": {
+			"newsletter": {
+				"title": "Revolution your Business",
+				"placeholder": "Your business email",
+				"button": "Join the business revolution"
+			},
+			"popular": {
+				"title": "Popular articles"
+			},
+			"topics": {
+				"title": "Post By Topic",
+				"events": "Events",
+				"beforeAfter": "Before & After",
+				"digitalConsultation": "Digital Consultation",
+				"eLearning": "E-Aesthetics",
+				"caseStudies": "Case studies",
+				"count": {
+					"events": "8",
+					"beforeAfter": "2",
+					"digitalConsultation": "2",
+					"eLearning": "2",
+					"caseStudies": "1"
+				}
+			}
+		}
+	},
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Our team will get back to you within 24 hours.",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "✅ Your message has been sent successfully, thank you!",
+    "error": "❌ An error occurred, please try again.",
+    "fields": {
+      "firstname": "First name",
+      "lastname": "Last name",
+      "email": "Email",
+      "country": "Country",
+      "phone": "Phone number",
+      "profession": "Profession",
+      "structureSize": "Structure size",
+      "objectives": "Main objective",
+      "message": "Additional information"
+    },
+    "professions": {
+      "medecin": "Doctor",
+      "manager": "Manager",
+      "assistant": "Assistant",
+      "secretaire": "Secretary",
+      "autre": "Other"
+    },
+    "structureSizes": {
+      "solo": "Single practitioner office",
+      "small": "Small structure (2–3 practitioners)",
+      "medium": "Medium structure (4–10 practitioners)",
+      "large": "Large structure (10+ practitioners)"
+    },
+    "objectivesList": {
+      "rentabilite": "Improve profitability",
+      "patients": "Attract more patients",
+      "temps": "Save time on administration",
+      "digitaliser": "Digitize / automate my practice",
+      "ia": "Discover AI's potential"
+    }
+  }
+}
