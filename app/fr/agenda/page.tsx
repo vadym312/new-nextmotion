@@ -1,30 +1,28 @@
-import { Locale, createTranslator } from '@/utils/i18n';
-import { Container } from '@/components/layout/Container';
-import { Section } from '@/components/layout/Section';
+import { createTranslator } from "@/utils/i18n";
+import { Container } from "@/components/layout/Container";
+import Link from "next/link";
 import {
   Calendar,
   Users,
   MapPin,
   Smartphone,
-  Link,
   Share2,
   Globe,
   Clock,
   CheckCircle,
   TrendingUp,
   Check,
-  Shield,
   Star,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from "@/components/ui/accordion";
 
 export default function AgendaPage() {
-  const t = createTranslator('fr');
+  const t = createTranslator("fr");
 
   return (
     <>
@@ -34,21 +32,25 @@ export default function AgendaPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
                 <Calendar className="w-4 h-4" />
-                {t('agenda.hero.badge')}
+                {t("agenda.hero.badge")}
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-                {t('agenda.hero.title')}
+                {t("agenda.hero.title")}
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                {t('agenda.hero.subtitle')}
+                {t("agenda.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('agenda.hero.cta')}
-                </button>
-                <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('agenda.hero.ctaSecondary')}
-                </button>
+                <Link href="/fr/contact_form">
+                  <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("agenda.hero.cta")}
+                  </button>
+                </Link>
+                <Link href="/fr/starter">
+                  <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("agenda.hero.ctaSecondary")}
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="relative">
@@ -68,7 +70,7 @@ export default function AgendaPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('agenda.problems.title')}
+              {t("agenda.problems.title")}
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
@@ -102,7 +104,7 @@ export default function AgendaPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('agenda.solution.title')}
+              {t("agenda.solution.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -145,7 +147,7 @@ export default function AgendaPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('agenda.benefits.title')}
+              {t("agenda.benefits.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-3 max-w-7xl mx-auto">
@@ -182,7 +184,7 @@ export default function AgendaPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('agenda.ecosystem.title')}
+              {t("agenda.ecosystem.title")}
             </h2>
           </div>
           <div className="max-w-6xl mx-auto">
@@ -201,7 +203,7 @@ export default function AgendaPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('agenda.testimonial.title')}
+              {t("agenda.testimonial.title")}
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -215,10 +217,10 @@ export default function AgendaPage() {
                 ))}
               </div>
               <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed">
-                {t('agenda.testimonial.quote')}
+                {t("agenda.testimonial.quote")}
               </blockquote>
               <p className="text-gray-900 font-semibold">
-                {t('agenda.testimonial.author')}
+                {t("agenda.testimonial.author")}
               </p>
             </div>
           </div>
@@ -229,10 +231,10 @@ export default function AgendaPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('agenda.pricing.title')}
+              {t("agenda.pricing.title")}
             </h2>
             <p className="text-xl text-gray-700">
-              {t('agenda.pricing.subtitle')}
+              {t("agenda.pricing.subtitle")}
             </p>
           </div>
 
@@ -242,15 +244,15 @@ export default function AgendaPage() {
                 returnObjects: true,
               }) as any;
               const isRecommended = plan.recommended;
-              const isGreen = plan.ctaVariant === 'green';
+              const isGreen = plan.ctaVariant === "green";
 
               return (
                 <div
                   key={planIndex}
                   className={`relative p-6 bg-white rounded-2xl border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col ${
                     isRecommended
-                      ? 'border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50'
-                      : 'border-gray-200'
+                      ? "border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50"
+                      : "border-gray-200"
                   }`}
                 >
                   {isRecommended && (
@@ -271,8 +273,8 @@ export default function AgendaPage() {
                   </div>
 
                   <div className="mb-6">
-                    {plan.price === 'Sur devis' ||
-                    plan.price === 'Custom quote' ? (
+                    {plan.price === "Sur devis" ||
+                    plan.price === "Custom quote" ? (
                       <div className="text-3xl font-bold text-[#0F172A]">
                         {plan.price}
                       </div>
@@ -301,7 +303,7 @@ export default function AgendaPage() {
                     {plan.features.map(
                       (feature: string, featureIndex: number) => {
                         const isBold =
-                          feature.startsWith('**') && feature.endsWith('**');
+                          feature.startsWith("**") && feature.endsWith("**");
                         const displayText = isBold
                           ? feature.slice(2, -2)
                           : feature;
@@ -317,7 +319,7 @@ export default function AgendaPage() {
                             />
                             <span
                               className={`text-sm text-gray-700 ${
-                                isBold ? 'font-bold' : ''
+                                isBold ? "font-bold" : ""
                               }`}
                             >
                               {displayText}
@@ -328,15 +330,17 @@ export default function AgendaPage() {
                     )}
                   </div>
 
-                  <button
-                    className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                      isGreen
-                        ? 'bg-green-600 text-white hover:bg-green-700'
-                        : 'bg-[#1650EF] text-white hover:bg-[#1650EF]/90'
-                    }`}
-                  >
-                    {plan.cta}
-                  </button>
+                  <Link href={isGreen ? "/fr/starter" : "/fr/contact_form"}>
+                    <button
+                      className={`w-full py-3 rounded-lg font-semibold transition-colors ${
+                        isGreen
+                          ? "bg-green-600 text-white hover:bg-green-700"
+                          : "bg-[#1650EF] text-white hover:bg-[#1650EF]/90"
+                      }`}
+                    >
+                      {plan.cta}
+                    </button>
+                  </Link>
 
                   <p className="text-xs text-gray-500 text-center mt-4">
                     {plan.support}
@@ -352,7 +356,7 @@ export default function AgendaPage() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] text-center sm:text-4xl mb-12">
-              {t('agenda.faq.title')}
+              {t("agenda.faq.title")}
             </h2>
 
             <Accordion type="single" collapsible className="space-y-3">
@@ -379,18 +383,22 @@ export default function AgendaPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-              {t('agenda.finalCta.title')}
+              {t("agenda.finalCta.title")}
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              {t('agenda.finalCta.subtitle')}
+              {t("agenda.finalCta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('agenda.finalCta.cta')}
-              </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('agenda.finalCta.ctaSecondary')}
-              </button>
+              <Link href="/fr/contact_form">
+                <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("agenda.finalCta.cta")}
+                </button>
+              </Link>
+              <Link href="/fr/starter">
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("agenda.finalCta.ctaSecondary")}
+                </button>
+              </Link>
             </div>
           </div>
         </Container>

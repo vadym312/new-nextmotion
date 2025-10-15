@@ -1,7 +1,8 @@
-import { createTranslator } from '@/utils/i18n';
-import { Container } from '@/components/layout/Container';
-import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
-import Image from 'next/image';
+import { createTranslator } from "@/utils/i18n";
+import { Container } from "@/components/layout/Container";
+import { TestimonialsCarousel } from "@/components/layout/TestimonialsCarousel";
+import Image from "next/image";
+import Link from "next/link";
 import {
   UserCheck,
   Clock,
@@ -16,10 +17,10 @@ import {
   CheckCircle2,
   Bot,
   RefreshCcw,
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function AssistantPage() {
-  const t = createTranslator('en');
+  const t = createTranslator("en");
 
   return (
     <>
@@ -32,17 +33,19 @@ export default function AssistantPage() {
                 Clinic Assistant
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-                {t('assistant.hero.title')}
+                {t("assistant.hero.title")}
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                {t('assistant.hero.subtitle')}
+                {t("assistant.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('assistant.hero.cta1')}
-                </button>
+                <Link href="/contact_form">
+                  <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("assistant.hero.cta1")}
+                  </button>
+                </Link>
                 <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('assistant.hero.cta2')}
+                  {t("assistant.hero.cta2")}
                 </button>
               </div>
             </div>
@@ -66,17 +69,21 @@ export default function AssistantPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('assistant.challenges.title')}
+              {t("assistant.challenges.title")}
             </h2>
             <p className="text-lg text-gray-600">
-              {t('assistant.challenges.subtitle')}
+              {t("assistant.challenges.subtitle")}
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
             {[0, 1, 2, 3].map((index) => {
               const icons = [Clock, CalendarClock, MessageSquare, FileText];
               const Icon = icons[index];
-              const itemKey = `item${index + 1}` as 'item1' | 'item2' | 'item3' | 'item4';
+              const itemKey = `item${index + 1}` as
+                | "item1"
+                | "item2"
+                | "item3"
+                | "item4";
               return (
                 <div
                   key={index}
@@ -107,22 +114,35 @@ export default function AssistantPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('assistant.solutions.title')}
+              {t("assistant.solutions.title")}
             </h2>
             <p className="text-lg text-gray-600">
-              {t('assistant.solutions.subtitle')}
+              {t("assistant.solutions.subtitle")}
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto justify-items-center">
             {[0, 1, 2, 3, 4].map((index) => {
-              const icons = [Calendar, Users, MessageCircle, Headphones, Sparkles];
+              const icons = [
+                Calendar,
+                Users,
+                MessageCircle,
+                Headphones,
+                Sparkles,
+              ];
               const Icon = icons[index];
-              const itemKey = `item${index + 1}` as 'item1' | 'item2' | 'item3' | 'item4' | 'item5';
+              const itemKey = `item${index + 1}` as
+                | "item1"
+                | "item2"
+                | "item3"
+                | "item4"
+                | "item5";
               return (
                 <div
                   key={index}
                   className={`p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 w-full ${
-                    index === 4 ? 'sm:col-span-2 lg:col-span-1 lg:col-start-2' : ''
+                    index === 4
+                      ? "sm:col-span-2 lg:col-span-1 lg:col-start-2"
+                      : ""
                   }`}
                 >
                   <div className="flex justify-center mb-6">
@@ -150,46 +170,47 @@ export default function AssistantPage() {
               Powerful tools streamlining your workflow
             </h2>
             <p className="text-lg text-gray-600">
-              Simplify daily operations with smart tools designed for clinic efficiency
+              Simplify daily operations with smart tools designed for clinic
+              efficiency
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
             {[
               {
-                name: 'NM Agenda',
-                desc: 'Automated appointment scheduling',
+                name: "NM Agenda",
+                desc: "Automated appointment scheduling",
                 icon: Calendar,
-                gradient: 'from-blue-50 to-blue-100',
-                iconColor: 'text-blue-500'
+                gradient: "from-blue-50 to-blue-100",
+                iconColor: "text-blue-500",
               },
               {
-                name: 'Patient Portal',
-                desc: 'Easy patient communication',
+                name: "Patient Portal",
+                desc: "Easy patient communication",
                 icon: Users,
-                gradient: 'from-green-50 to-green-100',
-                iconColor: 'text-green-500'
+                gradient: "from-green-50 to-green-100",
+                iconColor: "text-green-500",
               },
               {
-                name: 'Digital Consents',
-                desc: 'Paperless document management',
+                name: "Digital Consents",
+                desc: "Paperless document management",
                 icon: FileText,
-                gradient: 'from-amber-50 to-amber-100',
-                iconColor: 'text-amber-500'
+                gradient: "from-amber-50 to-amber-100",
+                iconColor: "text-amber-500",
               },
               {
-                name: 'Copilot AI',
-                desc: 'Smart assistant for tasks',
+                name: "Copilot AI",
+                desc: "Smart assistant for tasks",
                 icon: Bot,
-                gradient: 'from-purple-50 to-purple-100',
-                iconColor: 'text-purple-500'
+                gradient: "from-purple-50 to-purple-100",
+                iconColor: "text-purple-500",
               },
               {
-                name: 'Doctolib Sync',
-                desc: 'Calendar synchronization',
+                name: "Doctolib Sync",
+                desc: "Calendar synchronization",
                 icon: RefreshCcw,
-                gradient: 'from-cyan-50 to-cyan-100',
-                iconColor: 'text-cyan-500'
-              }
+                gradient: "from-cyan-50 to-cyan-100",
+                iconColor: "text-cyan-500",
+              },
             ].map((tool, index) => {
               const Icon = tool.icon;
               return (
@@ -197,9 +218,14 @@ export default function AssistantPage() {
                   key={index}
                   className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <div className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}>
+                  <div
+                    className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}
+                  >
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon className={`w-16 h-16 ${tool.iconColor}`} strokeWidth={1.5} />
+                      <Icon
+                        className={`w-16 h-16 ${tool.iconColor}`}
+                        strokeWidth={1.5}
+                      />
                     </div>
                   </div>
                   <div className="p-6">
@@ -221,16 +247,20 @@ export default function AssistantPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('assistant.data.title')}
+              {t("assistant.data.title")}
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              {t('assistant.data.subtitle')}
+              {t("assistant.data.subtitle")}
             </p>
           </div>
           <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 sm:p-12 border border-gray-100 shadow-sm">
             <div className="grid gap-6 sm:grid-cols-2">
               {[1, 2, 3, 4].map((index) => {
-                const bulletKey = `bullet${index}` as 'bullet1' | 'bullet2' | 'bullet3' | 'bullet4';
+                const bulletKey = `bullet${index}` as
+                  | "bullet1"
+                  | "bullet2"
+                  | "bullet3"
+                  | "bullet4";
                 return (
                   <div key={index} className="flex items-start gap-3">
                     <CheckCircle2
@@ -252,26 +282,29 @@ export default function AssistantPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('assistant.testimonial.title')}
+              {t("assistant.testimonial.title")}
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <TestimonialsCarousel
               testimonials={[
                 {
-                  quote: "Managing appointments has never been easier. The calendar sync with Doctolib eliminated all scheduling conflicts and our patients love the reminders.",
+                  quote:
+                    "Managing appointments has never been easier. The calendar sync with Doctolib eliminated all scheduling conflicts and our patients love the reminders.",
                   author: "Laura Bennett",
                   role: "Clinic Coordinator, Manchester",
                   rating: 5,
                 },
                 {
-                  quote: "The patient communication tools are fantastic. I can quickly respond to inquiries and the automated follow-ups have improved our patient retention.",
+                  quote:
+                    "The patient communication tools are fantastic. I can quickly respond to inquiries and the automated follow-ups have improved our patient retention.",
                   author: "Maria Garcia",
                   role: "Medical Assistant, Barcelona",
                   rating: 5,
                 },
                 {
-                  quote: "Document management is so much simpler now. Everything is digital, organized, and accessible. It's made my job significantly easier.",
+                  quote:
+                    "Document management is so much simpler now. Everything is digital, organized, and accessible. It's made my job significantly easier.",
                   author: "Sophie Dubois",
                   role: "Administrative Assistant, Brussels",
                   rating: 5,
@@ -288,18 +321,22 @@ export default function AssistantPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-              {t('assistant.cta.title')}
+              {t("assistant.cta.title")}
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              {t('assistant.cta.subtitle')}
+              {t("assistant.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('assistant.cta.primary')}
-              </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('assistant.cta.secondary')}
-              </button>
+              <Link href="/contact_form">
+                <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("assistant.cta.primary")}
+                </button>
+              </Link>
+              <Link href="/pricing">
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("assistant.cta.secondary")}
+                </button>
+              </Link>
             </div>
           </div>
         </Container>

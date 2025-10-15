@@ -1,6 +1,7 @@
-import { Locale, createTranslator } from '@/utils/i18n';
-import { Container } from '@/components/layout/Container';
-import { CopilotCarousel } from '@/components/layout/CopilotCarousel';
+import { createTranslator } from "@/utils/i18n";
+import { Container } from "@/components/layout/Container";
+import { CopilotCarousel } from "@/components/layout/CopilotCarousel";
+import Link from "next/link";
 import {
   Brain,
   Clock,
@@ -10,19 +11,18 @@ import {
   ClipboardList,
   MessageSquare,
   FileSignature,
-  Workflow,
   Check,
   Play,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from "@/components/ui/accordion";
 
 export default function CopilotAIPage() {
-  const t = createTranslator('en');
+  const t = createTranslator("en");
 
   return (
     <>
@@ -32,18 +32,20 @@ export default function CopilotAIPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
                 <Brain className="w-4 h-4" />
-                {t('copilotAi.hero.badge')}
+                {t("copilotAi.hero.badge")}
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-                {t('copilotAi.hero.title')}
+                {t("copilotAi.hero.title")}
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                {t('copilotAi.hero.subtitle')}
+                {t("copilotAi.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('copilotAi.hero.cta')}
-                </button>
+                <Link href="/contact_form">
+                  <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("copilotAi.hero.cta")}
+                  </button>
+                </Link>
                 <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl flex items-center justify-center gap-2">
                   <Play className="w-5 h-5" />
                   Play video
@@ -67,7 +69,7 @@ export default function CopilotAIPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('copilotAi.benefits.title')}
+              {t("copilotAi.benefits.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
@@ -101,10 +103,10 @@ export default function CopilotAIPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('copilotAi.intelligence.title')}
+              {t("copilotAi.intelligence.title")}
             </h2>
             <p className="text-xl text-gray-600">
-              {t('copilotAi.intelligence.subtitle')}
+              {t("copilotAi.intelligence.subtitle")}
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-3 max-w-7xl mx-auto mb-12">
@@ -139,7 +141,7 @@ export default function CopilotAIPage() {
           </div>
           <div className="mt-8 flex justify-center">
             <a
-              href={'https://www.youtube.com/watch?v=SY3cs5jWV0s&t=1s'}
+              href={"https://www.youtube.com/watch?v=SY3cs5jWV0s&t=1s"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-br from-[#1650EF] to-[#1E40AF] text-white rounded-xl hover:shadow-xl transition-all duration-300 font-semibold text-lg group"
@@ -155,12 +157,12 @@ export default function CopilotAIPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('copilotAi.ecosystem.title')}
+              {t("copilotAi.ecosystem.title")}
             </h2>
           </div>
           <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 sm:p-12 border border-gray-100 shadow-sm">
             <p className="text-lg text-[#4B5563] leading-relaxed text-center mb-8">
-              {t('copilotAi.ecosystem.text')}
+              {t("copilotAi.ecosystem.text")}
             </p>
             <div className="aspect-video rounded-2xl overflow-hidden">
               <img
@@ -180,7 +182,8 @@ export default function CopilotAIPage() {
               Included from the Essential pack
             </h2>
             <p className="text-xl text-gray-700">
-              Enjoy Nextmotion Copilot from the Essential pack (1 seat, €99/month/additional user)
+              Enjoy Nextmotion Copilot from the Essential pack (1 seat,
+              €99/month/additional user)
             </p>
           </div>
 
@@ -190,7 +193,7 @@ export default function CopilotAIPage() {
                 returnObjects: true,
               }) as any;
               const isRecommended = plan.recommended;
-              const isGreen = plan.ctaVariant === 'green';
+              const isGreen = plan.ctaVariant === "green";
               const isEssential = planIndex === 1;
 
               return (
@@ -198,8 +201,8 @@ export default function CopilotAIPage() {
                   key={planIndex}
                   className={`relative p-6 bg-white rounded-2xl border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col ${
                     isRecommended
-                      ? 'border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50'
-                      : 'border-gray-200'
+                      ? "border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50"
+                      : "border-gray-200"
                   }`}
                 >
                   {isRecommended && (
@@ -220,8 +223,8 @@ export default function CopilotAIPage() {
                   </div>
 
                   <div className="mb-6">
-                    {plan.price === 'Sur devis' ||
-                    plan.price === 'Custom quote' ? (
+                    {plan.price === "Sur devis" ||
+                    plan.price === "Custom quote" ? (
                       <div className="text-3xl font-bold text-[#0F172A]">
                         {plan.price}
                       </div>
@@ -255,7 +258,7 @@ export default function CopilotAIPage() {
                     {plan.features.map(
                       (feature: string, featureIndex: number) => {
                         const isBold =
-                          feature.startsWith('**') && feature.endsWith('**');
+                          feature.startsWith("**") && feature.endsWith("**");
                         const displayText = isBold
                           ? feature.slice(2, -2)
                           : feature;
@@ -271,7 +274,7 @@ export default function CopilotAIPage() {
                             />
                             <span
                               className={`text-sm text-gray-700 ${
-                                isBold ? 'font-bold' : ''
+                                isBold ? "font-bold" : ""
                               }`}
                             >
                               {displayText}
@@ -282,17 +285,19 @@ export default function CopilotAIPage() {
                     )}
                   </div>
 
-                  <button
-                    className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                      isGreen
-                        ? 'bg-green-600 text-white hover:bg-green-700'
-                        : isRecommended
-                        ? 'bg-[#1650EF] text-white hover:bg-[#1650EF]/90'
-                        : 'bg-white border-2 border-[#1650EF] text-[#1650EF] hover:bg-gray-50'
-                    }`}
-                  >
-                    {plan.cta}
-                  </button>
+                  <Link href={isGreen ? "/starter" : "/contact_form"}>
+                    <button
+                      className={`w-full py-3 rounded-lg font-semibold transition-colors ${
+                        isGreen
+                          ? "bg-green-600 text-white hover:bg-green-700"
+                          : isRecommended
+                          ? "bg-[#1650EF] text-white hover:bg-[#1650EF]/90"
+                          : "bg-white border-2 border-[#1650EF] text-[#1650EF] hover:bg-gray-50"
+                      }`}
+                    >
+                      {plan.cta}
+                    </button>
+                  </Link>
 
                   <p className="text-xs text-gray-500 mt-4 text-center">
                     {plan.support}
@@ -308,7 +313,7 @@ export default function CopilotAIPage() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] text-center sm:text-4xl mb-12">
-              {t('copilotAi.faq.title')}
+              {t("copilotAi.faq.title")}
             </h2>
 
             <Accordion type="single" collapsible className="space-y-3">
@@ -335,18 +340,22 @@ export default function CopilotAIPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-              {t('copilotAi.finalCta.title')}
+              {t("copilotAi.finalCta.title")}
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              {t('copilotAi.finalCta.subtitle')}
+              {t("copilotAi.finalCta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('copilotAi.finalCta.cta')}
-              </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('copilotAi.finalCta.ctaSecondary')}
-              </button>
+              <Link href="/contact_form">
+                <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("copilotAi.finalCta.cta")}
+                </button>
+              </Link>
+              <Link href="/starter">
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("copilotAi.finalCta.ctaSecondary")}
+                </button>
+              </Link>
             </div>
           </div>
         </Container>

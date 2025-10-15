@@ -2,23 +2,24 @@
 
 import Link from 'next/link';
 import { Container } from './Container';
-import { Locale } from '@/utils/i18n';
 import { FOOTER_EN, FOOTER_FR } from '@/config/nav.config';
+import { getTranslations } from '@/utils/i18n';
+import { usePathname } from 'next/navigation';
 
-interface FooterProps {
-  locale: Locale;
-  translations: Record<string, string>;
-}
-
-export function FooterNew({ locale, translations }: FooterProps) {
-  const footerConfig = locale === 'en' ? FOOTER_EN : FOOTER_FR;
+export function FooterNew() {
+  const pathname = usePathname();
+  const currentLocale = pathname.startsWith("/fr") ? "fr" : "en";
+  const navTranslations = getTranslations(currentLocale, "navigation");
+  const commonTranslations = getTranslations(currentLocale, "common");
+  const translations = { ...navTranslations, ...commonTranslations.footer };
+  const footerConfig = currentLocale === 'fr' ? FOOTER_FR : FOOTER_EN;
 
   return (
     <footer className="bg-[#0F172A] text-white py-16">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div className="lg:col-span-1">
-            <Link href={`/${locale}`} className="inline-block mb-4">
+            <Link href={`/${currentLocale}`} className="inline-block mb-4">
               <img
                 src="/nmlogowhite.svg"
                 alt="Nextmotion"

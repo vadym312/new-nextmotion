@@ -1,7 +1,8 @@
-import { createTranslator } from '@/utils/i18n';
-import { Container } from '@/components/layout/Container';
-import { CaptureCarousel } from '@/components/layout/CaptureCarousel';
-import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
+import { createTranslator } from "@/utils/i18n";
+import { Container } from "@/components/layout/Container";
+import { CaptureCarousel } from "@/components/layout/CaptureCarousel";
+import { TestimonialsCarousel } from "@/components/layout/TestimonialsCarousel";
+import Link from "next/link";
 import {
   Camera,
   Smartphone,
@@ -13,21 +14,17 @@ import {
   Clock,
   Share2,
   Check,
-  Shield,
-  Download,
-  Server,
-  X,
   Play,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from "@/components/ui/accordion";
 
 export default function CapturePage() {
-  const t = createTranslator('en');
+  const t = createTranslator("en");
 
   return (
     <>
@@ -37,21 +34,25 @@ export default function CapturePage() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
                 <Camera className="w-4 h-4" />
-                {t('capture.hero.badge')}
+                {t("capture.hero.badge")}
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-                {t('capture.hero.title')}
+                {t("capture.hero.title")}
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                {t('capture.hero.subtitle')}
+                {t("capture.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('capture.hero.cta')}
-                </button>
-                <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('capture.hero.ctaSecondary')}
-                </button>
+                <Link href="/contact_form">
+                  <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("capture.hero.cta")}
+                  </button>
+                </Link>
+                <Link href="/starter">
+                  <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("capture.hero.ctaSecondary")}
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="relative w-[70%] mx-auto">
@@ -71,7 +72,7 @@ export default function CapturePage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('capture.problems.title')}
+              {t("capture.problems.title")}
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
@@ -110,7 +111,7 @@ export default function CapturePage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('capture.solution.title')}
+              {t("capture.solution.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
@@ -147,13 +148,13 @@ export default function CapturePage() {
           </div>
           <div className="mt-8 flex justify-center">
             <a
-              href={'https://www.youtube.com/watch?v=SY3cs5jWV0s&t=1s'}
+              href={"https://www.youtube.com/watch?v=SY3cs5jWV0s&t=1s"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-br from-[#1650EF] to-[#1E40AF] text-white rounded-xl hover:shadow-xl transition-all duration-300 font-semibold text-lg group"
             >
               <Play className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              {'Watch the video'}
+              {"Watch the video"}
             </a>
           </div>
         </Container>
@@ -163,7 +164,7 @@ export default function CapturePage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('capture.benefits.title')}
+              {t("capture.benefits.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-3 max-w-7xl mx-auto">
@@ -200,7 +201,7 @@ export default function CapturePage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('capture.ecosystem.title')}
+              {t("capture.ecosystem.title")}
             </h2>
           </div>
           <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8 sm:p-12 border border-blue-100">
@@ -238,32 +239,36 @@ export default function CapturePage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('capture.testimonial.title')}
+              {t("capture.testimonial.title")}
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <TestimonialsCarousel
               testimonials={[
                 {
-                  quote: "NM Capture has revolutionized our photo workflow. The standardized lighting and angles ensure perfect comparability. Our marketing has never looked better.",
+                  quote:
+                    "NM Capture has revolutionized our photo workflow. The standardized lighting and angles ensure perfect comparability. Our marketing has never looked better.",
                   author: "Dr. Claire Dubois",
                   role: "Aesthetic Clinic Owner, Marseille",
                   rating: 5,
                 },
                 {
-                  quote: "The automated organization and easy sharing features save us so much time. Patients love seeing their progress in the portal.",
+                  quote:
+                    "The automated organization and easy sharing features save us so much time. Patients love seeing their progress in the portal.",
                   author: "Dr. Marc Lefevre",
                   role: "Dermatologist, Toulouse",
                   rating: 5,
                 },
                 {
-                  quote: "Consistent, professional before/after photos every single time. The ROI has been incredible, both in time saved and patient conversion.",
+                  quote:
+                    "Consistent, professional before/after photos every single time. The ROI has been incredible, both in time saved and patient conversion.",
                   author: "Dr. Nathalie Vincent",
                   role: "Medical Spa Director, Cannes",
                   rating: 5,
                 },
                 {
-                  quote: "This tool has become indispensable for our practice. The quality and consistency of our visual documentation has improved dramatically.",
+                  quote:
+                    "This tool has become indispensable for our practice. The quality and consistency of our visual documentation has improved dramatically.",
                   author: "Dr. Laurent Petit",
                   role: "Aesthetic Surgeon, Strasbourg",
                   rating: 5,
@@ -280,10 +285,10 @@ export default function CapturePage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('capture.pricing.title')}
+              {t("capture.pricing.title")}
             </h2>
             <p className="text-xl text-gray-700">
-              {t('capture.pricing.subtitle')}
+              {t("capture.pricing.subtitle")}
             </p>
           </div>
 
@@ -293,15 +298,15 @@ export default function CapturePage() {
                 returnObjects: true,
               }) as any;
               const isRecommended = plan.recommended;
-              const isGreen = plan.ctaVariant === 'green';
+              const isGreen = plan.ctaVariant === "green";
 
               return (
                 <div
                   key={planIndex}
                   className={`relative p-6 bg-white rounded-2xl border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col ${
                     isRecommended
-                      ? 'border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50'
-                      : 'border-gray-200'
+                      ? "border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50"
+                      : "border-gray-200"
                   }`}
                 >
                   {isRecommended && (
@@ -322,8 +327,8 @@ export default function CapturePage() {
                   </div>
 
                   <div className="mb-6">
-                    {plan.price === 'Sur devis' ||
-                    plan.price === 'Custom quote' ? (
+                    {plan.price === "Sur devis" ||
+                    plan.price === "Custom quote" ? (
                       <div className="text-3xl font-bold text-[#0F172A]">
                         {plan.price}
                       </div>
@@ -352,7 +357,7 @@ export default function CapturePage() {
                     {plan.features.map(
                       (feature: string, featureIndex: number) => {
                         const isBold =
-                          feature.startsWith('**') && feature.endsWith('**');
+                          feature.startsWith("**") && feature.endsWith("**");
                         const displayText = isBold
                           ? feature.slice(2, -2)
                           : feature;
@@ -368,7 +373,7 @@ export default function CapturePage() {
                             />
                             <span
                               className={`text-sm text-gray-700 ${
-                                isBold ? 'font-bold' : ''
+                                isBold ? "font-bold" : ""
                               }`}
                             >
                               {displayText}
@@ -379,15 +384,17 @@ export default function CapturePage() {
                     )}
                   </div>
 
-                  <button
-                    className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                      isGreen
-                        ? 'bg-green-600 text-white hover:bg-green-700'
-                        : 'bg-[#1650EF] text-white hover:bg-[#1650EF]/90'
-                    }`}
-                  >
-                    {plan.cta}
-                  </button>
+                  <Link href={isGreen ? "/starter" : "/contact_form"}>
+                    <button
+                      className={`w-full py-3 rounded-lg font-semibold transition-colors ${
+                        isGreen
+                          ? "bg-green-600 text-white hover:bg-green-700"
+                          : "bg-[#1650EF] text-white hover:bg-[#1650EF]/90"
+                      }`}
+                    >
+                      {plan.cta}
+                    </button>
+                  </Link>
 
                   <p className="text-xs text-gray-500 text-center mt-4">
                     {plan.support}
@@ -403,7 +410,7 @@ export default function CapturePage() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] text-center sm:text-4xl mb-12">
-              {t('capture.faq.title')}
+              {t("capture.faq.title")}
             </h2>
 
             <Accordion type="single" collapsible className="space-y-3">
@@ -430,18 +437,22 @@ export default function CapturePage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-              {t('capture.finalCta.title')}
+              {t("capture.finalCta.title")}
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              {t('capture.finalCta.subtitle')}
+              {t("capture.finalCta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('capture.finalCta.cta')}
-              </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('capture.finalCta.ctaSecondary')}
-              </button>
+              <Link href="/contact_form">
+                <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("capture.finalCta.cta")}
+                </button>
+              </Link>
+              <Link href="/starter">
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("capture.finalCta.ctaSecondary")}
+                </button>
+              </Link>
             </div>
           </div>
         </Container>

@@ -1,6 +1,7 @@
-import { Container } from '@/components/layout/Container';
-import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
-import Image from 'next/image';
+import { Container } from "@/components/layout/Container";
+import { TestimonialsCarousel } from "@/components/layout/TestimonialsCarousel";
+import Image from "next/image";
+import Link from "next/link";
 import {
   Building2,
   Users,
@@ -11,7 +12,7 @@ import {
   DollarSign,
   Package,
   Activity,
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function ClinicManagerPage() {
   return (
@@ -28,15 +29,20 @@ export default function ClinicManagerPage() {
                 Manage Your Clinic with Confidence
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Streamline operations, optimize workflows, and grow your aesthetic practice with powerful management tools.
+                Streamline operations, optimize workflows, and grow your
+                aesthetic practice with powerful management tools.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  Request a Demo
-                </button>
-                <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  Learn More
-                </button>
+                <Link href="/contact_form">
+                  <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    Request a Demo
+                  </button>
+                </Link>
+                <Link href="/starter">
+                  <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="relative lg:h-full">
@@ -67,10 +73,26 @@ export default function ClinicManagerPage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
             {[
-              { icon: Users, title: 'Staff Coordination', desc: 'Managing team schedules and responsibilities' },
-              { icon: Calendar, title: 'Appointment Flow', desc: 'Optimizing patient booking and capacity' },
-              { icon: FileText, title: 'Data Management', desc: 'Keeping patient records organized' },
-              { icon: BarChart3, title: 'Business Insights', desc: 'Understanding clinic performance' },
+              {
+                icon: Users,
+                title: "Staff Coordination",
+                desc: "Managing team schedules and responsibilities",
+              },
+              {
+                icon: Calendar,
+                title: "Appointment Flow",
+                desc: "Optimizing patient booking and capacity",
+              },
+              {
+                icon: FileText,
+                title: "Data Management",
+                desc: "Keeping patient records organized",
+              },
+              {
+                icon: BarChart3,
+                title: "Business Insights",
+                desc: "Understanding clinic performance",
+              },
             ].map((item, index) => {
               const Icon = item.icon;
               return (
@@ -80,7 +102,10 @@ export default function ClinicManagerPage() {
                 >
                   <div className="flex justify-center mb-4">
                     <div className="w-12 h-12 bg-[#FFE8D1] rounded-2xl flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-[#EA580C]" strokeWidth={2} />
+                      <Icon
+                        className="w-6 h-6 text-[#EA580C]"
+                        strokeWidth={2}
+                      />
                     </div>
                   </div>
                   <h3 className="font-bold text-[#0F172A] text-base mb-2 text-center">
@@ -108,18 +133,40 @@ export default function ClinicManagerPage() {
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto justify-items-center">
             {[
-              { icon: BarChart3, title: 'Analytics Dashboard', desc: 'Real-time insights into clinic performance' },
-              { icon: Users, title: 'Team Management', desc: 'Coordinate staff schedules and roles' },
-              { icon: Calendar, title: 'Smart Scheduling', desc: 'Optimize appointments and capacity' },
-              { icon: FileText, title: 'Document Control', desc: 'Centralized patient records' },
-              { icon: TrendingUp, title: 'Growth Tools', desc: 'Track and improve key metrics' },
+              {
+                icon: BarChart3,
+                title: "Analytics Dashboard",
+                desc: "Real-time insights into clinic performance",
+              },
+              {
+                icon: Users,
+                title: "Team Management",
+                desc: "Coordinate staff schedules and roles",
+              },
+              {
+                icon: Calendar,
+                title: "Smart Scheduling",
+                desc: "Optimize appointments and capacity",
+              },
+              {
+                icon: FileText,
+                title: "Document Control",
+                desc: "Centralized patient records",
+              },
+              {
+                icon: TrendingUp,
+                title: "Growth Tools",
+                desc: "Track and improve key metrics",
+              },
             ].map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
                   className={`p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 w-full ${
-                    index === 4 ? 'sm:col-span-2 lg:col-span-1 lg:col-start-2' : ''
+                    index === 4
+                      ? "sm:col-span-2 lg:col-span-1 lg:col-start-2"
+                      : ""
                   }`}
                 >
                   <div className="flex justify-center mb-6">
@@ -147,46 +194,47 @@ export default function ClinicManagerPage() {
               Powerful tools optimizing your operations
             </h2>
             <p className="text-lg text-gray-600">
-              Complete management platform for efficient clinic operations and insights
+              Complete management platform for efficient clinic operations and
+              insights
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
             {[
               {
-                name: 'Analytics Dashboard',
-                desc: 'Real-time KPI tracking',
+                name: "Analytics Dashboard",
+                desc: "Real-time KPI tracking",
                 icon: BarChart3,
-                gradient: 'from-blue-50 to-blue-100',
-                iconColor: 'text-blue-500'
+                gradient: "from-blue-50 to-blue-100",
+                iconColor: "text-blue-500",
               },
               {
-                name: 'Staff Scheduling',
-                desc: 'Automated team management',
+                name: "Staff Scheduling",
+                desc: "Automated team management",
                 icon: Calendar,
-                gradient: 'from-purple-50 to-purple-100',
-                iconColor: 'text-purple-500'
+                gradient: "from-purple-50 to-purple-100",
+                iconColor: "text-purple-500",
               },
               {
-                name: 'Financial Reports',
-                desc: 'Revenue & expense tracking',
+                name: "Financial Reports",
+                desc: "Revenue & expense tracking",
                 icon: DollarSign,
-                gradient: 'from-green-50 to-green-100',
-                iconColor: 'text-green-500'
+                gradient: "from-green-50 to-green-100",
+                iconColor: "text-green-500",
               },
               {
-                name: 'Inventory Control',
-                desc: 'Stock management system',
+                name: "Inventory Control",
+                desc: "Stock management system",
                 icon: Package,
-                gradient: 'from-orange-50 to-orange-100',
-                iconColor: 'text-orange-500'
+                gradient: "from-orange-50 to-orange-100",
+                iconColor: "text-orange-500",
               },
               {
-                name: 'Performance Metrics',
-                desc: 'Operational insights',
+                name: "Performance Metrics",
+                desc: "Operational insights",
                 icon: Activity,
-                gradient: 'from-pink-50 to-pink-100',
-                iconColor: 'text-pink-500'
-              }
+                gradient: "from-pink-50 to-pink-100",
+                iconColor: "text-pink-500",
+              },
             ].map((tool, index) => {
               const Icon = tool.icon;
               return (
@@ -194,9 +242,14 @@ export default function ClinicManagerPage() {
                   key={index}
                   className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <div className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}>
+                  <div
+                    className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}
+                  >
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon className={`w-16 h-16 ${tool.iconColor}`} strokeWidth={1.5} />
+                      <Icon
+                        className={`w-16 h-16 ${tool.iconColor}`}
+                        strokeWidth={1.5}
+                      />
                     </div>
                   </div>
                   <div className="p-6">
@@ -225,19 +278,22 @@ export default function ClinicManagerPage() {
             <TestimonialsCarousel
               testimonials={[
                 {
-                  quote: "The management dashboard gives me real-time insights into every aspect of our clinic. I can make informed decisions instantly.",
+                  quote:
+                    "The management dashboard gives me real-time insights into every aspect of our clinic. I can make informed decisions instantly.",
                   author: "Jessica Thompson",
                   role: "Clinic Manager, Miami",
                   rating: 5,
                 },
                 {
-                  quote: "Staff scheduling and coordination has never been easier. The system handles conflicts automatically and keeps everyone informed.",
+                  quote:
+                    "Staff scheduling and coordination has never been easier. The system handles conflicts automatically and keeps everyone informed.",
                   author: "David Martinez",
                   role: "Operations Manager, Los Angeles",
                   rating: 5,
                 },
                 {
-                  quote: "The reporting tools are comprehensive yet easy to use. I can track KPIs, revenue, and patient satisfaction all in one place.",
+                  quote:
+                    "The reporting tools are comprehensive yet easy to use. I can track KPIs, revenue, and patient satisfaction all in one place.",
                   author: "Rachel Green",
                   role: "Practice Administrator, Boston",
                   rating: 5,
@@ -257,12 +313,15 @@ export default function ClinicManagerPage() {
               Ready to Transform Your Clinic Management?
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Join hundreds of aesthetic clinics optimizing their operations with Nextmotion
+              Join hundreds of aesthetic clinics optimizing their operations
+              with Nextmotion
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                Request a Demo
-              </button>
+              <Link href="/contact_form">
+                <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  Request a Demo
+                </button>
+              </Link>
               <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
                 Learn more
               </button>

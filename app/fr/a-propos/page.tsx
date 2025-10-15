@@ -1,57 +1,57 @@
-import { Locale, createTranslator } from '@/utils/i18n';
-import { Container } from '@/components/layout/Container';
-import Image from 'next/image';
-import {
-  Heart,
-  Lightbulb,
-  Target,
-  Users,
-  Award,
-  Sparkles,
-} from 'lucide-react';
+import { createTranslator } from "@/utils/i18n";
+import { Container } from "@/components/layout/Container";
+import Image from "next/image";
+import Link from "next/link";
+import { Heart, Lightbulb, Target, Users, Sparkles } from "lucide-react";
 
 export default function AProposPage() {
-  const t = createTranslator('fr');
+  const t = createTranslator("fr");
 
-  const timelineYears = t('about.timeline.years', { returnObjects: true }) as Array<{
+  const timelineYears = t("about.timeline.years", {
+    returnObjects: true,
+  }) as Array<{
     year: string;
     desc: string;
   }>;
 
-  const values = t('about.values.items', { returnObjects: true }) as Array<{
+  const values = t("about.values.items", { returnObjects: true }) as Array<{
     name: string;
     desc: string;
   }>;
 
-  const teamMedical = t('about.teamMedical.members', { returnObjects: true }) as Array<{
+  const teamMedical = t("about.teamMedical.members", {
+    returnObjects: true,
+  }) as Array<{
     name: string;
     role: string;
     desc?: string;
   }>;
 
-  const teamOperational = t('about.teamOperational.members', { returnObjects: true }) as Array<{
+  const teamOperational = t("about.teamOperational.members", {
+    returnObjects: true,
+  }) as Array<{
     name: string;
     role: string;
     desc?: string;
   }>;
 
   const medicalPhotos: Record<string, string> = {
-    'Per Heden': '/about/perheden.jpg',
-    'Constantin Stan': '/about/constantinstan.jpg',
-    'Jean-Paul Meningaud': '/about/jeanpaulmeningaud.jpg',
-    'Dr Nabila Azib': '/about/nabilaazib.jpg',
-    'Dr Diala Haykal': '/about/diala haykal.jpg',
+    "Per Heden": "/about/perheden.jpg",
+    "Constantin Stan": "/about/constantinstan.jpg",
+    "Jean-Paul Meningaud": "/about/jeanpaulmeningaud.jpg",
+    "Dr Nabila Azib": "/about/nabilaazib.jpg",
+    "Dr Diala Haykal": "/about/diala haykal.jpg",
   };
 
   const operationalPhotos: Record<string, string> = {
-    'Dr Emmanuel Elard': '/about/emmanuelelard.jpg',
-    'Yasmina': '/about/yasmina.jpeg',
-    'Santiago': '/about/santiago.jpeg',
-    'Romain': '/about/romain.jpeg',
-    'Loan': '/about/loan.jpg',
-    'Théo': '/about/theo.jpg',
-    'Jérôme': '/about/jerome.jpg',
-    'Yannig': '/about/yannig.jpg',
+    "Dr Emmanuel Elard": "/about/emmanuelelard.jpg",
+    Yasmina: "/about/yasmina.jpeg",
+    Santiago: "/about/santiago.jpeg",
+    Romain: "/about/romain.jpeg",
+    Loan: "/about/loan.jpg",
+    Théo: "/about/theo.jpg",
+    Jérôme: "/about/jerome.jpg",
+    Yannig: "/about/yannig.jpg",
   };
 
   return (
@@ -60,14 +60,16 @@ export default function AProposPage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-              {t('about.hero.title')}
+              {t("about.hero.title")}
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              {t('about.hero.subtitle')}
+              {t("about.hero.subtitle")}
             </p>
-            <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-              {t('about.hero.cta')}
-            </button>
+            <Link href="/contact_form">
+              <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                {t("about.hero.cta")}
+              </button>
+            </Link>
           </div>
         </Container>
       </section>
@@ -86,7 +88,7 @@ export default function AProposPage() {
               </div>
               <div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  {t('about.intro.paragraph')}
+                  {t("about.intro.paragraph")}
                 </p>
               </div>
             </div>
@@ -98,14 +100,11 @@ export default function AProposPage() {
         <Container>
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-12 text-center">
-              {t('about.timeline.title')}
+              {t("about.timeline.title")}
             </h2>
             <div className="space-y-8">
               {timelineYears.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex gap-6 items-start"
-                >
+                <div key={index} className="flex gap-6 items-start">
                   <div className="flex-shrink-0 w-20 text-right">
                     <span className="text-2xl font-bold text-[#1650EF]">
                       {item.year}
@@ -113,9 +112,7 @@ export default function AProposPage() {
                   </div>
                   <div className="flex-shrink-0 w-px h-full bg-gray-300 relative top-4"></div>
                   <div className="flex-1 pb-8">
-                    <p className="text-gray-700 leading-relaxed">
-                      {item.desc}
-                    </p>
+                    <p className="text-gray-700 leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -128,10 +125,10 @@ export default function AProposPage() {
         <Container>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-6">
-              {t('about.mission.title')}
+              {t("about.mission.title")}
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              {t('about.mission.paragraph')}
+              {t("about.mission.paragraph")}
             </p>
           </div>
         </Container>
@@ -141,7 +138,7 @@ export default function AProposPage() {
         <Container>
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-12 text-center">
-              {t('about.values.title')}
+              {t("about.values.title")}
             </h2>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {values.map((value, index) => {
@@ -154,7 +151,10 @@ export default function AProposPage() {
                   >
                     <div className="flex justify-center mb-4">
                       <div className="w-14 h-14 bg-gradient-to-br from-[#1650EF] to-[#1E40AF] rounded-2xl flex items-center justify-center shadow-md">
-                        <Icon className="w-7 h-7 text-white" strokeWidth={2.5} />
+                        <Icon
+                          className="w-7 h-7 text-white"
+                          strokeWidth={2.5}
+                        />
                       </div>
                     </div>
                     <h3 className="font-bold text-[#0F172A] text-lg mb-3 text-center">
@@ -175,7 +175,7 @@ export default function AProposPage() {
         <Container>
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-12 text-center">
-              {t('about.teamMedical.title')}
+              {t("about.teamMedical.title")}
             </h2>
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {teamMedical.map((member, index) => (
@@ -222,7 +222,7 @@ export default function AProposPage() {
         <Container>
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-12 text-center">
-              {t('about.teamOperational.title')}
+              {t("about.teamOperational.title")}
             </h2>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {teamOperational.map((member, index) => (
@@ -269,18 +269,18 @@ export default function AProposPage() {
         <Container>
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('about.partners.title')}
+              {t("about.partners.title")}
             </h2>
             <p className="text-lg text-gray-600 mb-12">
-              {t('about.partners.subtitle')}
+              {t("about.partners.subtitle")}
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
               {[
-                { name: 'AMWC', logo: '/about/amwc.jpeg' },
-                { name: 'IMCAS', logo: '/about/IMCAS.jpg' },
-                { name: 'Vivacy', logo: '/about/vivacy.jpg' },
-                { name: 'Merz', logo: '/about/merz.jpeg' },
-                { name: 'Fillmed', logo: '/about/fillmed.jpg' }
+                { name: "AMWC", logo: "/about/amwc.jpeg" },
+                { name: "IMCAS", logo: "/about/IMCAS.jpg" },
+                { name: "Vivacy", logo: "/about/vivacy.jpg" },
+                { name: "Merz", logo: "/about/merz.jpeg" },
+                { name: "Fillmed", logo: "/about/fillmed.jpg" },
               ].map((partner, index) => (
                 <div
                   key={index}
@@ -306,11 +306,13 @@ export default function AProposPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8">
-              {t('about.cta.title')}
+              {t("about.cta.title")}
             </h2>
-            <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-              {t('about.cta.cta')}
-            </button>
+            <Link href="/contact_form">
+              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                {t("about.cta.cta")}
+              </button>
+            </Link>
           </div>
         </Container>
       </section>

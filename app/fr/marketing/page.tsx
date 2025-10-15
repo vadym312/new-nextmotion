@@ -1,6 +1,7 @@
 import { Container } from '@/components/layout/Container';
 import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Megaphone,
   Share2,
@@ -33,9 +34,9 @@ export default function MarketingPageFR() {
                 Convertissez plus de prospects, fidélisez plus de patients et mettez en valeur vos résultats avec des outils marketing puissants conçus pour les cliniques esthétiques.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                <Link href="/fr/contact_form" className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
                   Demander une démo
-                </button>
+                </Link>
                 <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
                   En savoir plus
                 </button>
@@ -262,9 +263,9 @@ export default function MarketingPageFR() {
               Rejoignez les cliniques esthétiques qui utilisent Nextmotion pour attirer plus de patients et développer leur cabinet
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+              <Link href="/fr/contact_form" className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
                 Demander une démo
-              </button>
+              </Link>
               <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
                 En savoir plus
               </button>

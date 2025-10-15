@@ -1,7 +1,8 @@
-import { createTranslator } from '@/utils/i18n';
-import { Container } from '@/components/layout/Container';
-import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
-import Image from 'next/image';
+import { createTranslator } from "@/utils/i18n";
+import { Container } from "@/components/layout/Container";
+import { TestimonialsCarousel } from "@/components/layout/TestimonialsCarousel";
+import Image from "next/image";
+import Link from "next/link";
 import {
   Stethoscope,
   Clock,
@@ -16,10 +17,10 @@ import {
   Bot,
   Video,
   Calendar,
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function PractitionerPage() {
-  const t = createTranslator('en');
+  const t = createTranslator("en");
 
   return (
     <>
@@ -32,17 +33,19 @@ export default function PractitionerPage() {
                 Aesthetic Practitioner
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-                {t('practitioner.hero.title')}
+                {t("practitioner.hero.title")}
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                {t('practitioner.hero.subtitle')}
+                {t("practitioner.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('practitioner.hero.cta1')}
-                </button>
+                <Link href="/contact_form">
+                  <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("practitioner.hero.cta1")}
+                  </button>
+                </Link>
                 <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('practitioner.hero.cta2')}
+                  {t("practitioner.hero.cta2")}
                 </button>
               </div>
             </div>
@@ -66,17 +69,21 @@ export default function PractitionerPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('practitioner.challenges.title')}
+              {t("practitioner.challenges.title")}
             </h2>
             <p className="text-lg text-gray-600">
-              {t('practitioner.challenges.subtitle')}
+              {t("practitioner.challenges.subtitle")}
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
             {[0, 1, 2, 3].map((index) => {
               const icons = [Clock, FileText, Eye, MessageCircle];
               const Icon = icons[index];
-              const itemKey = `item${index + 1}` as 'item1' | 'item2' | 'item3' | 'item4';
+              const itemKey = `item${index + 1}` as
+                | "item1"
+                | "item2"
+                | "item3"
+                | "item4";
               return (
                 <div
                   key={index}
@@ -107,22 +114,29 @@ export default function PractitionerPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('practitioner.solutions.title')}
+              {t("practitioner.solutions.title")}
             </h2>
             <p className="text-lg text-gray-600">
-              {t('practitioner.solutions.subtitle')}
+              {t("practitioner.solutions.subtitle")}
             </p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto justify-items-center">
             {[0, 1, 2, 3, 4].map((index) => {
               const icons = [Brain, Camera, FolderHeart, Share2, Sparkles];
               const Icon = icons[index];
-              const itemKey = `item${index + 1}` as 'item1' | 'item2' | 'item3' | 'item4' | 'item5';
+              const itemKey = `item${index + 1}` as
+                | "item1"
+                | "item2"
+                | "item3"
+                | "item4"
+                | "item5";
               return (
                 <div
                   key={index}
                   className={`p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 w-full ${
-                    index === 4 ? 'sm:col-span-2 lg:col-span-1 lg:col-start-2' : ''
+                    index === 4
+                      ? "sm:col-span-2 lg:col-span-1 lg:col-start-2"
+                      : ""
                   }`}
                 >
                   <div className="flex justify-center mb-6">
@@ -147,49 +161,49 @@ export default function PractitionerPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('practitioner.data.title')}
+              {t("practitioner.data.title")}
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              {t('practitioner.data.subtitle')}
+              {t("practitioner.data.subtitle")}
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
             {[
               {
-                name: 'NM Capture',
-                desc: 'Standardized before/after photos',
+                name: "NM Capture",
+                desc: "Standardized before/after photos",
                 icon: Camera,
-                gradient: 'from-blue-50 to-blue-100',
-                iconColor: 'text-blue-500'
+                gradient: "from-blue-50 to-blue-100",
+                iconColor: "text-blue-500",
               },
               {
-                name: 'NM Consult',
-                desc: 'Smart patient records',
+                name: "NM Consult",
+                desc: "Smart patient records",
                 icon: FileText,
-                gradient: 'from-emerald-50 to-emerald-100',
-                iconColor: 'text-emerald-500'
+                gradient: "from-emerald-50 to-emerald-100",
+                iconColor: "text-emerald-500",
               },
               {
-                name: 'Copilot AI',
-                desc: 'Conversational AI assistant',
+                name: "Copilot AI",
+                desc: "Conversational AI assistant",
                 icon: Bot,
-                gradient: 'from-purple-50 to-purple-100',
-                iconColor: 'text-purple-500'
+                gradient: "from-purple-50 to-purple-100",
+                iconColor: "text-purple-500",
               },
               {
-                name: 'NM Revolution',
-                desc: 'Dynamic patient videos',
+                name: "NM Revolution",
+                desc: "Dynamic patient videos",
                 icon: Video,
-                gradient: 'from-red-50 to-red-100',
-                iconColor: 'text-red-500'
+                gradient: "from-red-50 to-red-100",
+                iconColor: "text-red-500",
               },
               {
-                name: 'NM Agenda',
-                desc: 'Doctolib synchronization',
+                name: "NM Agenda",
+                desc: "Doctolib synchronization",
                 icon: Calendar,
-                gradient: 'from-amber-50 to-amber-100',
-                iconColor: 'text-amber-500'
-              }
+                gradient: "from-amber-50 to-amber-100",
+                iconColor: "text-amber-500",
+              },
             ].map((tool, index) => {
               const Icon = tool.icon;
               return (
@@ -197,9 +211,14 @@ export default function PractitionerPage() {
                   key={index}
                   className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <div className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}>
+                  <div
+                    className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}
+                  >
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon className={`w-16 h-16 ${tool.iconColor}`} strokeWidth={1.5} />
+                      <Icon
+                        className={`w-16 h-16 ${tool.iconColor}`}
+                        strokeWidth={1.5}
+                      />
                     </div>
                   </div>
                   <div className="p-6">
@@ -221,26 +240,29 @@ export default function PractitionerPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('practitioner.testimonial.title')}
+              {t("practitioner.testimonial.title")}
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <TestimonialsCarousel
               testimonials={[
                 {
-                  quote: "Nextmotion has streamlined my entire practice. The AI-powered consultation notes save me 2 hours daily, and patients love the 3D simulations.",
+                  quote:
+                    "Nextmotion has streamlined my entire practice. The AI-powered consultation notes save me 2 hours daily, and patients love the 3D simulations.",
                   author: "Dr. Emma Wilson",
                   role: "Aesthetic Surgeon, London",
                   rating: 5,
                 },
                 {
-                  quote: "The before/after photo management is exceptional. Everything is organized, standardized, and easy to share. My marketing has never been better.",
+                  quote:
+                    "The before/after photo management is exceptional. Everything is organized, standardized, and easy to share. My marketing has never been better.",
                   author: "Dr. Michael Chen",
                   role: "Cosmetic Doctor, Singapore",
                   rating: 5,
                 },
                 {
-                  quote: "Integration with my existing workflow was seamless. The patient portal has significantly improved engagement and satisfaction scores.",
+                  quote:
+                    "Integration with my existing workflow was seamless. The patient portal has significantly improved engagement and satisfaction scores.",
                   author: "Dr. Sarah Johnson",
                   role: "Dermatologist, New York",
                   rating: 5,
@@ -257,17 +279,19 @@ export default function PractitionerPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-              {t('practitioner.cta.title')}
+              {t("practitioner.cta.title")}
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              {t('practitioner.cta.subtitle')}
+              {t("practitioner.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('practitioner.cta.primary')}
-              </button>
+              <Link href="/contact_form">
+                <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("practitioner.cta.primary")}
+                </button>
+              </Link>
               <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('practitioner.cta.secondary')}
+                {t("practitioner.cta.secondary")}
               </button>
             </div>
           </div>

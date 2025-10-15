@@ -1,25 +1,16 @@
-import { Locale, createTranslator } from '@/utils/i18n';
-import { Container } from '@/components/layout/Container';
-import { Section } from '@/components/layout/Section';
-import { LogoCarousel } from '@/components/layout/LogoCarousel';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { createTranslator } from "@/utils/i18n";
+import { Container } from "@/components/layout/Container";
+import { LogoCarousel } from "@/components/layout/LogoCarousel";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import {
   FileText,
   Users,
   ClipboardList,
   CreditCard,
-  Smile,
-  Brain,
-  Zap,
-  Bot,
   Workflow,
-  Smartphone,
-  TrendingUp,
   Clock,
-  Share2,
   Check,
-  Mic,
   Image as ImageIcon,
   Lock,
   Calendar,
@@ -27,16 +18,16 @@ import {
   Sparkles,
   PenTool,
   Star,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from "@/components/ui/accordion";
 
 export default function ConsultPage() {
-  const t = createTranslator('fr');
+  const t = createTranslator("fr");
 
   return (
     <>
@@ -46,21 +37,25 @@ export default function ConsultPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
                 <FileText className="w-4 h-4" />
-                {t('consult.hero.badge')}
+                {t("consult.hero.badge")}
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-                {t('consult.hero.title')}
+                {t("consult.hero.title")}
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                {t('consult.hero.subtitle')}
+                {t("consult.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('consult.hero.cta')}
-                </button>
-                <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('consult.hero.ctaSecondary')}
-                </button>
+                <Link href="/fr/contact_form">
+                  <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("consult.hero.cta")}
+                  </button>
+                </Link>
+                <Link href="/fr/starter">
+                  <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("consult.hero.ctaSecondary")}
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="relative w-full sm:w-[70%] mx-auto">
@@ -77,16 +72,16 @@ export default function ConsultPage() {
       </section>
 
       <LogoCarousel
-        title={t('trustedBy.title')}
-        subtitle={t('trustedBy.subtitle')}
-        logos={t('logos.clinics', { returnObjects: true }) as string[]}
+        title={t("trustedBy.title")}
+        subtitle={t("trustedBy.subtitle")}
+        logos={t("logos.clinics", { returnObjects: true }) as string[]}
       />
 
       <section className="py-16 sm:py-24 bg-white">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('consult.problems.title')}
+              {t("consult.problems.title")}
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
@@ -120,7 +115,7 @@ export default function ConsultPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('consult.solution.title')}
+              {t("consult.solution.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
@@ -161,20 +156,48 @@ export default function ConsultPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('consult.features.title')}
+              {t("consult.features.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
             {[0, 1, 2, 3, 4, 5, 6, 7].map((index) => {
               const iconConfigs = [
-                { Icon: ClipboardList, bgColor: 'bg-blue-50', iconColor: 'text-blue-600' },
-                { Icon: ImageIcon, bgColor: 'bg-pink-50', iconColor: 'text-pink-600' },
-                { Icon: PenTool, bgColor: 'bg-green-50', iconColor: 'text-green-600' },
-                { Icon: Lock, bgColor: 'bg-red-50', iconColor: 'text-red-600' },
-                { Icon: Calendar, bgColor: 'bg-orange-50', iconColor: 'text-orange-600' },
-                { Icon: User, bgColor: 'bg-cyan-50', iconColor: 'text-cyan-600' },
-                { Icon: Sparkles, bgColor: 'bg-yellow-50', iconColor: 'text-yellow-600' },
-                { Icon: Workflow, bgColor: 'bg-purple-50', iconColor: 'text-purple-600' },
+                {
+                  Icon: ClipboardList,
+                  bgColor: "bg-blue-50",
+                  iconColor: "text-blue-600",
+                },
+                {
+                  Icon: ImageIcon,
+                  bgColor: "bg-pink-50",
+                  iconColor: "text-pink-600",
+                },
+                {
+                  Icon: PenTool,
+                  bgColor: "bg-green-50",
+                  iconColor: "text-green-600",
+                },
+                { Icon: Lock, bgColor: "bg-red-50", iconColor: "text-red-600" },
+                {
+                  Icon: Calendar,
+                  bgColor: "bg-orange-50",
+                  iconColor: "text-orange-600",
+                },
+                {
+                  Icon: User,
+                  bgColor: "bg-cyan-50",
+                  iconColor: "text-cyan-600",
+                },
+                {
+                  Icon: Sparkles,
+                  bgColor: "bg-yellow-50",
+                  iconColor: "text-yellow-600",
+                },
+                {
+                  Icon: Workflow,
+                  bgColor: "bg-purple-50",
+                  iconColor: "text-purple-600",
+                },
               ];
               const { Icon, bgColor, iconColor } = iconConfigs[index];
               return (
@@ -182,7 +205,9 @@ export default function ConsultPage() {
                   key={index}
                   className="flex flex-col items-center text-center p-6"
                 >
-                  <div className={`w-16 h-16 ${bgColor} rounded-2xl flex items-center justify-center mb-4`}>
+                  <div
+                    className={`w-16 h-16 ${bgColor} rounded-2xl flex items-center justify-center mb-4`}
+                  >
                     <Icon className={`w-8 h-8 ${iconColor}`} strokeWidth={2} />
                   </div>
                   <p className="text-[#374151] text-sm leading-relaxed">
@@ -199,26 +224,31 @@ export default function ConsultPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('consult.copilot.title')}
+              {t("consult.copilot.title")}
             </h2>
             <p className="text-lg text-[#6B7280] leading-relaxed">
-              {t('consult.copilot.subtitle')}
+              {t("consult.copilot.subtitle")}
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
             <div className="space-y-6">
-              {t('consult.copilot.text').split('\n\n').map((paragraph: string, index: number) => (
-                <p key={index} className="text-base text-[#4B5563] leading-relaxed">
-                  {paragraph}
-                </p>
-              ))}
+              {t("consult.copilot.text")
+                .split("\n\n")
+                .map((paragraph: string, index: number) => (
+                  <p
+                    key={index}
+                    className="text-base text-[#4B5563] leading-relaxed"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
               <div className="pt-2 flex justify-center md:justify-start">
-                <Link href="/copilot-ai">
+                <Link href="/fr/ai-copilot">
                   <Button
                     size="lg"
                     className="h-auto bg-[#1650EF] text-white hover:bg-[#1E40AF] shadow-lg px-8 py-3 text-base font-semibold"
                   >
-                    {t('consult.copilot.cta')}
+                    {t("consult.copilot.cta")}
                   </Button>
                 </Link>
               </div>
@@ -241,10 +271,10 @@ export default function ConsultPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('consult.ecosystem.title')}
+              {t("consult.ecosystem.title")}
             </h2>
             <p className="text-lg text-[#6B7280] leading-relaxed">
-              {t('consult.ecosystem.tagline')}
+              {t("consult.ecosystem.tagline")}
             </p>
           </div>
           <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
@@ -261,7 +291,7 @@ export default function ConsultPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('consult.testimonial.title')}
+              {t("consult.testimonial.title")}
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -275,10 +305,10 @@ export default function ConsultPage() {
                 ))}
               </div>
               <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed">
-                {t('consult.testimonial.quote')}
+                {t("consult.testimonial.quote")}
               </blockquote>
               <p className="text-gray-900 font-semibold">
-                {t('consult.testimonial.author')}
+                {t("consult.testimonial.author")}
               </p>
             </div>
           </div>
@@ -289,10 +319,10 @@ export default function ConsultPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('consult.pricing.title')}
+              {t("consult.pricing.title")}
             </h2>
             <p className="text-xl text-gray-700">
-              {t('consult.pricing.subtitle')}
+              {t("consult.pricing.subtitle")}
             </p>
           </div>
 
@@ -302,15 +332,15 @@ export default function ConsultPage() {
                 returnObjects: true,
               }) as any;
               const isRecommended = plan.recommended;
-              const isGreen = plan.ctaVariant === 'green';
+              const isGreen = plan.ctaVariant === "green";
 
               return (
                 <div
                   key={planIndex}
                   className={`relative p-6 bg-white rounded-2xl border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col ${
                     isRecommended
-                      ? 'border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50'
-                      : 'border-gray-200'
+                      ? "border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50"
+                      : "border-gray-200"
                   }`}
                 >
                   {isRecommended && (
@@ -331,8 +361,8 @@ export default function ConsultPage() {
                   </div>
 
                   <div className="mb-6">
-                    {plan.price === 'Sur devis' ||
-                    plan.price === 'Custom quote' ? (
+                    {plan.price === "Sur devis" ||
+                    plan.price === "Custom quote" ? (
                       <div className="text-3xl font-bold text-[#0F172A]">
                         {plan.price}
                       </div>
@@ -361,7 +391,7 @@ export default function ConsultPage() {
                     {plan.features.map(
                       (feature: string, featureIndex: number) => {
                         const isBold =
-                          feature.startsWith('**') && feature.endsWith('**');
+                          feature.startsWith("**") && feature.endsWith("**");
                         const displayText = isBold
                           ? feature.slice(2, -2)
                           : feature;
@@ -377,7 +407,7 @@ export default function ConsultPage() {
                             />
                             <span
                               className={`text-sm text-gray-700 ${
-                                isBold ? 'font-bold' : ''
+                                isBold ? "font-bold" : ""
                               }`}
                             >
                               {displayText}
@@ -388,15 +418,17 @@ export default function ConsultPage() {
                     )}
                   </div>
 
-                  <button
-                    className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                      isGreen
-                        ? 'bg-green-600 text-white hover:bg-green-700'
-                        : 'bg-[#1650EF] text-white hover:bg-[#1650EF]/90'
-                    }`}
-                  >
-                    {plan.cta}
-                  </button>
+                  <Link href={isGreen ? "/fr/starter" : "/fr/contact_form"}>
+                    <button
+                      className={`w-full py-3 rounded-lg font-semibold transition-colors ${
+                        isGreen
+                          ? "bg-green-600 text-white hover:bg-green-700"
+                          : "bg-[#1650EF] text-white hover:bg-[#1650EF]/90"
+                      }`}
+                    >
+                      {plan.cta}
+                    </button>
+                  </Link>
 
                   <p className="text-xs text-gray-500 text-center mt-4">
                     {plan.support}
@@ -412,7 +444,7 @@ export default function ConsultPage() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] text-center sm:text-4xl mb-12">
-              {t('consult.faq.title')}
+              {t("consult.faq.title")}
             </h2>
 
             <Accordion type="single" collapsible className="space-y-3">
@@ -439,18 +471,22 @@ export default function ConsultPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-              {t('consult.finalCta.title')}
+              {t("consult.finalCta.title")}
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              {t('consult.finalCta.subtitle')}
+              {t("consult.finalCta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('consult.finalCta.cta')}
-              </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('consult.finalCta.ctaSecondary')}
-              </button>
+              <Link href="/fr/contact_form">
+                <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("consult.finalCta.cta")}
+                </button>
+              </Link>
+              <Link href="/fr/starter">
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("consult.finalCta.ctaSecondary")}
+                </button>
+              </Link>
             </div>
           </div>
         </Container>

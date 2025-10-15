@@ -44,11 +44,7 @@ export const NAV_EN = {
     title: 'Resources',
     links: [
       { label: 'blog', href: '/blog' },
-      { label: 'caseStudies', href: '/case-studies' },
-      { label: 'webinars', href: '/webinars' },
-      { label: 'releaseNotes', href: '/release-notes' },
-      { label: 'podcast', href: '/podcast' },
-      { label: 'contact', href: '/contact' },
+      { label: 'contact', href: '/contact_form' },
       { label: 'aboutUs', href: '/about' },
     ]
   },
@@ -98,11 +94,7 @@ export const NAV_FR = {
     title: 'Ressources',
     links: [
       { label: 'blog', href: '/fr/blog' },
-      { label: 'caseStudies', href: '/fr/cas-clients' },
-      { label: 'webinars', href: '/fr/webinars' },
-      { label: 'releaseNotes', href: '/fr/release-notes' },
-      { label: 'podcast', href: '/fr/podcast' },
-      { label: 'contact', href: '/fr/contact' },
+      { label: 'contact', href: '/fr/contact_form' },
       { label: 'aboutUs', href: '/fr/a-propos' },
     ]
   },
@@ -143,10 +135,7 @@ export const FOOTER_EN = {
     title: 'Resources',
     links: [
       { label: 'blog', href: '/blog' },
-      { label: 'caseStudies', href: '/case-studies' },
-      { label: 'webinars', href: '/webinars' },
-      { label: 'support', href: '/contact' },
-      { label: 'releaseNotes', href: '/release-notes' },
+      { label: 'support', href: '/contact_form' },
     ]
   },
   legal: {
@@ -186,10 +175,7 @@ export const FOOTER_FR = {
     title: 'Ressources',
     links: [
       { label: 'blog', href: '/fr/blog' },
-      { label: 'caseStudies', href: '/fr/cas-clients' },
-      { label: 'webinars', href: '/fr/webinars' },
-      { label: 'support', href: '/fr/contact' },
-      { label: 'releaseNotes', href: '/fr/release-notes' },
+      { label: 'support', href: '/fr/contact_form' },
     ]
   },
   legal: {

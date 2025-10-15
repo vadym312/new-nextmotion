@@ -1,6 +1,7 @@
-import { ReactNode } from 'react';
-import { Container } from './Container';
-import { Button } from '@/components/ui/button';
+import { ReactNode } from "react";
+import { Container } from "./Container";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface HeroProps {
   title: string;
@@ -36,21 +37,25 @@ export function Hero({
             {subtitle}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              onClick={onPrimaryClick}
-              size="lg"
-              className="h-auto w-full sm:w-auto bg-[#1650EF] hover:bg-[#1650EF]/90 text-white shadow-lg px-8 py-3 text-base font-semibold"
-            >
-              {primaryCta}
-            </Button>
-            {tertiaryCta && (
+            <Link href="/contact_form">
               <Button
-                onClick={onTertiaryClick}
+                onClick={onPrimaryClick}
                 size="lg"
-                className="h-auto w-full sm:w-auto bg-white border-2 border-[#1650EF] text-[#1650EF] hover:bg-gray-50 shadow-lg px-8 py-3 text-base font-semibold"
+                className="h-auto w-full sm:w-auto bg-[#1650EF] hover:bg-[#1650EF]/90 text-white shadow-lg px-8 py-3 text-base font-semibold"
               >
-                {tertiaryCta}
+                {primaryCta}
               </Button>
+            </Link>
+            {tertiaryCta && (
+              <Link href="/starter">
+                <Button
+                  onClick={onTertiaryClick}
+                  size="lg"
+                  className="h-auto w-full sm:w-auto bg-white border-2 border-[#1650EF] text-[#1650EF] hover:bg-gray-50 shadow-lg px-8 py-3 text-base font-semibold"
+                >
+                  {tertiaryCta}
+                </Button>
+              </Link>
             )}
           </div>
         </div>

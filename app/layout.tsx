@@ -1,33 +1,33 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import { getTranslations } from '@/utils/i18n';
-import { Header } from '@/components/layout/Header';
-import { FooterNew } from '@/components/layout/FooterNew';
-import HreflangTags from './components/HreflangTags';
-import Script from 'next/script';
-import CookieConsent from './components/CookieConsent';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { Locale, getTranslations } from "@/utils/i18n";
+import { Header } from "@/components/layout/Header";
+import { FooterNew } from "@/components/layout/FooterNew";
+import HreflangTags from "./components/HreflangTags";
+import Script from "next/script";
+import CookieConsent from "./components/CookieConsent";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    'Management software for aesthetic clinics: simplify your appointments and cash management.',
+    "Management software for aesthetic clinics: simplify your appointments and cash management.",
   description:
-    'Optimize the management of your aesthetic clinic with our software dedicated to physicians, aesthetic surgeons, and managers. Simplify appointment scheduling, cash management, and much more.',
+    "Optimize the management of your aesthetic clinic with our software dedicated to physicians, aesthetic surgeons, and managers. Simplify appointment scheduling, cash management, and much more.",
   alternates: {
-    canonical: 'https://www.nextmotion.net',
+    canonical: "https://www.nextmotion.net",
   },
 };
 
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { locale: Locale };
 }) {
-  const locale = 'en';
-  const navTranslations = getTranslations(locale, 'navigation');
-  const commonTranslations = getTranslations(locale, 'common');
+  const { locale } = params;
 
   return (
     <html lang={locale}>
@@ -62,16 +62,13 @@ export default function RootLayout({
             src="https://www.googletagmanager.com/ns.html?id=GTM-PCK4QN5X"
             height="0"
             width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
+            style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
         <CookieConsent />
-        <Header locale={locale} translations={navTranslations} />
+        <Header />
         <main className="pt-20">{children}</main>
-        <FooterNew
-          locale={locale}
-          translations={{ ...navTranslations, ...commonTranslations.footer }}
-        />
+        <FooterNew/>
       </body>
     </html>
   );

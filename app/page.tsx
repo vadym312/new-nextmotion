@@ -1,11 +1,11 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { createTranslator } from '@/utils/i18n';
-import { Hero } from '@/components/layout/Hero';
-import { CTA } from '@/components/layout/CTA';
-import { Container } from '@/components/layout/Container';
-import { LogoCarousel } from '@/components/layout/LogoCarousel';
-import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
+import { Metadata } from "next";
+import Link from "next/link";
+import { createTranslator } from "@/utils/i18n";
+import { Hero } from "@/components/layout/Hero";
+import { CTA } from "@/components/layout/CTA";
+import { Container } from "@/components/layout/Container";
+import { LogoCarousel } from "@/components/layout/LogoCarousel";
+import { TestimonialsCarousel } from "@/components/layout/TestimonialsCarousel";
 import {
   Camera,
   Heart,
@@ -23,71 +23,71 @@ import {
   Workflow,
   Plug,
   Check,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
-import { OrganizationSchema } from './components/OrganizationSchema';
-import { SoftwareApplicationSchema } from './components/SoftwareApplicationSchema';
+} from "@/components/ui/accordion";
+import { OrganizationSchema } from "./components/OrganizationSchema";
+import { SoftwareApplicationSchema } from "./components/SoftwareApplicationSchema";
 
 export const metadata: Metadata = {
   title:
-    'Management software for aesthetic clinics: simplify your appointments and cash management.',
+    "Management software for aesthetic clinics: simplify your appointments and cash management.",
   description:
-    'Optimize the management of your aesthetic clinic with our software dedicated to physicians, aesthetic surgeons, and managers. Simplify appointment scheduling, cash management, and much more.',
+    "Optimize the management of your aesthetic clinic with our software dedicated to physicians, aesthetic surgeons, and managers. Simplify appointment scheduling, cash management, and much more.",
   alternates: {
-    canonical: 'https://www.nextmotion.net',
+    canonical: "https://www.nextmotion.net",
   },
 };
 
 export default function Home() {
-  const t = createTranslator('en');
+  const t = createTranslator("en");
 
   return (
     <>
       <Hero
-        title={t('hero.title')}
-        subtitle={t('hero.subtitle')}
-        primaryCta={t('hero.cta')}
-        secondaryCta={t('hero.ctaSecondary')}
-        tertiaryCta={t('hero.ctaTertiary')}
+        title={t("hero.title")}
+        subtitle={t("hero.subtitle")}
+        primaryCta={t("hero.cta")}
+        secondaryCta={t("hero.ctaSecondary")}
+        tertiaryCta={t("hero.ctaTertiary")}
       />
 
       <LogoCarousel
-        title={t('trustedBy.title')}
-        subtitle={t('trustedBy.subtitle')}
-        logos={t('logos.clinics', { returnObjects: true }) as string[]}
+        title={t("trustedBy.title")}
+        subtitle={t("trustedBy.subtitle")}
+        logos={t("logos.clinics", { returnObjects: true }) as string[]}
       />
 
       <section className="py-16 sm:py-24 bg-white">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl">
-              {t('challenges.title')}
+              {t("challenges.title")}
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-3 max-w-7xl mx-auto">
             {[
               {
                 icon: DollarSign,
-                title: 'Lack of revenue',
+                title: "Lack of revenue",
                 description:
                   "too many rejected quotes, loss of business opportunities",
               },
               {
                 icon: User,
-                title: 'Complex patient experience',
+                title: "Complex patient experience",
                 description:
-                  'a less than smooth journey that harms satisfaction and retention',
+                  "a less than smooth journey that harms satisfaction and retention",
               },
               {
                 icon: Clock,
-                title: 'Time-consuming management',
+                title: "Time-consuming management",
                 description:
-                  'paper consents, scattered tools, heavy administrative tasks',
+                  "paper consents, scattered tools, heavy administrative tasks",
               },
             ].map((item, index) => {
               const Icon = item.icon;
@@ -107,7 +107,7 @@ export default function Home() {
                   <p className="text-[#374151] text-base text-center leading-relaxed">
                     <span className="font-bold text-[#0F172A]">
                       {item.title}
-                    </span>{' '}
+                    </span>{" "}
                     : {item.description}
                   </p>
                 </div>
@@ -128,21 +128,21 @@ export default function Home() {
             {[
               {
                 icon: DollarSign,
-                title: '+ Revenue',
+                title: "+ Revenue",
                 description:
-                  'standardized before/after photos, integrated CRM, marketing tracking',
+                  "standardized before/after photos, integrated CRM, marketing tracking",
               },
               {
                 icon: Heart,
-                title: '+ Patient satisfaction',
+                title: "+ Patient satisfaction",
                 description:
-                  'digitalized consultation, electronic consents, patient portal',
+                  "digitalized consultation, electronic consents, patient portal",
               },
               {
                 icon: Clock,
-                title: '- Time wasted',
+                title: "- Time wasted",
                 description:
-                  'automations, AI secretary, calendar synced with Doctolib',
+                  "automations, AI secretary, calendar synced with Doctolib",
               },
             ].map((item, index) => {
               const Icon = item.icon;
@@ -184,49 +184,47 @@ export default function Home() {
             {[
               {
                 icon: Camera,
-                title: 'Nextmotion Capture',
-                description: 'comparable and standardized before/after photos',
-                image: '/solutions/nmcapturehome.jpg',
-                link: '/capture',
+                title: "Nextmotion Capture",
+                description: "comparable and standardized before/after photos",
+                image: "/solutions/nmcapturehome.jpg",
+                link: "/capture",
               },
               {
                 icon: FileCheck,
-                title: 'Nextmotion Consult',
-                description:
-                  'smart patient file and automated reports',
-                image: '/solutions/nmconsulthome.jpg',
-                link: '/assistant',
+                title: "Nextmotion Consult",
+                description: "smart patient file and automated reports",
+                image: "/solutions/nmconsulthome.jpg",
+                link: "/consult",
               },
               {
                 icon: Calendar,
-                title: 'Nextmotion Agenda',
-                description: 'planning and synchronization with Doctolib',
-                image: '/solutions/nmcalendarhome.jpg',
-                link: '/practitioner',
+                title: "Nextmotion Agenda",
+                description: "planning and synchronization with Doctolib",
+                image: "/solutions/nmcalendarhome.jpg",
+                link: "/agenda",
               },
               {
                 icon: Globe,
-                title: 'Patient Portal',
-                description:
-                  'online space to share documents and results',
-                image: '/solutions/portalhome.jpg',
-                link: null,
+                title: "Patient Portal",
+                description: "online space to share documents and results",
+                image: "/solutions/portalhome.jpg",
+                link: "/ai-copilot",
               },
               {
                 icon: Image,
-                title: 'Nextmotion 3D',
+                title: "Nextmotion 3D",
                 description:
-                  'realistic and interactive morphological simulations',
-                image: '/solutions/nm3Dhome.jpg',
-                link: '/3d',
+                  "realistic and interactive morphological simulations",
+                image: "/solutions/nm3Dhome.jpg",
+                link: "/3d",
               },
               {
                 icon: Video,
-                title: 'Nextmotion Revolution',
+                title: "Nextmotion Revolution",
                 description:
-                  'standardized and dynamic videos for your patients',
-                image: '/solutions/nmrevolutionhome.jpg',
-                link: '/marketing',
+                  "standardized and dynamic videos for your patients",
+                image: "/solutions/nmrevolutionhome.jpg",
+                link: "/revolution",
               },
             ].map((module, index) => {
               const content = (
@@ -266,9 +264,12 @@ export default function Home() {
             })}
           </div>
           <div className="flex justify-center mt-12">
-            <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+            <Link
+              href="/contact_form"
+              className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl"
+            >
               Request a demo
-            </button>
+            </Link>
           </div>
         </Container>
       </section>
@@ -277,7 +278,7 @@ export default function Home() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl">
-              {t('ai.title')}
+              {t("ai.title")}
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-3 max-w-7xl mx-auto">
@@ -309,7 +310,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center mt-12">
             <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-              {t('ai.cta')}
+              {t("ai.cta")}
             </button>
           </div>
         </Container>
@@ -319,7 +320,7 @@ export default function Home() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl">
-              {t('results.title')}
+              {t("results.title")}
             </h2>
           </div>
 
@@ -358,25 +359,29 @@ export default function Home() {
             <TestimonialsCarousel
               testimonials={[
                 {
-                  quote: "Nextmotion has transformed our practice. The before/after photo management is exceptional and our patients love the 3D simulations.",
+                  quote:
+                    "Nextmotion has transformed our practice. The before/after photo management is exceptional and our patients love the 3D simulations.",
                   author: "Dr. Sophie Martin",
                   role: "Aesthetic Surgeon, Paris",
                   rating: 5,
                 },
                 {
-                  quote: "The AI assistant saves us hours every week. The automated reports are accurate and our workflow has never been smoother.",
+                  quote:
+                    "The AI assistant saves us hours every week. The automated reports are accurate and our workflow has never been smoother.",
                   author: "Dr. Jean Dupont",
                   role: "Aesthetic Doctor, Lyon",
                   rating: 5,
                 },
                 {
-                  quote: "Our patient satisfaction has increased significantly since we started using Nextmotion. The patient portal is a game-changer.",
+                  quote:
+                    "Our patient satisfaction has increased significantly since we started using Nextmotion. The patient portal is a game-changer.",
                   author: "Dr. Marie Laurent",
                   role: "Medical Spa Director, Bordeaux",
                   rating: 5,
                 },
                 {
-                  quote: "The Doctolib integration and calendar synchronization have eliminated double bookings. Our team is much more efficient.",
+                  quote:
+                    "The Doctolib integration and calendar synchronization have eliminated double bookings. Our team is much more efficient.",
                   author: "Dr. Pierre Rousseau",
                   role: "Clinic Manager, Nice",
                   rating: 5,
@@ -393,16 +398,16 @@ export default function Home() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('pricing.title')}
+              {t("pricing.title")}
             </h2>
             <p className="text-xl text-gray-700">
-              {t('pricing.subtitle')}{' '}
+              {t("pricing.subtitle")}{" "}
               <span className="text-[#1650EF] font-semibold">
-                {t('pricing.subtitleHighlight1')}
+                {t("pricing.subtitleHighlight1")}
               </span>
-              {t('pricing.subtitleMiddle')}{' '}
+              {t("pricing.subtitleMiddle")}{" "}
               <span className="text-[#1650EF] font-semibold">
-                {t('pricing.subtitleHighlight2')}
+                {t("pricing.subtitleHighlight2")}
               </span>
             </p>
           </div>
@@ -413,15 +418,15 @@ export default function Home() {
                 returnObjects: true,
               }) as any;
               const isRecommended = plan.recommended;
-              const isGreen = plan.ctaVariant === 'green';
+              const isGreen = plan.ctaVariant === "green";
 
               return (
                 <div
                   key={planIndex}
                   className={`relative p-6 bg-white rounded-2xl border shadow-sm hover:shadow-md transition-all duration-300 flex flex-col ${
                     isRecommended
-                      ? 'border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50'
-                      : 'border-gray-200'
+                      ? "border-[#1650EF] ring-2 ring-[#1650EF] ring-opacity-50"
+                      : "border-gray-200"
                   }`}
                 >
                   {isRecommended && (
@@ -442,8 +447,8 @@ export default function Home() {
                   </div>
 
                   <div className="mb-6">
-                    {plan.price === 'Sur devis' ||
-                    plan.price === 'Custom quote' ? (
+                    {plan.price === "Sur devis" ||
+                    plan.price === "Custom quote" ? (
                       <div className="text-3xl font-bold text-[#0F172A]">
                         {plan.price}
                       </div>
@@ -472,7 +477,7 @@ export default function Home() {
                     {plan.features.map(
                       (feature: string, featureIndex: number) => {
                         const isBold =
-                          feature.startsWith('**') && feature.endsWith('**');
+                          feature.startsWith("**") && feature.endsWith("**");
                         const displayText = isBold
                           ? feature.slice(2, -2)
                           : feature;
@@ -488,7 +493,7 @@ export default function Home() {
                             />
                             <span
                               className={`text-sm text-gray-700 ${
-                                isBold ? 'font-bold' : ''
+                                isBold ? "font-bold" : ""
                               }`}
                             >
                               {displayText}
@@ -499,15 +504,17 @@ export default function Home() {
                     )}
                   </div>
 
-                  <button
-                    className={`w-full py-3 rounded-lg font-semibold transition-colors ${
-                      isGreen
-                        ? 'bg-green-600 text-white hover:bg-green-700'
-                        : 'bg-[#1650EF] text-white hover:bg-[#1650EF]/90'
-                    }`}
-                  >
-                    {plan.cta}
-                  </button>
+                  <Link href={isGreen ? "/starter" : "/contact_form"}>
+                    <button
+                      className={`w-full py-3 rounded-lg font-semibold transition-colors ${
+                        isGreen
+                          ? "bg-green-600 text-white hover:bg-green-700"
+                          : "bg-[#1650EF] text-white hover:bg-[#1650EF]/90"
+                      }`}
+                    >
+                      {plan.cta}
+                    </button>
+                  </Link>
 
                   <p className="text-xs text-gray-500 text-center mt-4">
                     {plan.support}
@@ -523,7 +530,7 @@ export default function Home() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] text-center sm:text-4xl mb-12">
-              {t('faq.title')}
+              {t("faq.title")}
             </h2>
 
             <Accordion type="single" collapsible className="space-y-3">
@@ -547,10 +554,10 @@ export default function Home() {
       </section>
 
       <CTA
-        title={t('finalCta.title')}
-        subtitle={t('finalCta.subtitle')}
-        buttonText={t('finalCta.cta')}
-        secondaryButtonText={t('finalCta.ctaSecondary')}
+        title={t("finalCta.title")}
+        subtitle={t("finalCta.subtitle")}
+        buttonText={t("finalCta.cta")}
+        secondaryButtonText={t("finalCta.ctaSecondary")}
       />
       <OrganizationSchema />
       <SoftwareApplicationSchema />

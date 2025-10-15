@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Locale } from '@/utils/i18n';
 import { Button } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
 
 interface LanguageSwitcherProps {
   currentLocale: Locale;
@@ -17,6 +16,7 @@ const URL_MAPPINGS: Record<string, { en: string; fr: string }> = {
 
 export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
   const pathname = usePathname();
+  const activeLocale: Locale = pathname && pathname.startsWith('/fr') ? 'fr' : 'en';
 
   const getLocalePath = (newLocale: Locale) => {
     if (!pathname) return newLocale === 'en' ? '/' : '/fr';
@@ -51,7 +51,7 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
         variant="ghost"
         size="sm"
         className={`h-8 px-3 ${
-          currentLocale === 'fr' ? 'bg-gray-100 font-medium' : 'text-gray-600'
+          activeLocale === 'fr' ? 'bg-gray-100 font-medium' : 'text-gray-600'
         }`}
       >
         <Link href={getLocalePath('fr')}>FR</Link>
@@ -61,7 +61,7 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
         variant="ghost"
         size="sm"
         className={`h-8 px-3 ${
-          currentLocale === 'en' ? 'bg-gray-100 font-medium' : 'text-gray-600'
+          activeLocale === 'en' ? 'bg-gray-100 font-medium' : 'text-gray-600'
         }`}
       >
         <Link href={getLocalePath('en')}>EN</Link>

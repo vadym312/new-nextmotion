@@ -6,13 +6,11 @@ import Image from 'next/image';
 import { Container } from './Container';
 import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from './LanguageSwitcher';
-import { Locale } from '@/utils/i18n';
-import { Menu, X, ChevronDown, Sparkles } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
@@ -22,21 +20,22 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { NAV_EN, NAV_FR } from '@/config/nav.config';
+import { getTranslations } from '@/utils/i18n';
+import { usePathname } from 'next/navigation';
 
-interface HeaderProps {
-  locale: Locale;
-  translations: Record<string, string>;
-}
+export function Header() {
 
-export function Header({ locale, translations }: HeaderProps) {
+  const pathname = usePathname();
+  const currentLocale = pathname.startsWith("/fr") ? "fr" : "en";
+  const translations = getTranslations(currentLocale, 'navigation');
   const [mobileOpen, setMobileOpen] = useState(false);
-  const navConfig = locale === 'en' ? NAV_EN : NAV_FR;
+  const navConfig = currentLocale === 'fr' ? NAV_FR : NAV_EN;
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-sm">
       <Container>
         <nav className="flex items-center justify-between h-20">
-          <Link href={`${locale === 'en' ? '/' : '/fr'}`} className="flex items-center group">
+          <Link href={`${currentLocale === 'en' ? '/' : '/fr'}`} className="flex items-center group">
             <Image
               src="/nmlogo.svg"
               alt="Nextmotion"
@@ -168,7 +167,7 @@ export function Header({ locale, translations }: HeaderProps) {
                 {translations[navConfig.login.label]}
               </a>
             </Button>
-            <LanguageSwitcher currentLocale={locale} />
+            <LanguageSwitcher currentLocale={currentLocale} />
             <Button
               asChild
               size="sm"
@@ -199,7 +198,7 @@ export function Header({ locale, translations }: HeaderProps) {
               <SheetContent side="right" className="w-full sm:w-96 p-0 bg-white">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between p-6 border-b bg-gradient-to-r from-gray-50 to-white">
-                    <Link href={`/${locale}`} className="flex items-center">
+                    <Link href={`/${currentLocale}`} className="flex items-center">
                       <Image
                         src="/nmlogomobile.svg"
                         alt="Nextmotion"
@@ -301,7 +300,7 @@ export function Header({ locale, translations }: HeaderProps) {
                         </a>
                       </Button>
                     </div>
-                    <LanguageSwitcher currentLocale={locale} />
+                    <LanguageSwitcher currentLocale={currentLocale} />
                   </div>
                 </div>
               </SheetContent>

@@ -1,37 +1,27 @@
-import { Locale, createTranslator } from '@/utils/i18n';
-import { Container } from '@/components/layout/Container';
-import { Section } from '@/components/layout/Section';
-import { RevolutionCarousel } from '@/components/layout/RevolutionCarousel';
+import { createTranslator } from "@/utils/i18n";
+import { Container } from "@/components/layout/Container";
+import { RevolutionCarousel } from "@/components/layout/RevolutionCarousel";
+import NextLink from "next/link";
 import {
   Camera,
-  Smartphone,
   RotateCcw,
   Sun,
   Smile,
-  Zap,
   Link,
+  Zap,
   Cloud,
   Monitor,
-  TrendingUp,
-  Clock,
-  Share2,
-  Check,
-  Shield,
-  Download,
-  Server,
-  X,
   Play,
-  Workflow,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from "@/components/ui/accordion";
 
 export default function RevolutionPage() {
-  const t = createTranslator('en');
+  const t = createTranslator("en");
 
   return (
     <>
@@ -41,18 +31,20 @@ export default function RevolutionPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
                 <Camera className="w-4 h-4" />
-                {t('revolution.hero.badge')}
+                {t("revolution.hero.badge")}
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-                {t('revolution.hero.title')}
+                {t("revolution.hero.title")}
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                {t('revolution.hero.subtitle')}
+                {t("revolution.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('revolution.hero.cta')}
-                </button>
+                <NextLink href="/contact_form">
+                  <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("revolution.hero.cta")}
+                  </button>
+                </NextLink>
                 <a
                   href="https://youtu.be/3aI4hHgQKek"
                   target="_blank"
@@ -81,15 +73,15 @@ export default function RevolutionPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('revolution.concept.title')}
+              {t("revolution.concept.title")}
             </h2>
             <p className="text-xl text-gray-600 mb-4">
-              {t('revolution.concept.subtitle')}
+              {t("revolution.concept.subtitle")}
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed text-center">
-              {t('revolution.concept.text')}
+              {t("revolution.concept.text")}
             </p>
             <div className="mt-12 aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center">
               <img
@@ -106,7 +98,7 @@ export default function RevolutionPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('revolution.benefits.title')}
+              {t("revolution.benefits.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
@@ -140,7 +132,7 @@ export default function RevolutionPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('revolution.workflow.title')}
+              {t("revolution.workflow.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 max-w-7xl mx-auto">
@@ -169,15 +161,15 @@ export default function RevolutionPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('revolution.value.title')}
+              {t("revolution.value.title")}
             </h2>
             <p className="text-xl text-gray-600 mb-4">
-              {t('revolution.value.subtitle')}
+              {t("revolution.value.subtitle")}
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-gray-600 leading-relaxed text-center mb-12">
-              {t('revolution.value.text')}
+              {t("revolution.value.text")}
             </p>
             <RevolutionCarousel />
             <div className="flex justify-center mt-8">
@@ -198,7 +190,7 @@ export default function RevolutionPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('revolution.integration.title')}
+              {t("revolution.integration.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-3 max-w-7xl mx-auto">
@@ -237,18 +229,18 @@ export default function RevolutionPage() {
             <div className="space-y-6">
               <div>
                 <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-2">
-                  {t('revolution.pricing.title')}
+                  {t("revolution.pricing.title")}
                 </h2>
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-5xl font-bold text-[#1650EF]">
-                    {t('revolution.pricing.price')}
+                    {t("revolution.pricing.price")}
                   </span>
                 </div>
                 <p className="text-xl text-gray-700 font-semibold">
-                  {t('revolution.pricing.subtitle')}
+                  {t("revolution.pricing.subtitle")}
                 </p>
                 <p className="text-base text-gray-500">
-                  {t('revolution.pricing.starterPackValue')}
+                  {t("revolution.pricing.starterPackValue")}
                 </p>
               </div>
 
@@ -256,8 +248,18 @@ export default function RevolutionPage() {
                 {[0, 1, 2, 3, 4].map((index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#1650EF]/10 flex items-center justify-center mt-0.5">
-                      <svg className="w-4 h-4 text-[#1650EF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <svg
+                        className="w-4 h-4 text-[#1650EF]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                     </div>
                     <span className="text-lg text-gray-700">
@@ -268,7 +270,7 @@ export default function RevolutionPage() {
               </ul>
 
               <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                {t('revolution.pricing.cta')}
+                {t("revolution.pricing.cta")}
               </button>
             </div>
 
@@ -287,7 +289,7 @@ export default function RevolutionPage() {
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] text-center sm:text-4xl mb-12">
-              {t('revolution.faq.title')}
+              {t("revolution.faq.title")}
             </h2>
 
             <Accordion type="single" collapsible className="space-y-3">
@@ -314,18 +316,22 @@ export default function RevolutionPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-              {t('revolution.final.title')}
+              {t("revolution.final.title")}
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              {t('revolution.final.subtitle')}
+              {t("revolution.final.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('revolution.final.cta1')}
-              </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('revolution.final.cta2')}
-              </button>
+              <NextLink href="/contact_form">
+                <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("revolution.final.cta1")}
+                </button>
+              </NextLink>
+              <NextLink href="/starter">
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("revolution.final.cta2")}
+                </button>
+              </NextLink>
             </div>
           </div>
         </Container>

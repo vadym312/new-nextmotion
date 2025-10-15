@@ -1,6 +1,7 @@
-import { createTranslator } from '@/utils/i18n';
-import { Container } from '@/components/layout/Container';
-import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
+import { createTranslator } from "@/utils/i18n";
+import { Container } from "@/components/layout/Container";
+import { TestimonialsCarousel } from "@/components/layout/TestimonialsCarousel";
+import Link from "next/link";
 import {
   Layers,
   Eye,
@@ -11,16 +12,16 @@ import {
   Microscope,
   Shield,
   Play,
-} from 'lucide-react';
+} from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from "@/components/ui/accordion";
 
 export default function ThreeDPage() {
-  const t = createTranslator('en');
+  const t = createTranslator("en");
 
   return (
     <>
@@ -30,25 +31,27 @@ export default function ThreeDPage() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
                 <Layers className="w-4 h-4" />
-                {t('3d.hero.badge')}
+                {t("3d.hero.badge")}
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-                {t('3d.hero.title')}
+                {t("3d.hero.title")}
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                {t('3d.hero.subtitle')}
+                {t("3d.hero.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t('3d.hero.cta')}
-                </button>
+                <Link href="/contact_form">
+                  <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("3d.hero.cta")}
+                  </button>
+                </Link>
                 <a
                   href="https://youtu.be/LIZQ9LJmcXo?si=LBPoEIRlicrZhgIT"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl text-center"
                 >
-                  {t('3d.hero.ctaSecondary')}
+                  {t("3d.hero.ctaSecondary")}
                 </a>
               </div>
             </div>
@@ -69,7 +72,7 @@ export default function ThreeDPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('3d.problems.title')}
+              {t("3d.problems.title")}
             </h2>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
@@ -103,7 +106,7 @@ export default function ThreeDPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('3d.solution.title')}
+              {t("3d.solution.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
@@ -146,7 +149,7 @@ export default function ThreeDPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('3d.benefits.title')}
+              {t("3d.benefits.title")}
             </h2>
           </div>
           <div className="grid gap-8 sm:grid-cols-3 max-w-7xl mx-auto">
@@ -183,7 +186,7 @@ export default function ThreeDPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('3d.workflow.title')}
+              {t("3d.workflow.title")}
             </h2>
           </div>
           <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl overflow-hidden border border-blue-100">
@@ -212,22 +215,28 @@ export default function ThreeDPage() {
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-8">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('3d.science.title')}
+              {t("3d.science.title")}
             </h2>
             <p className="text-xl text-gray-600 mb-6">
-              {t('3d.science.subtitle')}
+              {t("3d.science.subtitle")}
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
             <div className="bg-white rounded-2xl p-8 sm:p-12 shadow-lg border border-gray-100">
               <div className="text-center mb-6">
                 <div className="flex items-baseline justify-center gap-2 mb-4">
-                  <span className="text-2xl text-gray-600">{t('3d.science.currency')}</span>
-                  <span className="text-6xl font-bold text-[#1650EF]">{t('3d.science.price')}</span>
-                  <span className="text-2xl text-gray-600">{t('3d.science.period')}</span>
+                  <span className="text-2xl text-gray-600">
+                    {t("3d.science.currency")}
+                  </span>
+                  <span className="text-6xl font-bold text-[#1650EF]">
+                    {t("3d.science.price")}
+                  </span>
+                  <span className="text-2xl text-gray-600">
+                    {t("3d.science.period")}
+                  </span>
                 </div>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  {t('3d.science.description')}
+                  {t("3d.science.description")}
                 </p>
               </div>
               <div className="mt-8 flex justify-center">
@@ -244,26 +253,29 @@ export default function ThreeDPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
-              {t('3d.testimonial.title')}
+              {t("3d.testimonial.title")}
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
             <TestimonialsCarousel
               testimonials={[
                 {
-                  quote: "The 3D simulations have completely changed how we consult with patients. They can visualize results before committing, which has dramatically increased our conversion rate.",
+                  quote:
+                    "The 3D simulations have completely changed how we consult with patients. They can visualize results before committing, which has dramatically increased our conversion rate.",
                   author: "Dr. Alexandre Moreau",
                   role: "Plastic Surgeon, Paris",
                   rating: 5,
                 },
                 {
-                  quote: "Patients are amazed by the realistic 3D previews. It sets clear expectations and reduces anxiety. This tool is essential for modern aesthetic practice.",
+                  quote:
+                    "Patients are amazed by the realistic 3D previews. It sets clear expectations and reduces anxiety. This tool is essential for modern aesthetic practice.",
                   author: "Dr. Isabelle Bernard",
                   role: "Aesthetic Doctor, Monaco",
                   rating: 5,
                 },
                 {
-                  quote: "The ease of use and scientific accuracy of Nextmotion 3D are impressive. My patients feel more confident in their decisions.",
+                  quote:
+                    "The ease of use and scientific accuracy of Nextmotion 3D are impressive. My patients feel more confident in their decisions.",
                   author: "Dr. Thomas Garnier",
                   role: "Cosmetic Surgeon, Lyon",
                   rating: 5,
@@ -276,12 +288,11 @@ export default function ThreeDPage() {
         </Container>
       </section>
 
-
       <section className="py-16 sm:py-24 bg-white">
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] text-center sm:text-4xl mb-12">
-              {t('3d.faq.title')}
+              {t("3d.faq.title")}
             </h2>
 
             <Accordion type="single" collapsible className="space-y-3">
@@ -308,22 +319,24 @@ export default function ThreeDPage() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-4">
-              {t('3d.finalCta.title')}
+              {t("3d.finalCta.title")}
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              {t('3d.finalCta.subtitle')}
+              {t("3d.finalCta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t('3d.finalCta.cta')}
-              </button>
+              <Link href="/contact_form">
+                <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("3d.finalCta.cta")}
+                </button>
+              </Link>
               <a
                 href="https://youtu.be/LIZQ9LJmcXo?si=LBPoEIRlicrZhgIT"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl text-center inline-block"
               >
-                {t('3d.hero.ctaSecondary')}
+                {t("3d.hero.ctaSecondary")}
               </a>
             </div>
           </div>
