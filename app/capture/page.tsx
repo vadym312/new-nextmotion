@@ -1,7 +1,7 @@
-import { Locale, createTranslator } from '@/utils/i18n';
+import { createTranslator } from '@/utils/i18n';
 import { Container } from '@/components/layout/Container';
-import { Section } from '@/components/layout/Section';
 import { CaptureCarousel } from '@/components/layout/CaptureCarousel';
+import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
 import {
   Camera,
   Smartphone,
@@ -242,14 +242,36 @@ export default function CapturePage() {
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl p-8 sm:p-12 text-center shadow-sm border border-gray-100">
-              <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed italic">
-                "{t('capture.testimonial.quote')}"
-              </blockquote>
-              <p className="text-gray-900 font-semibold text-lg">
-                {t('capture.testimonial.author')}
-              </p>
-            </div>
+            <TestimonialsCarousel
+              testimonials={[
+                {
+                  quote: "NM Capture has revolutionized our photo workflow. The standardized lighting and angles ensure perfect comparability. Our marketing has never looked better.",
+                  author: "Dr. Claire Dubois",
+                  role: "Aesthetic Clinic Owner, Marseille",
+                  rating: 5,
+                },
+                {
+                  quote: "The automated organization and easy sharing features save us so much time. Patients love seeing their progress in the portal.",
+                  author: "Dr. Marc Lefevre",
+                  role: "Dermatologist, Toulouse",
+                  rating: 5,
+                },
+                {
+                  quote: "Consistent, professional before/after photos every single time. The ROI has been incredible, both in time saved and patient conversion.",
+                  author: "Dr. Nathalie Vincent",
+                  role: "Medical Spa Director, Cannes",
+                  rating: 5,
+                },
+                {
+                  quote: "This tool has become indispensable for our practice. The quality and consistency of our visual documentation has improved dramatically.",
+                  author: "Dr. Laurent Petit",
+                  role: "Aesthetic Surgeon, Strasbourg",
+                  rating: 5,
+                },
+              ]}
+              autoPlay={true}
+              interval={6000}
+            />
           </div>
         </Container>
       </section>
@@ -285,7 +307,7 @@ export default function CapturePage() {
                   {isRecommended && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-[#1650EF] text-white text-sm font-semibold px-4 py-1 rounded-full">
-                        Recommandé
+                        Popular
                       </span>
                     </div>
                   )}

@@ -1,5 +1,6 @@
-import { Locale, createTranslator } from '@/utils/i18n';
+import { createTranslator } from '@/utils/i18n';
 import { Container } from '@/components/layout/Container';
+import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
 import Image from 'next/image';
 import {
   Stethoscope,
@@ -12,10 +13,9 @@ import {
   FolderHeart,
   Share2,
   Sparkles,
-  CheckCircle2,
-  TrendingUp,
-  Shield,
-  Users,
+  Bot,
+  Video,
+  Calendar,
 } from 'lucide-react';
 
 export default function PractitionerPage() {
@@ -25,7 +25,7 @@ export default function PractitionerPage() {
     <>
       <section className="py-16 sm:py-24 bg-gradient-to-br from-blue-50 via-white to-gray-50">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
                 <Stethoscope className="w-4 h-4" />
@@ -46,9 +46,16 @@ export default function PractitionerPage() {
                 </button>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center">
-                <Stethoscope className="w-48 h-48 text-[#1650EF]/20" strokeWidth={1} />
+            <div className="relative lg:h-full">
+              <div className="w-full lg:w-auto lg:h-full bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/youare/youare.jpg"
+                  alt="Aesthetic Practitioner"
+                  width={420}
+                  height={420}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -148,36 +155,69 @@ export default function PractitionerPage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
             {[
-              { name: 'NM Capture', desc: 'Standardized before/after photos' },
-              { name: 'NM Consult', desc: 'Smart patient records' },
-              { name: 'Copilot AI', desc: 'Conversational AI assistant' },
-              { name: 'NM Revolution', desc: 'Dynamic patient videos' },
-              { name: 'NM Agenda', desc: 'Doctolib synchronization' }
-            ].map((tool, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
-              >
-                <div className="relative aspect-video bg-gradient-to-br from-blue-50 to-gray-100">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Camera className="w-16 h-16 text-gray-300" strokeWidth={1.5} />
+              {
+                name: 'NM Capture',
+                desc: 'Standardized before/after photos',
+                icon: Camera,
+                gradient: 'from-blue-50 to-blue-100',
+                iconColor: 'text-blue-500'
+              },
+              {
+                name: 'NM Consult',
+                desc: 'Smart patient records',
+                icon: FileText,
+                gradient: 'from-emerald-50 to-emerald-100',
+                iconColor: 'text-emerald-500'
+              },
+              {
+                name: 'Copilot AI',
+                desc: 'Conversational AI assistant',
+                icon: Bot,
+                gradient: 'from-purple-50 to-purple-100',
+                iconColor: 'text-purple-500'
+              },
+              {
+                name: 'NM Revolution',
+                desc: 'Dynamic patient videos',
+                icon: Video,
+                gradient: 'from-red-50 to-red-100',
+                iconColor: 'text-red-500'
+              },
+              {
+                name: 'NM Agenda',
+                desc: 'Doctolib synchronization',
+                icon: Calendar,
+                gradient: 'from-amber-50 to-amber-100',
+                iconColor: 'text-amber-500'
+              }
+            ].map((tool, index) => {
+              const Icon = tool.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <div className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Icon className={`w-16 h-16 ${tool.iconColor}`} strokeWidth={1.5} />
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-[#0F172A] text-base mb-2 text-center">
+                      {tool.name}
+                    </h3>
+                    <p className="text-[#4B5563] text-sm text-center leading-relaxed">
+                      {tool.desc}
+                    </p>
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="font-bold text-[#0F172A] text-base mb-2 text-center">
-                    {tool.name}
-                  </h3>
-                  <p className="text-[#4B5563] text-sm text-center leading-relaxed">
-                    {tool.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </section>
 
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-gray-50">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
@@ -185,14 +225,30 @@ export default function PractitionerPage() {
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8 sm:p-12 text-center border border-blue-100">
-              <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed italic">
-                "{t('practitioner.testimonial.quote')}"
-              </blockquote>
-              <p className="text-gray-900 font-semibold text-lg">
-                {t('practitioner.testimonial.author')}
-              </p>
-            </div>
+            <TestimonialsCarousel
+              testimonials={[
+                {
+                  quote: "Nextmotion has streamlined my entire practice. The AI-powered consultation notes save me 2 hours daily, and patients love the 3D simulations.",
+                  author: "Dr. Emma Wilson",
+                  role: "Aesthetic Surgeon, London",
+                  rating: 5,
+                },
+                {
+                  quote: "The before/after photo management is exceptional. Everything is organized, standardized, and easy to share. My marketing has never been better.",
+                  author: "Dr. Michael Chen",
+                  role: "Cosmetic Doctor, Singapore",
+                  rating: 5,
+                },
+                {
+                  quote: "Integration with my existing workflow was seamless. The patient portal has significantly improved engagement and satisfaction scores.",
+                  author: "Dr. Sarah Johnson",
+                  role: "Dermatologist, New York",
+                  rating: 5,
+                },
+              ]}
+              autoPlay={true}
+              interval={6000}
+            />
           </div>
         </Container>
       </section>

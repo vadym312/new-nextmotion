@@ -1,5 +1,7 @@
-import { Locale, createTranslator } from '@/utils/i18n';
+import { createTranslator } from '@/utils/i18n';
 import { Container } from '@/components/layout/Container';
+import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
+import Image from 'next/image';
 import {
   Building2,
   BarChart3,
@@ -12,7 +14,8 @@ import {
   Brain,
   Star,
   CheckCircle2,
-  TrendingUp,
+  Package,
+  Receipt,
 } from 'lucide-react';
 
 export default function MultiSitePageFR() {
@@ -22,7 +25,7 @@ export default function MultiSitePageFR() {
     <>
       <section className="py-16 sm:py-24 bg-gradient-to-br from-blue-50 via-white to-gray-50">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
                 <Building2 className="w-4 h-4" />
@@ -43,9 +46,16 @@ export default function MultiSitePageFR() {
                 </button>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center">
-                <Building2 className="w-48 h-48 text-[#1650EF]/20" strokeWidth={1} />
+            <div className="relative lg:h-full">
+              <div className="w-full lg:w-auto lg:h-full bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/youare/youare.jpg"
+                  alt="Propriétaire Multi-Sites"
+                  width={420}
+                  height={420}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -164,7 +174,81 @@ export default function MultiSitePageFR() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-white to-gray-50">
+        <Container>
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
+              Des outils puissants unifiant vos emplacements
+            </h2>
+            <p className="text-lg text-gray-600">
+              Plateforme centralisée pour une gestion multi-sites fluide et un contrôle optimal
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
+            {[
+              {
+                name: 'Tableau de Bord Unifié',
+                desc: 'Vue en temps réel sur tous les sites',
+                icon: LayoutDashboard,
+                gradient: 'from-blue-50 to-blue-100',
+                iconColor: 'text-blue-500'
+              },
+              {
+                name: 'Reporting Central',
+                desc: 'Analyses et KPI consolidés',
+                icon: BarChart3,
+                gradient: 'from-violet-50 to-violet-100',
+                iconColor: 'text-violet-500'
+              },
+              {
+                name: 'Gestion Personnel',
+                desc: 'Coordination équipes multi-sites',
+                icon: UserCog,
+                gradient: 'from-emerald-50 to-emerald-100',
+                iconColor: 'text-emerald-500'
+              },
+              {
+                name: 'Sync Inventaire',
+                desc: 'Suivi ressources partagées',
+                icon: Package,
+                gradient: 'from-orange-50 to-orange-100',
+                iconColor: 'text-orange-500'
+              },
+              {
+                name: 'Facturation Groupe',
+                desc: 'Gestion financière multi-sites',
+                icon: Receipt,
+                gradient: 'from-teal-50 to-teal-100',
+                iconColor: 'text-teal-500'
+              }
+            ].map((tool, index) => {
+              const Icon = tool.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <div className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Icon className={`w-16 h-16 ${tool.iconColor}`} strokeWidth={1.5} />
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-[#0F172A] text-base mb-2 text-center">
+                      {tool.name}
+                    </h3>
+                    <p className="text-[#4B5563] text-sm text-center leading-relaxed">
+                      {tool.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 sm:py-24 bg-gray-50">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
@@ -172,14 +256,30 @@ export default function MultiSitePageFR() {
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8 sm:p-12 text-center border border-blue-100">
-              <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed italic">
-                "{t('multisite.testimonial.quote')}"
-              </blockquote>
-              <p className="text-gray-900 font-semibold text-lg">
-                {t('multisite.testimonial.author')}
-              </p>
-            </div>
+            <TestimonialsCarousel
+              testimonials={[
+                {
+                  quote: "Gérer plusieurs sites était un cauchemar. Le système centralisé de Nextmotion me donne une visibilité et un contrôle complets sur toutes nos cliniques.",
+                  author: "Dr. Robert Taylor",
+                  role: "Propriétaire Multi-Sites, 5 Emplacements",
+                  rating: 5,
+                },
+                {
+                  quote: "Les rapports et analyses unifiés sont inestimables. Je peux comparer les performances entre sites et prendre des décisions basées sur les données instantanément.",
+                  author: "Dr. Patricia Moore",
+                  role: "Directrice Régionale, UK",
+                  rating: 5,
+                },
+                {
+                  quote: "La gestion du personnel sur plusieurs sites est désormais transparente. Les matériaux de formation et protocoles centralisés assurent la cohérence partout.",
+                  author: "Dr. James Anderson",
+                  role: "Directeur Médical de Groupe",
+                  rating: 5,
+                },
+              ]}
+              autoPlay={true}
+              interval={6000}
+            />
           </div>
         </Container>
       </section>

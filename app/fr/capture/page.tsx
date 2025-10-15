@@ -1,7 +1,7 @@
-import { Locale, createTranslator } from '@/utils/i18n';
+import { createTranslator } from '@/utils/i18n';
 import { Container } from '@/components/layout/Container';
-import { Section } from '@/components/layout/Section';
 import { CaptureCarousel } from '@/components/layout/CaptureCarousel';
+import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
 import {
   Camera,
   Smartphone,
@@ -13,10 +13,6 @@ import {
   Clock,
   Share2,
   Check,
-  Shield,
-  Download,
-  Server,
-  X,
   Play,
 } from 'lucide-react';
 import {
@@ -242,14 +238,36 @@ export default function CapturePage() {
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl p-8 sm:p-12 text-center shadow-sm border border-gray-100">
-              <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed italic">
-                "{t('capture.testimonial.quote')}"
-              </blockquote>
-              <p className="text-gray-900 font-semibold text-lg">
-                {t('capture.testimonial.author')}
-              </p>
-            </div>
+            <TestimonialsCarousel
+              testimonials={[
+                {
+                  quote: "NM Capture a révolutionné notre workflow photo. L'éclairage et les angles standardisés assurent une comparabilité parfaite. Notre marketing n'a jamais été aussi professionnel.",
+                  author: "Dr. Claire Dubois",
+                  role: "Propriétaire de Clinique Esthétique, Marseille",
+                  rating: 5,
+                },
+                {
+                  quote: "L'organisation automatisée et les fonctionnalités de partage facile nous font gagner un temps précieux. Les patients adorent voir leurs progrès dans le portail.",
+                  author: "Dr. Marc Lefevre",
+                  role: "Dermatologue, Toulouse",
+                  rating: 5,
+                },
+                {
+                  quote: "Des photos avant/après cohérentes et professionnelles à chaque fois. Le retour sur investissement a été incroyable, tant en temps gagné qu'en conversion patient.",
+                  author: "Dr. Nathalie Vincent",
+                  role: "Directrice de Spa Médical, Cannes",
+                  rating: 5,
+                },
+                {
+                  quote: "Cet outil est devenu indispensable pour notre pratique. La qualité et la cohérence de notre documentation visuelle se sont considérablement améliorées.",
+                  author: "Dr. Laurent Petit",
+                  role: "Chirurgien Esthétique, Strasbourg",
+                  rating: 5,
+                },
+              ]}
+              autoPlay={true}
+              interval={6000}
+            />
           </div>
         </Container>
       </section>
@@ -285,7 +303,7 @@ export default function CapturePage() {
                   {isRecommended && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-[#1650EF] text-white text-sm font-semibold px-4 py-1 rounded-full">
-                        Recommandé
+                        Populaire
                       </span>
                     </div>
                   )}

@@ -195,14 +195,14 @@ export default function Home() {
                 description:
                   'dossier patient intelligent et comptes-rendus automatisés',
                 image: '/solutions/nmconsulthome.jpg',
-                link: null,
+                link: '/fr/assistant',
               },
               {
                 icon: Calendar,
                 title: 'Nextmotion Agenda',
                 description: 'planification et synchronisation avec Doctolib',
                 image: '/solutions/nmcalendarhome.jpg',
-                link: null,
+                link: '/fr/practitioner',
               },
               {
                 icon: Globe,
@@ -226,7 +226,7 @@ export default function Home() {
                 description:
                   'vidéos standardisées et dynamiques pour vos patients',
                 image: '/solutions/nmrevolutionhome.jpg',
-                link: null,
+                link: '/fr/marketing',
               },
             ].map((module, index) => {
               const content = (
@@ -238,10 +238,10 @@ export default function Home() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="font-bold text-[#0F172A] text-base mb-2">
+                  <h3 className="font-bold text-[#0F172A] text-base mb-2 text-center">
                     {module.title}
                   </h3>
-                  <p className="text-[#4B5563] text-sm leading-relaxed">
+                  <p className="text-[#4B5563] text-sm leading-relaxed text-center">
                     {module.description}
                   </p>
                 </>
@@ -258,7 +258,7 @@ export default function Home() {
               ) : (
                 <div
                   key={index}
-                  className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 group"
+                  className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm transition-all duration-300"
                 >
                   {content}
                 </div>
@@ -427,7 +427,7 @@ export default function Home() {
                   {isRecommended && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-[#1650EF] text-white text-sm font-semibold px-4 py-1 rounded-full">
-                        Recommandé
+                        Populaire
                       </span>
                     </div>
                   )}

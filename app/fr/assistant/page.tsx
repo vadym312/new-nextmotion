@@ -1,5 +1,7 @@
-import { Locale, createTranslator } from '@/utils/i18n';
+import { createTranslator } from '@/utils/i18n';
 import { Container } from '@/components/layout/Container';
+import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
+import Image from 'next/image';
 import {
   UserCheck,
   Clock,
@@ -12,7 +14,8 @@ import {
   Headphones,
   Sparkles,
   CheckCircle2,
-  Smartphone,
+  Bot,
+  RefreshCcw,
 } from 'lucide-react';
 
 export default function AssistantPageFR() {
@@ -22,7 +25,7 @@ export default function AssistantPageFR() {
     <>
       <section className="py-16 sm:py-24 bg-gradient-to-br from-blue-50 via-white to-gray-50">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-2 items-center">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
                 <UserCheck className="w-4 h-4" />
@@ -43,9 +46,16 @@ export default function AssistantPageFR() {
                 </button>
               </div>
             </div>
-            <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center">
-                <UserCheck className="w-48 h-48 text-[#1650EF]/20" strokeWidth={1} />
+            <div className="relative lg:h-full">
+              <div className="w-full lg:w-auto lg:h-full bg-gradient-to-br from-blue-100 to-blue-50 rounded-3xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/youare/youare.jpg"
+                  alt="Assistant de Clinique"
+                  width={420}
+                  height={420}
+                  className="w-full h-full object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -133,6 +143,80 @@ export default function AssistantPageFR() {
         </Container>
       </section>
 
+      <section className="py-16 sm:py-24 bg-gradient-to-b from-white to-gray-50">
+        <Container>
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
+              Des outils puissants optimisant votre flux de travail
+            </h2>
+            <p className="text-lg text-gray-600">
+              {"Simplifiez les opérations quotidiennes avec des outils intelligents conçus pour l'efficacité clinique"}
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
+            {[
+              {
+                name: 'NM Agenda',
+                desc: 'Planification automatisée des rendez-vous',
+                icon: Calendar,
+                gradient: 'from-blue-50 to-blue-100',
+                iconColor: 'text-blue-500'
+              },
+              {
+                name: 'Portail Patient',
+                desc: 'Communication patient facilitée',
+                icon: Users,
+                gradient: 'from-green-50 to-green-100',
+                iconColor: 'text-green-500'
+              },
+              {
+                name: 'Consentements Digitaux',
+                desc: 'Gestion documentaire sans papier',
+                icon: FileText,
+                gradient: 'from-amber-50 to-amber-100',
+                iconColor: 'text-amber-500'
+              },
+              {
+                name: 'Copilot IA',
+                desc: 'Assistant intelligent pour les tâches',
+                icon: Bot,
+                gradient: 'from-purple-50 to-purple-100',
+                iconColor: 'text-purple-500'
+              },
+              {
+                name: 'Sync Doctolib',
+                desc: 'Synchronisation calendrier',
+                icon: RefreshCcw,
+                gradient: 'from-cyan-50 to-cyan-100',
+                iconColor: 'text-cyan-500'
+              }
+            ].map((tool, index) => {
+              const Icon = tool.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
+                >
+                  <div className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Icon className={`w-16 h-16 ${tool.iconColor}`} strokeWidth={1.5} />
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-[#0F172A] text-base mb-2 text-center">
+                      {tool.name}
+                    </h3>
+                    <p className="text-[#4B5563] text-sm text-center leading-relaxed">
+                      {tool.desc}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </Container>
+      </section>
+
       <section className="py-16 sm:py-24 bg-gray-50">
         <Container>
           <div className="text-center max-w-4xl mx-auto mb-16">
@@ -164,7 +248,7 @@ export default function AssistantPageFR() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-gray-50">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
@@ -172,14 +256,30 @@ export default function AssistantPageFR() {
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8 sm:p-12 text-center border border-blue-100">
-              <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed italic">
-                "{t('assistant.testimonial.quote')}"
-              </blockquote>
-              <p className="text-gray-900 font-semibold text-lg">
-                {t('assistant.testimonial.author')}
-              </p>
-            </div>
+            <TestimonialsCarousel
+              testimonials={[
+                {
+                  quote: "La gestion des rendez-vous n'a jamais été aussi simple. La synchronisation avec Doctolib a éliminé tous les conflits d'horaires et les patients adorent les rappels.",
+                  author: "Laura Bennett",
+                  role: "Coordinatrice de Clinique, Manchester",
+                  rating: 5,
+                },
+                {
+                  quote: "Les outils de communication patient sont fantastiques. Je peux répondre rapidement aux demandes et les suivis automatisés ont amélioré notre rétention.",
+                  author: "Maria Garcia",
+                  role: "Assistante Médicale, Barcelone",
+                  rating: 5,
+                },
+                {
+                  quote: "La gestion documentaire est tellement plus simple maintenant. Tout est numérique, organisé et accessible. Cela a considérablement facilité mon travail.",
+                  author: "Sophie Dubois",
+                  role: "Assistante Administrative, Bruxelles",
+                  rating: 5,
+                },
+              ]}
+              autoPlay={true}
+              interval={6000}
+            />
           </div>
         </Container>
       </section>

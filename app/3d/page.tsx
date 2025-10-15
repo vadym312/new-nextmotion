@@ -1,6 +1,6 @@
-import { Locale, createTranslator } from '@/utils/i18n';
+import { createTranslator } from '@/utils/i18n';
 import { Container } from '@/components/layout/Container';
-import { Section } from '@/components/layout/Section';
+import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
 import {
   Layers,
   Eye,
@@ -8,13 +8,9 @@ import {
   BookOpen,
   Brain,
   Users,
-  Workflow,
   Microscope,
   Shield,
-  Monitor,
-  Tablet,
-  Share2,
-  Check,
+  Play,
 } from 'lucide-react';
 import {
   Accordion,
@@ -191,11 +187,23 @@ export default function ThreeDPage() {
             </h2>
           </div>
           <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl overflow-hidden border border-blue-100">
-            <img
-              src="/3d/nm3dcover.jpg"
-              alt="Nextmotion 3D Application"
-              className="w-full h-auto object-cover"
-            />
+            <a
+              href="https://www.youtube.com/watch?v=LIZQ9LJmcXo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative group cursor-pointer"
+            >
+              <img
+                src="/3d/nm3dcover.jpg"
+                alt="Nextmotion 3D Application"
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
+                  <Play className="w-10 h-10 text-[#1650EF] fill-[#1650EF] ml-1" />
+                </div>
+              </div>
+            </a>
           </div>
         </Container>
       </section>
@@ -232,7 +240,7 @@ export default function ThreeDPage() {
         </Container>
       </section>
 
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-gray-50">
         <Container>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] sm:text-4xl mb-4">
@@ -240,14 +248,30 @@ export default function ThreeDPage() {
             </h2>
           </div>
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl p-8 sm:p-12 text-center shadow-sm border border-gray-100">
-              <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed italic">
-                "{t('3d.testimonial.quote')}"
-              </blockquote>
-              <p className="text-gray-900 font-semibold text-lg">
-                {t('3d.testimonial.author')}
-              </p>
-            </div>
+            <TestimonialsCarousel
+              testimonials={[
+                {
+                  quote: "The 3D simulations have completely changed how we consult with patients. They can visualize results before committing, which has dramatically increased our conversion rate.",
+                  author: "Dr. Alexandre Moreau",
+                  role: "Plastic Surgeon, Paris",
+                  rating: 5,
+                },
+                {
+                  quote: "Patients are amazed by the realistic 3D previews. It sets clear expectations and reduces anxiety. This tool is essential for modern aesthetic practice.",
+                  author: "Dr. Isabelle Bernard",
+                  role: "Aesthetic Doctor, Monaco",
+                  rating: 5,
+                },
+                {
+                  quote: "The ease of use and scientific accuracy of Nextmotion 3D are impressive. My patients feel more confident in their decisions.",
+                  author: "Dr. Thomas Garnier",
+                  role: "Cosmetic Surgeon, Lyon",
+                  rating: 5,
+                },
+              ]}
+              autoPlay={true}
+              interval={6000}
+            />
           </div>
         </Container>
       </section>
