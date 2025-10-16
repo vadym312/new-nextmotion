@@ -22,7 +22,7 @@ export function CTA({
   onSecondaryButtonClick,
 }: CTAProps) {
 
-  const currentLocale = locale === 'fr' ? 'fr' : ''
+  const currentLocale = locale === 'fr' ? '/fr' : ''
 
   return (
     <section className="py-20 sm:py-32 bg-gradient-to-br from-[#2563EB] via-[#1650EF] to-[#1E40AF] relative overflow-hidden">
@@ -38,7 +38,7 @@ export function CTA({
             </p>
           )}
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <Link href={`/${currentLocale}/contact_form`}>
+            <Link href={`${currentLocale}/contact_form`}>
               <Button
                 onClick={onButtonClick}
                 size="lg"
@@ -48,7 +48,7 @@ export function CTA({
               </Button>
             </Link>
             {secondaryButtonText && (
-              <Link href={`/${currentLocale}/starter`}>
+              <Link href={`${currentLocale}/starter`}>
                 <Button
                   onClick={onSecondaryButtonClick}
                   size="lg"
