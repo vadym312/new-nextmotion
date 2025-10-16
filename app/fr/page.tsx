@@ -267,7 +267,7 @@ export default function Home() {
           </div>
           <div className="flex justify-center mt-12">
             <Link
-              href="/contact_form"
+              href="/fr/contact_form"
               className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl"
             >
               Réserver une démo
