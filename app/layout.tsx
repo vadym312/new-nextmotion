@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Locale, getTranslations } from "@/utils/i18n";
+import { Locale } from "@/utils/i18n";
 import { Header } from "@/components/layout/Header";
 import { FooterNew } from "@/components/layout/FooterNew";
 import HreflangTags from "./components/HreflangTags";
