@@ -44,9 +44,11 @@ export default function PractitionerPage() {
                     {t("practitioner.hero.cta1")}
                   </button>
                 </Link>
-                <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t("practitioner.hero.cta2")}
-                </button>
+                <Link href="/starter">
+                  <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("practitioner.hero.cta2")}
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="relative lg:h-full">
@@ -290,9 +292,11 @@ export default function PractitionerPage() {
                   {t("practitioner.cta.primary")}
                 </button>
               </Link>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                {t("practitioner.cta.secondary")}
-              </button>
+              <Link href="/pricing">
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  {t("practitioner.cta.secondary")}
+                </button>
+              </Link>
             </div>
           </div>
         </Container>

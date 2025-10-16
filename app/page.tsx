@@ -208,7 +208,7 @@ export default function Home() {
                 title: "Patient Portal",
                 description: "online space to share documents and results",
                 image: "/solutions/portalhome.jpg",
-                link: "/ai-copilot",
+                link: null,
               },
               {
                 icon: Image,
@@ -309,9 +309,11 @@ export default function Home() {
             })}
           </div>
           <div className="flex justify-center mt-12">
-            <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-              {t("ai.cta")}
-            </button>
+            <Link href="/ai-copilot">
+              <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                {t("ai.cta")}
+              </button>
+            </Link>
           </div>
         </Container>
       </section>

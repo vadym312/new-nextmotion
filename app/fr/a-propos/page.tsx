@@ -65,7 +65,7 @@ export default function AProposPage() {
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               {t("about.hero.subtitle")}
             </p>
-            <Link href="/contact_form">
+            <Link href="/fr/contact_form">
               <button className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
                 {t("about.hero.cta")}
               </button>
@@ -308,7 +308,7 @@ export default function AProposPage() {
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-8">
               {t("about.cta.title")}
             </h2>
-            <Link href="/contact_form">
+            <Link href="/fr/contact_form">
               <button className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
                 {t("about.cta.cta")}
               </button>

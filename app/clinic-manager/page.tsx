@@ -322,9 +322,11 @@ export default function ClinicManagerPage() {
                   Request a Demo
                 </button>
               </Link>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                Learn more
-              </button>
+              <Link href="/starter">
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  Learn more
+                </button>
+              </Link>
             </div>
           </div>
         </Container>

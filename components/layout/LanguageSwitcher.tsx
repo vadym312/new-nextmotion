@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Locale } from '@/utils/i18n';
 import { Button } from '@/components/ui/button';
 
@@ -16,7 +16,19 @@ const URL_MAPPINGS: Record<string, { en: string; fr: string }> = {
 
 export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
   const pathname = usePathname();
+  const router = useRouter();
   const activeLocale: Locale = pathname && pathname.startsWith('/fr') ? 'fr' : 'en';
+
+  const setLanguagePreference = (locale: Locale) => {
+    document.cookie = `NEXT_LOCALE=${locale}; max-age=${60 * 60 * 24 * 365}; path=/; samesite=lax`;
+  };
+
+  // Handle language switch with cookie update
+  const handleLanguageSwitch = (newLocale: Locale) => {
+    setLanguagePreference(newLocale);
+    const newPath = getLocalePath(newLocale);
+    router.push(newPath);
+  };
 
   const getLocalePath = (newLocale: Locale) => {
     if (!pathname) return newLocale === 'en' ? '/' : '/fr';
@@ -47,24 +59,24 @@ export function LanguageSwitcher({ currentLocale }: LanguageSwitcherProps) {
   return (
     <div className="flex items-center gap-1 border border-gray-200 rounded-lg p-1 bg-white">
       <Button
-        asChild
         variant="ghost"
         size="sm"
         className={`h-8 px-3 ${
           activeLocale === 'fr' ? 'bg-gray-100 font-medium' : 'text-gray-600'
         }`}
+        onClick={() => handleLanguageSwitch('fr')}
       >
-        <Link href={getLocalePath('fr')}>FR</Link>
+        FR
       </Button>
       <Button
-        asChild
         variant="ghost"
         size="sm"
         className={`h-8 px-3 ${
           activeLocale === 'en' ? 'bg-gray-100 font-medium' : 'text-gray-600'
         }`}
+        onClick={() => handleLanguageSwitch('en')}
       >
-        <Link href={getLocalePath('en')}>EN</Link>
+        EN
       </Button>
     </div>
   );

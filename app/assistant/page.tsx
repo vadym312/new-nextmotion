@@ -44,9 +44,11 @@ export default function AssistantPage() {
                     {t("assistant.hero.cta1")}
                   </button>
                 </Link>
-                <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  {t("assistant.hero.cta2")}
-                </button>
+                <Link href="/starter">
+                  <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    {t("assistant.hero.cta2")}
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="relative lg:h-full">

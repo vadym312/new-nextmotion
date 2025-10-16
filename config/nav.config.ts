@@ -15,8 +15,7 @@ export const NAV_EN = {
       { label: 'patientRecords', href: '/consult' },
       { label: 'beforeAfter', href: '/capture' },
       { label: 'onlineBooking', href: '/agenda' },
-      { label: 'aiTranscription', href: '/ai-copilot' },
-      { label: 'aiSkinAnalysis', href: '/ai-skin-analysis' },
+      { label: 'aiTranscription', href: '/ai-copilot' }
     ]
   },
   moreSolutions: {
@@ -65,8 +64,7 @@ export const NAV_FR = {
       { label: 'patientRecords', href: '/fr/consult' },
       { label: 'beforeAfter', href: '/fr/capture' },
       { label: 'onlineBooking', href: '/fr/agenda' },
-      { label: 'aiTranscription', href: '/fr/ai-copilot' },
-      { label: 'aiSkinAnalysis', href: '/fr/analyse-peau-ia' },
+      { label: 'aiTranscription', href: '/fr/ai-copilot' }
     ]
   },
   moreSolutions: {
@@ -115,7 +113,6 @@ export const FOOTER_EN = {
       { label: 'capture', href: '/capture' },
       { label: 'consult', href: '/consult' },
       { label: 'agenda', href: '/agenda' },
-      { label: 'aiSkinAnalysis', href: '/ai-skin-analysis' },
       { label: 'copilot', href: '/ai-copilot' },
       { label: 'revolution', href: '/revolution' },
       { label: 'simulation3d', href: '/3d' },
@@ -155,7 +152,6 @@ export const FOOTER_FR = {
       { label: 'capture', href: '/fr/capture' },
       { label: 'consult', href: '/fr/consult' },
       { label: 'agenda', href: '/fr/agenda' },
-      { label: 'aiAnalysis', href: '/fr/analyse-peau-ia' },
       { label: 'copilot', href: '/fr/ai-copilot' },
       { label: 'revolution', href: '/fr/revolution' },
       { label: 'simulation3d', href: '/fr/3d' },

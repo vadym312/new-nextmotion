@@ -1,6 +1,7 @@
-import { Container } from '@/components/layout/Container';
-import { TestimonialsCarousel } from '@/components/layout/TestimonialsCarousel';
-import Image from 'next/image';
+import { Container } from "@/components/layout/Container";
+import { TestimonialsCarousel } from "@/components/layout/TestimonialsCarousel";
+import Image from "next/image";
+import Link from "next/link";
 import {
   Megaphone,
   Share2,
@@ -13,7 +14,7 @@ import {
   Video,
   TrendingUpIcon,
   Star,
-} from 'lucide-react';
+} from "lucide-react";
 
 export default function MarketingPage() {
   return (
@@ -30,15 +31,22 @@ export default function MarketingPage() {
                 Grow Your Aesthetic Practice with Smart Marketing
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Convert more leads, retain more patients, and showcase your results with powerful marketing tools built for aesthetic clinics.
+                Convert more leads, retain more patients, and showcase your
+                results with powerful marketing tools built for aesthetic
+                clinics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact_form" className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                <Link
+                  href="/contact_form"
+                  className="px-8 py-4 bg-[#1650EF] text-white rounded-xl hover:bg-[#1650EF]/90 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl"
+                >
                   Request a Demo
-                </a>
-                <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
-                  Learn More
-                </button>
+                </Link>
+                <Link href="/starter">
+                  <button className="px-8 py-4 bg-white border-2 border-[#1650EF] text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-lg hover:shadow-xl">
+                    Learn More
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="relative lg:h-full">
@@ -69,10 +77,26 @@ export default function MarketingPage() {
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
             {[
-              { icon: Target, title: 'Lead Generation', desc: 'Attracting qualified potential patients' },
-              { icon: Share2, title: 'Content Creation', desc: 'Creating engaging before/after content' },
-              { icon: MessageSquare, title: 'Patient Engagement', desc: 'Building trust and loyalty' },
-              { icon: BarChart3, title: 'ROI Tracking', desc: 'Measuring marketing effectiveness' },
+              {
+                icon: Target,
+                title: "Lead Generation",
+                desc: "Attracting qualified potential patients",
+              },
+              {
+                icon: Share2,
+                title: "Content Creation",
+                desc: "Creating engaging before/after content",
+              },
+              {
+                icon: MessageSquare,
+                title: "Patient Engagement",
+                desc: "Building trust and loyalty",
+              },
+              {
+                icon: BarChart3,
+                title: "ROI Tracking",
+                desc: "Measuring marketing effectiveness",
+              },
             ].map((item, index) => {
               const Icon = item.icon;
               return (
@@ -82,7 +106,10 @@ export default function MarketingPage() {
                 >
                   <div className="flex justify-center mb-4">
                     <div className="w-12 h-12 bg-[#FFE8D1] rounded-2xl flex items-center justify-center">
-                      <Icon className="w-6 h-6 text-[#EA580C]" strokeWidth={2} />
+                      <Icon
+                        className="w-6 h-6 text-[#EA580C]"
+                        strokeWidth={2}
+                      />
                     </div>
                   </div>
                   <h3 className="font-bold text-[#0F172A] text-base mb-2 text-center">
@@ -110,18 +137,40 @@ export default function MarketingPage() {
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto justify-items-center">
             {[
-              { icon: Sparkles, title: 'NM Revolution', desc: 'Create dynamic before/after videos automatically' },
-              { icon: Share2, title: 'Social Media Export', desc: 'Share results directly to social platforms' },
-              { icon: Users, title: 'Patient Referrals', desc: 'Turn satisfied patients into advocates' },
-              { icon: BarChart3, title: 'Analytics', desc: 'Track campaign performance and ROI' },
-              { icon: MessageSquare, title: 'Patient Portal', desc: 'Engage patients with their journey' },
+              {
+                icon: Sparkles,
+                title: "NM Revolution",
+                desc: "Create dynamic before/after videos automatically",
+              },
+              {
+                icon: Share2,
+                title: "Social Media Export",
+                desc: "Share results directly to social platforms",
+              },
+              {
+                icon: Users,
+                title: "Patient Referrals",
+                desc: "Turn satisfied patients into advocates",
+              },
+              {
+                icon: BarChart3,
+                title: "Analytics",
+                desc: "Track campaign performance and ROI",
+              },
+              {
+                icon: MessageSquare,
+                title: "Patient Portal",
+                desc: "Engage patients with their journey",
+              },
             ].map((item, index) => {
               const Icon = item.icon;
               return (
                 <div
                   key={index}
                   className={`p-8 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300 w-full ${
-                    index === 4 ? 'sm:col-span-2 lg:col-span-1 lg:col-start-2' : ''
+                    index === 4
+                      ? "sm:col-span-2 lg:col-span-1 lg:col-start-2"
+                      : ""
                   }`}
                 >
                   <div className="flex justify-center mb-6">
@@ -149,46 +198,47 @@ export default function MarketingPage() {
               Powerful tools amplifying your reach
             </h2>
             <p className="text-lg text-gray-600">
-              Marketing platform designed to showcase results and grow your practice
+              Marketing platform designed to showcase results and grow your
+              practice
             </p>
           </div>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5 max-w-7xl mx-auto">
             {[
               {
-                name: 'Before/After Gallery',
-                desc: 'Showcase your best results',
+                name: "Before/After Gallery",
+                desc: "Showcase your best results",
                 icon: ImageIcon,
-                gradient: 'from-purple-50 to-purple-100',
-                iconColor: 'text-purple-500'
+                gradient: "from-purple-50 to-purple-100",
+                iconColor: "text-purple-500",
               },
               {
-                name: 'Social Media Tools',
-                desc: 'Automated content sharing',
+                name: "Social Media Tools",
+                desc: "Automated content sharing",
                 icon: Share2,
-                gradient: 'from-blue-50 to-blue-100',
-                iconColor: 'text-blue-500'
+                gradient: "from-blue-50 to-blue-100",
+                iconColor: "text-blue-500",
               },
               {
-                name: 'Video Generator',
-                desc: 'Dynamic patient stories',
+                name: "Video Generator",
+                desc: "Dynamic patient stories",
                 icon: Video,
-                gradient: 'from-red-50 to-red-100',
-                iconColor: 'text-red-500'
+                gradient: "from-red-50 to-red-100",
+                iconColor: "text-red-500",
               },
               {
-                name: 'Campaign Tracking',
-                desc: 'ROI & conversion analytics',
+                name: "Campaign Tracking",
+                desc: "ROI & conversion analytics",
                 icon: TrendingUpIcon,
-                gradient: 'from-green-50 to-green-100',
-                iconColor: 'text-green-500'
+                gradient: "from-green-50 to-green-100",
+                iconColor: "text-green-500",
               },
               {
-                name: 'Patient Reviews',
-                desc: 'Reputation management',
+                name: "Patient Reviews",
+                desc: "Reputation management",
                 icon: Star,
-                gradient: 'from-amber-50 to-amber-100',
-                iconColor: 'text-amber-500'
-              }
+                gradient: "from-amber-50 to-amber-100",
+                iconColor: "text-amber-500",
+              },
             ].map((tool, index) => {
               const Icon = tool.icon;
               return (
@@ -196,9 +246,14 @@ export default function MarketingPage() {
                   key={index}
                   className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <div className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}>
+                  <div
+                    className={`relative aspect-video bg-gradient-to-br ${tool.gradient}`}
+                  >
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <Icon className={`w-16 h-16 ${tool.iconColor}`} strokeWidth={1.5} />
+                      <Icon
+                        className={`w-16 h-16 ${tool.iconColor}`}
+                        strokeWidth={1.5}
+                      />
                     </div>
                   </div>
                   <div className="p-6">
@@ -227,19 +282,22 @@ export default function MarketingPage() {
             <TestimonialsCarousel
               testimonials={[
                 {
-                  quote: "The marketing tools have transformed how we attract new patients. Our social media engagement has tripled since we started sharing results with Nextmotion.",
+                  quote:
+                    "The marketing tools have transformed how we attract new patients. Our social media engagement has tripled since we started sharing results with Nextmotion.",
                   author: "Amanda Foster",
                   role: "Marketing Director, San Francisco",
                   rating: 5,
                 },
                 {
-                  quote: "The before/after video generator is phenomenal. We create professional marketing content in minutes, not hours. Our conversion rate has never been higher.",
+                  quote:
+                    "The before/after video generator is phenomenal. We create professional marketing content in minutes, not hours. Our conversion rate has never been higher.",
                   author: "Kevin Brown",
                   role: "Digital Marketing Manager, Toronto",
                   rating: 5,
                 },
                 {
-                  quote: "Patient referrals have increased 40% since implementing the automated sharing features. The analytics help us understand what resonates with our audience.",
+                  quote:
+                    "Patient referrals have increased 40% since implementing the automated sharing features. The analytics help us understand what resonates with our audience.",
                   author: "Lisa Chen",
                   role: "Marketing Specialist, Sydney",
                   rating: 5,
@@ -259,15 +317,21 @@ export default function MarketingPage() {
               Ready to Supercharge Your Marketing?
             </h2>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              Join aesthetic clinics using Nextmotion to attract more patients and grow their practice
+              Join aesthetic clinics using Nextmotion to attract more patients
+              and grow their practice
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact_form" className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+              <Link
+                href="/contact_form"
+                className="px-8 py-4 bg-white text-[#1650EF] rounded-xl hover:bg-gray-50 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl"
+              >
                 Request a Demo
-              </a>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
-                Learn more
-              </button>
+              </Link>
+              <Link href="/pricing">
+                <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl hover:bg-white/10 transition-colors font-semibold text-lg shadow-xl hover:shadow-2xl">
+                  Learn more
+                </button>
+              </Link>
             </div>
           </div>
         </Container>

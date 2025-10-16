@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Container } from './Container';
 import { Button } from '@/components/ui/button';
@@ -20,22 +20,42 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { NAV_EN, NAV_FR } from '@/config/nav.config';
-import { getTranslations } from '@/utils/i18n';
+import { getTranslations, Locale } from '@/utils/i18n';
 import { usePathname } from 'next/navigation';
+
+function getPreferredLocale(): Locale {
+  if (typeof window === 'undefined') return 'en';
+
+  const browserLang = navigator.language.split('-')[0];
+  if (browserLang === 'fr') return 'fr';
+
+  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  if (timeZone.includes('Paris') || timeZone.includes('Brussels') || timeZone.includes('Geneva')) {
+    return 'fr';
+  }
+
+  return 'en';
+}
 
 export function Header() {
 
   const pathname = usePathname();
   const currentLocale = pathname.startsWith("/fr") ? "fr" : "en";
+  const [homeLink, setHomeLink] = useState(currentLocale === 'fr' ? '/fr' : '/');
   const translations = getTranslations(currentLocale, 'navigation');
   const [mobileOpen, setMobileOpen] = useState(false);
   const navConfig = currentLocale === 'fr' ? NAV_FR : NAV_EN;
+
+  useEffect(() => {
+    const preferredLocale = getPreferredLocale();
+    setHomeLink(preferredLocale === 'fr' ? '/fr' : '/');
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-100 shadow-sm">
       <Container>
         <nav className="flex items-center justify-between h-20">
-          <Link href={`${currentLocale === 'en' ? '/' : '/fr'}`} className="flex items-center group">
+          <Link href={homeLink} className="flex items-center group">
             <Image
               src="/nmlogo.svg"
               alt="Nextmotion"
@@ -198,7 +218,7 @@ export function Header() {
               <SheetContent side="right" className="w-full sm:w-96 p-0 bg-white">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between p-6 border-b bg-gradient-to-r from-gray-50 to-white">
-                    <Link href={`/${currentLocale}`} className="flex items-center">
+                    <Link href={homeLink} className="flex items-center">
                       <Image
                         src="/nmlogomobile.svg"
                         alt="Nextmotion"
