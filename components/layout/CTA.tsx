@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 interface CTAProps {
+  locale: string;
   title: string;
   subtitle?: string;
   buttonText: string;
@@ -12,6 +13,7 @@ interface CTAProps {
 }
 
 export function CTA({
+  locale,
   title,
   subtitle,
   buttonText,
@@ -19,6 +21,9 @@ export function CTA({
   onButtonClick,
   onSecondaryButtonClick,
 }: CTAProps) {
+
+  const currentLocale = locale === 'fr' ? 'fr' : ''
+
   return (
     <section className="py-20 sm:py-32 bg-gradient-to-br from-[#2563EB] via-[#1650EF] to-[#1E40AF] relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLW9wYWNpdHk9Ii4xIi8+PC9nPjwvc3ZnPg==')] opacity-30"></div>
@@ -33,7 +38,7 @@ export function CTA({
             </p>
           )}
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-            <Link href={"/contact_form"}>
+            <Link href={`/${currentLocale}/contact_form`}>
               <Button
                 onClick={onButtonClick}
                 size="lg"
@@ -43,7 +48,7 @@ export function CTA({
               </Button>
             </Link>
             {secondaryButtonText && (
-              <Link href={"/starter"}>
+              <Link href={`/${currentLocale}/starter`}>
                 <Button
                   onClick={onSecondaryButtonClick}
                   size="lg"

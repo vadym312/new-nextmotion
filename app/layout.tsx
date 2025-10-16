@@ -54,6 +54,7 @@ export default function RootLayout({
       </Script>
       <head>
         <HreflangTags />
+        <link rel="icon" href="/nmlogomobile.svg" type="image/x-icon" sizes="32x32"></link>
       </head>
       <body className={inter.className}>
         <noscript>

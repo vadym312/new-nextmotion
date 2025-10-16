@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 interface HeroProps {
+  locale: string;
   title: string;
   subtitle: string;
   primaryCta: string;
@@ -16,6 +17,7 @@ interface HeroProps {
 }
 
 export function Hero({
+  locale,
   title,
   subtitle,
   primaryCta,
@@ -26,6 +28,8 @@ export function Hero({
   onTertiaryClick,
   image,
 }: HeroProps) {
+
+  const currentLocale = locale === 'fr' ? 'fr' : ''
   return (
     <section className="relative bg-white pt-24 pb-20 sm:pt-32 sm:pb-28">
       <Container>
@@ -37,7 +41,7 @@ export function Hero({
             {subtitle}
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact_form">
+            <Link href={`/${currentLocale}/contact_form`}>
               <Button
                 onClick={onPrimaryClick}
                 size="lg"
@@ -47,7 +51,7 @@ export function Hero({
               </Button>
             </Link>
             {tertiaryCta && (
-              <Link href="/starter">
+              <Link href={`/${currentLocale}/starter`}>
                 <Button
                   onClick={onTertiaryClick}
                   size="lg"

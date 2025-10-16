@@ -48,6 +48,7 @@ export default function Home() {
   return (
     <>
       <Hero
+        locale="fr"
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
         primaryCta={t("hero.cta")}
@@ -508,7 +509,7 @@ export default function Home() {
                     )}
                   </div>
 
-                  <Link href={isGreen ? "/starter" : "/contact_form"}>
+                  <Link href={isGreen ? "/fr/starter" : "/fr/contact_form"}>
                     <button
                       className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                         isGreen
@@ -558,6 +559,7 @@ export default function Home() {
       </section>
 
       <CTA
+        locale="fr"
         title={t("finalCta.title")}
         subtitle={t("finalCta.subtitle")}
         buttonText={t("finalCta.cta")}

@@ -49,6 +49,7 @@ export default function Home() {
   return (
     <>
       <Hero
+        locale="en"
         title={t("hero.title")}
         subtitle={t("hero.subtitle")}
         primaryCta={t("hero.cta")}
@@ -556,6 +557,7 @@ export default function Home() {
       </section>
 
       <CTA
+        locale="en"
         title={t("finalCta.title")}
         subtitle={t("finalCta.subtitle")}
         buttonText={t("finalCta.cta")}
